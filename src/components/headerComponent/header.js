@@ -1,20 +1,7 @@
 import React, { Component } from "react";
 
-// components
-
-
-class HeaderCenter extends Component {
-    render () {
-        return (
-            <section className="center">
-                <h1>
-                Still Waiting for the Revolution After All These Years
-                    <span className="metadata">Chapter 2 - More Bacon</span>
-                </h1>
-            </section>
-        );
-    }
-}
+// includes
+import "../../Assets/css/header.min.css";
 
 const delta = 5;
 const navbarHeight = 70;
@@ -65,46 +52,51 @@ class Header extends Component {
 
     hasScrolled () {
         const st = window.scrollY;
-
-        // Make sure they scroll more than delta
         if (Math.abs(this.state.lastScrollTop - st) <= delta)
             return;
-
-        // If they scrolled down and are past the navbar, add class .nav-up.
-        // This is necessary so you never see what is "behind" the navbar.
         if (st > this.state.lastScrollTop && st > navbarHeight) {
             // Scroll Down
             this.hideHeader();
         } else {
             // Scroll Up
-            // if(st + window.outerHeight < this.getDocHeight()) {
-            //   this.showHeader();
-            // }
             if (st < this.getDocHeight()) {
                 this.showHeader();
             }
         }
-
         this.setState({
             lastScrollTop: st
         });
-
     }
 
     handleScroll (event) {
         this.setState({
             didScroll: true
         });
-
         this.hasScrolled();
-
     }
+
     render () {
         return (
-            <header id='navbar' className={this.state.navClass}>
-                <article>
-                    <HeaderCenter />
-                </article>
+            <header className={this.state.navClass}>
+                <div className="navigationBar">
+                    <div className="navigationContainer">
+                        <div className="navItem">
+                            Home
+                        </div>
+                        <div className="navItem">
+                            About Me
+                        </div>
+                        <div className="navItem">
+                            Skills
+                        </div>
+                        <div className="navItem">
+                            Projects
+                        </div>
+                        <div className="navItem">
+                            Contact
+                        </div>
+                    </div>
+                </div>
             </header>
         );
     }
