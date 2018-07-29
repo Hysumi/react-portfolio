@@ -11,21 +11,14 @@ $lightGrey: #e6e6e6;
 $darkGrey: #333;
 $red: #ff1755;
 
-/*
- * Mixins
- */
+ html, body {
+    padding: 0;
+    margin: 0;
+    height: 3000px;
+    font-size: 16px;
+    font-family: "Roboto";
+  }
 
- @mixin translateY ($e) {
-    -webkit-transform: translateY($e);
-    -moz-transform: translateY($e);
-    transition: $e;
-}
-
-@mixin transition ($e) {
-    -webkit-transition: $e;
-    -moz-transition: $e;
-    transition: $e;
-}
 
 /*
  * Fonts
@@ -35,31 +28,12 @@ $red: #ff1755;
  * bold 700
  * bold 700 Italic
  */
-
- html, body {
-    padding: 0;
-    margin: 0;
-    height: 3000px;
-    font-size: 16px;
-    font-family: "Roboto";
-  }
-
 body {
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
     color: $black;
     font-weight: 400;
     font-style: normal;
-}
-
-a {
-    text-decoration: none;
-    @include transition(.4s ease-in-out);
-    cursor: pointer;
-    &:hover {
-        color: $red;
-        @include transition(.4s ease-in-out);
-    }
 }
 
 .container-fluid {

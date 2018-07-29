@@ -1,6 +1,22 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:400,300,700|Pacifico|Julius+Sans+One";
 @import "_config.scss";
 
+/*
+ * Mixins
+ */
+
+ @mixin scaleX ($e) {
+    -webkit-transform: scaleX($e);
+    -moz-transform: scaleX($e);
+    transition: $e;
+}
+
+@mixin transition ($e) {
+    -webkit-transition: $e;
+    -moz-transition: $e;
+    transition: $e;
+}
+
 body {
   padding-top: $header-height;
 }
@@ -54,15 +70,12 @@ header {
         left: 0;
         background-color: $header-navItemBackgroundColor;
         visibility: hidden;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transition: all 0.3s ease-in-out 0s;
-        transition: all 0.3s ease-in-out 0s;
+        @include scaleX(0);
+        @include transition(all 0.3s ease-in-out 0s);
     }
     &:hover:before{
         visibility: visible;
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
+        @include scaleX(1);
     }
   }
 }
