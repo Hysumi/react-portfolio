@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
-// components
+
+// includes
+import "../../Assets/css/default.min.css";
 
 class HomePage extends Component {
     render () {
