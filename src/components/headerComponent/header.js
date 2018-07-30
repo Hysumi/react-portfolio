@@ -12,7 +12,6 @@ class Header extends Component {
         super(props);
 
         this.state = {
-            didScroll: true,
             lastScrollTop: 0,
             navClass: "nav-down"
         };
@@ -68,8 +67,9 @@ class Header extends Component {
 
     hasScrolled () {
         const st = window.scrollY;
-        if (Math.abs(this.state.lastScrollTop - st) <= delta)
+        if (Math.abs(this.state.lastScrollTop - st) <= delta) {
             return;
+        }
         if (st > this.state.lastScrollTop && st > navbarHeight) {
             // Scroll Down
             this.hideHeader();
@@ -85,9 +85,6 @@ class Header extends Component {
     }
 
     handleScroll (event) {
-        this.setState({
-            didScroll: true
-        });
         this.hasScrolled();
     }
     /*
@@ -105,7 +102,8 @@ class Header extends Component {
                         <Link
                             to="aboutMe"
                             smooth={true}
-                            duration={800}>
+                            duration={800}
+                            offset={-70}>
                             <div className="navItem">
                                 About Me
                             </div>
