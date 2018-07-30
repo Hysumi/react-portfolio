@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 // includes
 import "../../Assets/css/header.min.css";
@@ -16,6 +17,9 @@ class Header extends Component {
             navClass: "nav-down"
         };
 
+        this.scrollToTop = this.scrollToTop.bind(this);
+        this.scrollToBottom = this.scrollToBottom.bind(this);
+
         this.hideHeader = this.hideHeader.bind(this);
         this.showHeader = this.showHeader.bind(this);
         this.hasScrolled = this.hasScrolled.bind(this);
@@ -29,6 +33,18 @@ class Header extends Component {
     componentWillUnmount () {
         window.removeEventListener("scroll", this.handleScroll);
     }
+
+    scrollToTop () {
+        scroll.scrollToTop();
+    }
+
+    scrollToBottom () {
+        scroll.scrollToBottom();
+    }
+
+    /*
+     * Start Show/Hide on Scroll Methods
+     */
 
     hideHeader () {
         this.setState({
@@ -74,25 +90,34 @@ class Header extends Component {
         });
         this.hasScrolled();
     }
+    /*
+     * End Show/Hide on Scroll Methods
+     */
 
     render () {
         return (
             <header className={this.state.navClass}>
                 <div className="navigationBar">
                     <div className="navigationContainer">
-                        <div className="navItem">
+                        <div className="navItem" onClick={this.scrollToTop}>
                             Home
                         </div>
-                        <div className="navItem">
-                            About Me
-                        </div>
+                        <Link
+                            to="aboutMe"
+                            smooth={true}
+                            duration={800}>
+                            <div className="navItem">
+                                About Me
+                            </div>
+                        </Link>
+
                         <div className="navItem">
                             Skills
                         </div>
                         <div className="navItem">
                             Projects
                         </div>
-                        <div className="navItem">
+                        <div className="navItem" onClick={this.scrollToBottom}>
                             Contact
                         </div>
                     </div>
