@@ -100,18 +100,23 @@ class Header extends Component {
                             Home
                         </div>
                         <Link
+                            to="skills"
+                            smooth={true}
+                            duration={800}
+                            offset={-70}>
+                            <div className="navItem">
+                                Skills
+                            </div>
+                        </Link>
+                        <Link
                             to="aboutMe"
                             smooth={true}
                             duration={800}
                             offset={-70}>
                             <div className="navItem">
-                                About Me
+                                Experience
                             </div>
                         </Link>
-
-                        <div className="navItem">
-                            Skills
-                        </div>
                         <div className="navItem">
                             Projects
                         </div>
