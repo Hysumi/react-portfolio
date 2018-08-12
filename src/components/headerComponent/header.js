@@ -13,11 +13,15 @@ class Header extends Component {
 
         this.state = {
             lastScrollTop: 0,
-            navClass: "nav-down"
+            navClass: "nav-down",
+            navClicked: false
         };
+
+        this._timeout = null;
 
         this.scrollToTop = this.scrollToTop.bind(this);
         this.scrollToBottom = this.scrollToBottom.bind(this);
+        this.navClicked = this.navClicked.bind(this);
 
         this.hideHeader = this.hideHeader.bind(this);
         this.showHeader = this.showHeader.bind(this);
@@ -39,6 +43,12 @@ class Header extends Component {
 
     scrollToBottom () {
         scroll.scrollToBottom();
+    }
+
+    navClicked () {
+        this.setState({
+            navClicked: true
+        });
     }
 
     /*
@@ -85,6 +95,20 @@ class Header extends Component {
     }
 
     handleScroll (event) {
+        if (this._timeout) {
+            clearTimeout(this._timeout);
+        }
+
+        this._timeout = setTimeout(() => {
+            this._timeout = null;
+            if (this.state.navClicked) {
+                this.setState({
+                    navClass: "nav-up",
+                    navClicked: false
+                });
+            }
+        }, 100);
+
         this.hasScrolled();
     }
     /*
@@ -92,6 +116,8 @@ class Header extends Component {
      */
 
     render () {
+
+
         return (
             <header className={this.state.navClass}>
                 <div className="navigationBar">
@@ -103,8 +129,8 @@ class Header extends Component {
                             to="skills"
                             smooth={true}
                             duration={800}
-                            offset={-70}>
-                            <div className="navItem">
+                            offset={0}>
+                            <div className="navItem" onClick={this.navClicked}>
                                 Skills
                             </div>
                         </Link>
@@ -112,7 +138,7 @@ class Header extends Component {
                             to="aboutMe"
                             smooth={true}
                             duration={800}
-                            offset={-70}>
+                            offset={0}>
                             <div className="navItem">
                                 Experience
                             </div>
