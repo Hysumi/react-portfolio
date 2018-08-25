@@ -5,7 +5,7 @@
  * Mixins
  */
 
- @mixin scaleX ($e) {
+@mixin scaleX ($e) {
     -webkit-transform: scaleX($e);
     -moz-transform: scaleX($e);
     transition: $e;

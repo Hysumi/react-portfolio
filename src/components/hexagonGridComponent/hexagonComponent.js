@@ -6,10 +6,10 @@ import "../../Assets/css/skills.min.css";
 class Hexagonal extends Component {
     render () {
         return (
-            <div class="lab_item">
-                <div class="hexagon hexagon2">
-                    <div class="hexagon-in1">
-                        <div class="hexagon-in2 backImageTemp">
+            <div className="lab_item">
+                <div className="hexagon hexagon2">
+                    <div className="hexagon-in1">
+                        <div className="hexagon-in2 backImageTemp">
                         </div>
                     </div>
                 </div>

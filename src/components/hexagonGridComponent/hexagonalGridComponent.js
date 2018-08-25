@@ -9,10 +9,31 @@ import "../../Assets/css/skills.min.css";
 class HexagonalGrid extends Component {
     render () {
         return (
-            <div>
-                <Hexagonal/>
-                <Hexagonal/>
-                <Hexagonal/>
+            <div className="hexContainer">
+                <div className="hexGrid">
+                    <Hexagonal/>
+                    <Hexagonal/>
+                    <Hexagonal/>
+                    <Hexagonal/>
+
+                    <Hexagonal/>
+                    <Hexagonal/>
+                    <Hexagonal/>
+
+                    <Hexagonal/>
+                    <Hexagonal/>
+                    <Hexagonal/>
+                    <Hexagonal/>
+
+                    <Hexagonal/>
+                    <Hexagonal/>
+                    <Hexagonal/>
+                    <Hexagonal/>
+                    <Hexagonal/>
+
+                    <Hexagonal/>
+                    <Hexagonal/>
+                </div>
             </div>
         );
     }
