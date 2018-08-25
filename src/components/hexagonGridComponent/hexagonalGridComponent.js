@@ -13,7 +13,6 @@ class HexagonalGrid extends Component {
                 <Hexagonal/>
                 <Hexagonal/>
                 <Hexagonal/>
-                <Hexagonal/>
             </div>
         );
     }
