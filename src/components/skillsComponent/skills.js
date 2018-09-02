@@ -9,8 +9,9 @@ import "../../Assets/css/skills.min.css";
 class Skills extends Component {
     render () {
         return (
-            <div>
+            <div className="grid-container">
                 <HexagonalGrid/>
+                sdfsdfdsfsfs
             </div>
         );
     }

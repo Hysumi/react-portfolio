@@ -1,142 +1,132 @@
-:root {
-    /* Change this to change the appearance of the hexaons */
-    --hex-width: 100px; 
-    --hex-between: 10px;
-    
-    /* Other hexagon dimentions */
-    --hex-height: calc(var(--hex-width) / 1.73 /* sqrt(3) */);
-    --hex-margin: calc(var(--hex-width) / 2);
-    --hex-border: calc(var(--hex-margin) / 1.73 /* sqrt(3) */);
-    --hex-transition: all 0.5s ease;
-    
-    /* Colors
-    --color-hex-default: #000000;
-    --color-hex-hover:   #FFFFFF;
-    --color-angular:     #DD0031;
-    --color-atom:        #66595C;
-    --color-bootstrap:   #563D7C;
-    --color-circleci:    #343434;
-    --color-css:         #1572B6;
-    --color-git:         #F14E32;
-    --color-gulp:        #DA4648;
-    --color-haskell:     #5D4F85;
-    --color-html:        #E34F26;
-    --color-javascript:  #F7DF1E;
-    --color-meteor:      #DE4F4F;
-    --color-python:      #3776AB;
-    --color-rails:       #CC0000;
-    --color-sass:        #CC6699;
-    --color-vuejs:       #4FC08D;
-    --color-webpack:     #8DD6F9;
-     */
+/* Hexagons */
+#hexGrid {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 50px 0;
+    color: rgb(236,236,236)
 }
 
-/*
- * Mixins
- */
-
-@mixin transformRotate ($e) {
-    -webkit-transform: rotate($e);
-	-moz-transform: rotate($e);
-	-o-transform: rotate($e);
-	-ms-transform: rotate($e);
-	transform: rotate($e);
+#hexGrid:after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
-@mixin transition ($e) {
-    -webkit-transition: $e;
-	-moz-transition: $e;
-	-o-transition: $e;
-	-ms-transition: $e;
-	transition: $e;
+.hex {
+    position: relative;
+    list-style-type: none;
+    float: left;
+    overflow: hidden;
+    visibility: hidden;
+    outline: 1px solid transparent;
+    transform: rotate(-60deg) skewY(30deg) translatez(-1px);
 }
 
-/*
- * Início SCSS Hexagono
- */
-.backImageTemp {
-    background-image: url(../images/democracy.jpg);
-}
-
-.lab_item {
-	width: 100px;
-	height: 130px;
-	position: relative;
-	display: inline-block;
-}
-
-.hexagon2 {
-	position: absolute;
-	width: 100px;
-	height: 300px;
-	top: -85px;
-}
-
-.hexagon {
-	overflow: hidden;
-	visibility: hidden;
-
-    @include transformRotate(120deg);
-	cursor: pointer;
-}
-
-.hexagon-in1 {
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-
-    @include transformRotate(-60deg);
-}
-
-.hexagon-in2 {
-	-webkit-box-shadow: inset 0 0 0 200px rgba(176, 218, 212, 0.48);
-	box-shadow: inset 0 0 0 200px rgba(176, 218, 212, 0.48);
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-position: 50%;
-
-	-webkit-background-size: 200%;
-	-moz-background-size: 200%;
-	background-size: 200%;
+.hex * {
+    position: absolute;
     visibility: visible;
-    
-    @include transformRotate(-60deg);
-    @include transition(var(--hex-transition));
-	
+    outline: 1px solid transparent;
 }
 
-.hexagon-in2:hover {
-	-webkit-box-shadow: inset 0 0 0 0px #B0DAD4;
-	box-shadow: inset 0 0 0 0px #B0DAD4;
+.hexIn {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    transform: skewY(-30deg) rotate(60deg);
 }
 
-/*
- * Fim SCSS Hexagono
- * Início SCSS Grid
- */
 
-.hexContainer {
-    width: 550px;
-    height: auto;
-	overflow: hidden;
-	position: relative;
-	margin: 0 auto;
-    margin-bottom: 2.5em;
-    margin-top: 2.5em;
-	background: rgb(236, 236, 236);
+  /*** HEX CONTENT **********************************************************************/
 
-	-webkit-transition: all ease 500ms;
-	-moz-transition: all ease 500ms;
-	-o-transition: all ease 500ms;
-	-ms-transition: all ease 500ms;
-	transition: all ease 500ms;
-}
-
-.hexGrid {
-    padding-top: 1em;
-	width: 820px;
+.hex img {
+    left: -100%;
+    right: -100%;
+    width: auto;
+    height: 100%;
     margin: 0 auto;
-    height: auto;
+}
+
+  /*** HOVER EFFECT  **********************************************************************/
+
+  .hexIn:hover h1, .hexIn:focus h1, .hexIn:hover p, .hexIn:focus p {
+    transform: translateY(0%) translatez(-1px);
+  }
+
+
+  /*** SPACING AND SIZING *****************************************************************/
+
+@media (min-width:1201px) {  /* <- 2-3  hexagons per row */
+    .hex {
+      width: 32.666%;    /* = (100-2) / 3 */
+      padding-bottom: 37.720%;    /* =  width / sin(60) */
+    }
+    .hex:nth-child(5n+1),
+    .hex:nth-child(5n+2) {
+      transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    }
+    .hex:nth-child(5n+3),
+    .hex:nth-child(5n+4),
+    .hex:nth-child(5n+5) {
+      margin-top: -8.564%;
+      margin-bottom: -8.564%;
+    }
+    .hex:nth-child(5n+2),
+    .hex:nth-child(5n+4) {
+      margin-right: 1%;
+      margin-left: 1%;
+    }
+    .hex:nth-child(5n+1) {
+      margin-left: 0.5%;
+    }
+    .hex:nth-child(5n+3),
+    .hex:nth-child(5n+6) {
+      clear: left;
+    }
+}
+
+@media (max-width: 1200px) {  /* <- 1-2  hexagons per row */
+    .hex {
+      width: 49.5%;    /* = (100-1) / 2 */
+      padding-bottom: 57.158%;    /* =  width / sin(60) */
+    }
+    .hex:nth-child(3n+1) {
+      transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    }
+    .hex:nth-child(3n+2),
+    .hex:nth-child(3n+3) {
+      margin-top: -13.423%;
+      margin-bottom: -13.423%;
+    }
+    .hex:nth-child(3n+1) {
+      margin-left: 0.5%
+    }
+    .hex:nth-child(3n+3) {
+      margin-left: 1%;
+    }
+    .hex:nth-child(3n+2),
+    .hex:nth-child(3n+4) {
+      clear: left;
+    }
+}
+
+@media (max-width: 400px) {
+    #hexGrid {
+      font-size: 13px;
+    }
+}
+
+  /* End Hexagons */
+
+
+.grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100%;
+    grid-gap: 0px 2em;
+    grid-template-areas: ". .";
 }

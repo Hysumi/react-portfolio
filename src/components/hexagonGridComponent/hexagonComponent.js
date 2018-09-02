@@ -6,14 +6,11 @@ import "../../Assets/css/skills.min.css";
 class Hexagonal extends Component {
     render () {
         return (
-            <div className="lab_item">
-                <div className="hexagon hexagon2">
-                    <div className="hexagon-in1">
-                        <div className="hexagon-in2 backImageTemp">
-                        </div>
-                    </div>
+            <li className="hex">
+                <div className="hexIn">
+                    <img src="https://farm9.staticflickr.com/8461/8048823381_0fbc2d8efb.jpg" alt=""/>
                 </div>
-            </div>
+            </li>
         );
     }
 }
