@@ -10,8 +10,8 @@ class Skills extends Component {
     render () {
         return (
             <div className="grid-container">
-                <HexagonalGrid/>
                 sdfsdfdsfsfs
+                <HexagonalGrid/>
             </div>
         );
     }

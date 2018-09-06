@@ -23,8 +23,9 @@ Main components
 #cd-timeline {
   position: relative;
   padding: 2em 0;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin: 0 0 0 0;
+  max-width: 100%;
+  box-shadow: inset 0px 3px 10px 0px black;
 }
 #cd-timeline::before {
   content: '';
