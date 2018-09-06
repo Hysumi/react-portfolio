@@ -78,17 +78,9 @@
 .hexagon > svg {
     height: 75%;
 }
-.color-sass {
-    background-color: var(--color-sass);
-}
 
-.color-sass::after,
-.color-sass::before {
-    border-top-color: var(--color-sass);
-    border-bottom-color: var(--color-sass);
-}
 .color-sass {
-    background-color: var(--color-sass);
+    fill: var(--color-sass);
 }
 
 .hexagon img {

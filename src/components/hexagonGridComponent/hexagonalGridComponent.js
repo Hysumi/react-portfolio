@@ -13,20 +13,14 @@ class HexagonalGrid extends Component {
     render () {
         return (
             <div className="hexagon-container">
-                <Hexagonal/>
-                <Hexagonal/>
-
-                <Hexagonal/>
-
-                <Hexagonal/>
-
-                <Hexagonal/>
-                <Hexagonal/>
-                <Hexagonal/>
-                <Hexagonal/>
-                <Hexagonal/>
-                <Hexagonal/>
-
+                {Icons.map((icon, i) =>
+                    <Hexagonal key={i}
+                        arialabelledby={icon.arialabelledby}
+                        role={icon.role}
+                        xmlns={icon.xmlns}
+                        id={icon.id}
+                        path={icon.path}
+                    />)}
             </div>
         );
     }
