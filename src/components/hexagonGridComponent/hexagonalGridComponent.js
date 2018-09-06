@@ -7,7 +7,7 @@ import Hexagonal from "./hexagonComponent";
 import "../../Assets/css/skills.min.css";
 
 // data
-import Icons from "../../mocks/skill-icons-data"
+import Icons from "../../mocks/skill-icons-data";
 
 class HexagonalGrid extends Component {
     render () {
@@ -20,6 +20,7 @@ class HexagonalGrid extends Component {
                         xmlns={icon.xmlns}
                         id={icon.id}
                         path={icon.path}
+                        class={icon.class}
                     />)}
             </div>
         );
