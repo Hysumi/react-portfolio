@@ -16,6 +16,7 @@ class HexagonalGrid extends Component {
                 {Icons.map((icon, i) =>
                     <Hexagonal key={i}
                         path={icon.path}
+                        circle={icon.circle}
                         viewBox={icon.viewBox}
                         class={icon.class}
                     />)}
