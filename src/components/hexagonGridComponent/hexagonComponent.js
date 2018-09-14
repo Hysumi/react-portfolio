@@ -8,7 +8,9 @@ class Hexagonal extends Component {
         return (
             <div className={this.props.class}>
                 <svg role="img" viewBox={this.props.viewBox} xmlns="http://www.w3.org/2000/svg">
-                    <path d={this.props.path}/>
+                    {this.props.path.map((d, i) =>
+                        <path key={i} d={d}/>
+                    )}
                 </svg>
             </div>
         );
