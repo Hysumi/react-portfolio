@@ -15,11 +15,8 @@ class HexagonalGrid extends Component {
             <div className="hexagon-container">
                 {Icons.map((icon, i) =>
                     <Hexagonal key={i}
-                        arialabelledby={icon.arialabelledby}
-                        role={icon.role}
-                        xmlns={icon.xmlns}
-                        id={icon.id}
                         path={icon.path}
+                        viewBox={icon.viewBox}
                         class={icon.class}
                     />)}
             </div>

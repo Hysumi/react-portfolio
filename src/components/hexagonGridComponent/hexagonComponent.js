@@ -7,8 +7,7 @@ class Hexagonal extends Component {
     render () {
         return (
             <div className={this.props.class}>
-                <svg aria-labelledby={this.props.arialabelledby} role="img" viewBox="0 0 24 24" xmlns={this.props.xmlns}>
-                    <title id={this.props.id}></title>
+                <svg role="img" viewBox={this.props.viewBox} xmlns="http://www.w3.org/2000/svg">
                     <path d={this.props.path}/>
                 </svg>
             </div>
