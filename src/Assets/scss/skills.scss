@@ -9,25 +9,30 @@
     --hex-border: calc(var(--hex-margin) / 1.73 /* sqrt(3) */);
 
     /* Colors */
-    --color-hex-default: #000000;
-    --color-hex-hover:   #FFFFFF;
+    --color-hex-default: rgb(119, 119, 119, 0.5);
     --color-angular:     #DD0031;
-    --color-atom:        #66595C;
-    --color-bootstrap:   #563D7C;
     --color-circleci:    #343434;
     --color-css:         #1572B6;
     --color-git:         #F14E32;
     --color-gulp:        #DA4648;
-    --color-haskell:     #5D4F85;
     --color-html:        #E34F26;
     --color-javascript:  #F7DF1E;
-    --color-meteor:      #DE4F4F;
-    --color-python:      #3776AB;
-    --color-rails:       #CC0000;
     --color-sass:        #CC6699;
     --color-vuejs:       #4FC08D;
-    --color-webpack:     #8DD6F9;
 }
+
+/* Mixins */
+
+@mixin hoverEffect ($t, $r, $s) {
+    -webkit-transition: $t;
+    -moz-transition: $t;
+    transition: $t;
+
+    -webkit-transform: rotate($r) scale($s);
+    -moz-transform: rotate($r) scale($s);
+    transform: rotate($r) scale($s);
+}
+
 /* Hexagon Container */
 
 .hexagon-container {
@@ -52,6 +57,7 @@
     position: relative;
     transition: var(--hex-transition);
     width: var(--hex-width);
+
 }
 
 .hexagon::after,
@@ -74,25 +80,19 @@
     bottom: 100%;
 }
 
-  /* HEX CONTENT */
+/* HEX CONTENT */
+
 .hexagon > svg {
     height: 75%;
 }
 
-.color-sass {
-    fill: var(--color-sass);
-}
-
-.hexagon img {
-    left: -100%;
-    right: -100%;
-    top: 25%;
-    width: 60px;
-    height: auto;
-    margin: 0 auto;
-}
-
 /* HOVER EFFECT  */
+
+.hexagon:hover {
+    > svg {
+        @include hoverEffect(0.3s ease, 10deg, 1.3);
+    }
+}
 
 /* SPACING */
 .hexagon:nth-child(6n+4),
@@ -104,8 +104,8 @@
 
 
 .grid-container {
+    height: 100vh;
     display: grid;
-    height: 100%;
     grid-template-columns: 60% 40%;
     grid-template-rows: 100%;
     grid-gap: 0px 2em;
