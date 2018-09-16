@@ -7,18 +7,29 @@
     --hex-height: calc(var(--hex-width) / 1.73 /* sqrt(3) */);
     --hex-margin: calc(var(--hex-width) / 2);
     --hex-border: calc(var(--hex-margin) / 1.73 /* sqrt(3) */);
+    --hex-transition: all .2s ease;
 
     /* Colors */
-    --color-hex-default: rgb(119, 119, 119, 0.5);
-    --color-angular:     #DD0031;
-    --color-circleci:    #343434;
-    --color-css:         #1572B6;
-    --color-git:         #F14E32;
-    --color-gulp:        #DA4648;
+    --color-background-hex-grid: rgb(215, 215, 215, 0.5);
+    --color-hex-default:         rgb(119, 119, 119, 0.5);
+    --color-hex-selected:#FFFFFF;
     --color-html:        #E34F26;
-    --color-javascript:  #F7DF1E;
+    --color-css:         #1572B6;
     --color-sass:        #CC6699;
-    --color-vuejs:       #4FC08D;
+    --color-react:       #61DAFB;
+    --color-angular:     #DD0031;
+    --color-vue:         #4FC08D;
+    --color-javascript:  #F7DF1E;
+    --color-csharp:      #803970;
+    --color-ts:          #007ACC;
+    --color-ionic:       #509CF6;
+    --color-node:        #339933;
+    //--color-sqlserver: 
+    --color-git:         #F14E32;
+    --color-docker:      #1488C6;
+    --color-gulp:        #DA4648;
+    --color-unity:       #000000;
+    --color-unreal:      rgb(35, 35, 35, 0.7);
 }
 
 /* Mixins */
@@ -33,9 +44,41 @@
     transform: rotate($r) scale($s);
 }
 
+@mixin hexagon () {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    fill: white;
+    height: var(--hex-height);
+    justify-content: center;
+    margin: var(--hex-border) 0;
+    position: relative;
+    transition: var(--hex-transition);
+    width: var(--hex-width);
+}
+
+@mixin hexagonAfter() {
+    top: 100%;
+    width: 0;
+}
+
+@mixin hexagonBefore() {
+    bottom: 100%;
+}
+
+@mixin hexagonAfterBefore() {
+    border-left: var(--hex-margin) solid transparent;
+    border-right: var(--hex-margin) solid transparent;
+    content: "";
+    left: 0;
+    position: absolute;
+    transition: var(--hex-transition);
+    width: 0;
+}
 /* Hexagon Container */
 
 .hexagon-container {
+    background-color: var(--color-background-hex-grid);
     display: grid;
     grid-template-columns: var(--hex-width) var(--hex-width) var(--hex-width);
     grid-auto-rows: calc(var(--hex-width) - 28.87px/2);
@@ -46,47 +89,49 @@
 /* Hexagons */
 
 .hexagon {
-    align-items: center;
     background-color: var(--color-hex-default);
-    cursor: pointer;
-    display: flex;
-    fill: white;
-    height: var(--hex-height);
-    justify-content: center;
-    margin: var(--hex-border) 0;
-    position: relative;
-    transition: var(--hex-transition);
-    width: var(--hex-width);
-
+    @include hexagon();
 }
 
-.hexagon::after,
-.hexagon::before {
-    border-left: var(--hex-margin) solid transparent;
-    border-right: var(--hex-margin) solid transparent;
-    content: "";
-    left: 0;
-    position: absolute;
-    transition: var(--hex-transition);
-    width: 0;
-}
 .hexagon::after {
     border-top: var(--hex-border) solid var(--color-hex-default);
-    top: 100%;
-    width: 0;
+    @include hexagonAfter();
+    @include hexagonAfterBefore();
 }
 .hexagon::before {
     border-bottom: var(--hex-border) solid var(--color-hex-default);
-    bottom: 100%;
+    @include hexagonBefore();
+    @include hexagonAfterBefore();
+}
+
+.hex-selected {
+    background-color: var(--color-hex-selected);
+    @include hexagon();
+}
+
+.hex-selected::after {
+    border-top: var(--hex-border) solid var(--color-hex-selected);
+    @include hexagonAfter();
+    @include hexagonAfterBefore();
+}
+
+.hex-selected::before {
+    border-bottom: var(--hex-border) solid var(--color-hex-selected);
+    @include hexagonBefore();
+    @include hexagonAfterBefore();
 }
 
 /* HEX CONTENT */
-
 .hexagon > svg {
     height: 75%;
+    transition: var(--hex-transition);
+}
+.hex-selected > svg {
+    height: 100%;
+    transition: var(--hex-transition);
 }
 
-/* HOVER EFFECT  */
+/* Hover */
 
 .hexagon:hover {
     > svg {
@@ -95,14 +140,89 @@
 }
 
 /* Click Effect */
-.teste {
-    background-color: white;
+
+.fill-html {
+    fill: var(--color-html);
 }
-/* SPACING */
+
+.fill-css {
+    fill: var(--color-css);
+}
+
+.fill-sass {
+    fill: var(--color-sass);
+}
+
+.fill-react {
+    fill: var(--color-react);
+}
+
+.fill-angular {
+    fill: var(--color-angular);
+}
+
+.fill-vue {
+    fill: var(--color-vue);
+}
+
+.fill-js {
+    fill: var(--color-javascript);
+}
+
+.fill-csharp {
+    fill: var(--color-csharp);
+}
+
+.fill-ts {
+    fill: var(--color-ts);
+}
+
+.fill-ionic {
+    fill: var(--color-ionic);
+}
+
+.fill-node {
+    fill: var(--color-node);
+}
+
+.fill-sqlserver {
+    fill: var(--color-sqlserver);
+}
+
+.fill-git {
+    fill: var(--color-git);
+}
+
+.fill-docker {
+    fill: var(--color-docker);
+}
+
+.fill-gulp {
+    fill: var(--color-gulp);
+}
+
+.fill-unity {
+    fill: var(--color-unity);
+}
+
+.fill-unreal {
+    fill: var(--color-unreal);
+}
+
+/* Colors */
+
+.fill-sass {
+    fill: var(--color-sass);
+}
+
+/* Spacing */
 
 .hexagon:nth-child(6n+4),
 .hexagon:nth-child(6n+5),
-.hexagon:nth-child(6n+6) {
+.hexagon:nth-child(6n+6),
+.hex-selected:nth-child(6n+4),
+.hex-selected:nth-child(6n+5),
+.hex-selected:nth-child(6n+6) {
     margin-left: calc(var(--hex-width) / 2 + var(--hex-between) / 2)
 }
 /* End Hexagons */

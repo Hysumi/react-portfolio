@@ -26,13 +26,12 @@ class Hexagonal extends Component {
             });
         } else {
             this.setState({
-                toggleClass: this.props.class
+                toggleClass: "hex-selected " + this.props.class
             });
         }
     }
 
     render () {
-        console.log(this.state.toggleClass);
         return (
             <div onClick={this.toggleClick} className={this.state.toggleClass}>
                 <svg role="img" viewBox={this.props.viewBox} xmlns="http://www.w3.org/2000/svg">

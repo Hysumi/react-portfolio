@@ -7,7 +7,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "hexagon teste"
+        class: "fill-html"
     },
     {
         Name: "CSS",
@@ -16,7 +16,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "hexagon"
+        class: "fill-css"
     },
     {
         Name: "SASS",
@@ -25,7 +25,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "hexagon"
+        class: "fill-sass"
     },
     {
         Name: "React",
@@ -41,7 +41,7 @@ export const Icons = [
             r: "2.139"
         },
         viewBox: "0 0 24 24",
-        class: "hexagon"
+        class: "fill-react"
     },
     {
         Name: "Angular",
@@ -51,7 +51,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "hexagon"
+        class: "fill-angular"
     },
     {
         Name: "Vue",
@@ -60,7 +60,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "hexagon"
+        class: "fill-vue"
     },
     {
         Name: "JS",
@@ -69,7 +69,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "-0.5 0 25 25",
-        class: "hexagon"
+        class: "fill-js"
     },
     {
         Name: "C#",
@@ -78,7 +78,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 125 125",
-        class: "hexagon"
+        class: "fill-csharp"
     },
     {
         Name: "TypeScript",
@@ -87,7 +87,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "-10 0 270 270",
-        class: "hexagon"
+        class: "fill-ts"
     },
     {
         Name: "Ionic",
@@ -100,7 +100,7 @@ export const Icons = [
             r: "90"
         },
         viewBox: "45 45 425 425",
-        class: "hexagon"
+        class: "fill-ionic"
     },
     {
         Name: "NodeJS",
@@ -110,7 +110,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 600 600",
-        class: "hexagon"
+        class: "fill-node"
     },
     {
         Name: "SQL Server",
@@ -119,7 +119,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 1000 1000",
-        class: "hexagon"
+        class: "fill-sqlserver"
     },
     {
         Name: "Git",
@@ -128,7 +128,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "hexagon"
+        class: "fill-git"
     },
     {
         Name: "Docker",
@@ -137,7 +137,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "hexagon"
+        class: "fill-docker"
     },
     {
         Name: "Gulp",
@@ -146,7 +146,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "hexagon"
+        class: "fill-gulp"
     },
     {
         Name: "Unity",
@@ -155,7 +155,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "100 100 800 800",
-        class: "hexagon"
+        class: "fill-unity"
     },
     {
         Name: "Unreal",
@@ -164,7 +164,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "3 3 26 26",
-        class: "hexagon"
+        class: "fill-unreal"
     },
 ];
 
