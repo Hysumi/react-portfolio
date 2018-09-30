@@ -1,238 +1,36 @@
-:root {
-    /* Change this to change the appearance of the hexaons */
-    --hex-width: 100px;
-    --hex-between: 5px;
 
-    /* Other hexagon dimentions */
-    --hex-height: calc(var(--hex-width) / 1.73 /* sqrt(3) */);
-    --hex-margin: calc(var(--hex-width) / 2);
-    --hex-border: calc(var(--hex-margin) / 1.73 /* sqrt(3) */);
-    --hex-transition: all .2s ease;
-
-    /* Colors */
-    --color-background-hex-grid: rgb(215, 215, 215, 0.5);
-    --color-hex-default:         rgb(119, 119, 119, 0.5);
-    --color-hex-selected:#FFFFFF;
-    --color-html:        #E34F26;
-    --color-css:         #1572B6;
-    --color-sass:        #CC6699;
-    --color-react:       #61DAFB;
-    --color-angular:     #DD0031;
-    --color-vue:         #4FC08D;
-    --color-javascript:  #F7DF1E;
-    --color-csharp:      #803970;
-    --color-ts:          #028be8;
-    --color-ionic:       #509CF6;
-    --color-node:        #339933;
-    --color-sqlserver:   #750000;
-    --color-git:         #F14E32;
-    --color-docker:      #1488C6;
-    --color-gulp:        #DA4648;
-    --color-unity:       #000000;
-    --color-unreal:      rgb(35, 35, 35, 0.7);
-}
-
-/* Mixins */
-
-@mixin hoverEffect ($t, $r, $s) {
-    -webkit-transition: $t;
-    -moz-transition: $t;
-    transition: $t;
-
-    -webkit-transform: rotate($r) scale($s);
-    -moz-transform: rotate($r) scale($s);
-    transform: rotate($r) scale($s);
-}
-
-@mixin hexagon () {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    fill: white;
-    height: var(--hex-height);
-    justify-content: center;
-    margin: var(--hex-border) 0;
-    position: relative;
-    transition: var(--hex-transition);
-    width: var(--hex-width);
-}
-
-@mixin hexagonAfter() {
-    top: 100%;
-    width: 0;
-}
-
-@mixin hexagonBefore() {
-    bottom: 100%;
-}
-
-@mixin hexagonAfterBefore() {
-    border-left: var(--hex-margin) solid transparent;
-    border-right: var(--hex-margin) solid transparent;
-    content: "";
-    left: 0;
-    position: absolute;
-    transition: var(--hex-transition);
-    width: 0;
-}
-/* Hexagon Container */
-
-.hexagon-container {
-    background-color: var(--color-background-hex-grid);
-    display: grid;
-    grid-template-columns: var(--hex-width) var(--hex-width) var(--hex-width);
-    grid-auto-rows: calc(var(--hex-width) - 28.87px/2);
-    grid-gap: var(--hex-between) var(--hex-between);
-    padding: var(--hex-border);
-}
-
-/* Hexagons */
-
-.hexagon {
-    background-color: var(--color-hex-default);
-    @include hexagon();
-}
-
-.hexagon::after {
-    border-top: var(--hex-border) solid var(--color-hex-default);
-    @include hexagonAfter();
-    @include hexagonAfterBefore();
-}
-.hexagon::before {
-    border-bottom: var(--hex-border) solid var(--color-hex-default);
-    @include hexagonBefore();
-    @include hexagonAfterBefore();
-}
-
-.hex-selected {
-    background-color: var(--color-hex-selected);
-    @include hexagon();
-}
-
-.hex-selected::after {
-    border-top: var(--hex-border) solid var(--color-hex-selected);
-    @include hexagonAfter();
-    @include hexagonAfterBefore();
-}
-
-.hex-selected::before {
-    border-bottom: var(--hex-border) solid var(--color-hex-selected);
-    @include hexagonBefore();
-    @include hexagonAfterBefore();
-}
-
-/* HEX CONTENT */
-.hexagon > svg {
-    height: 75%;
-    transition: var(--hex-transition);
-}
-.hex-selected > svg {
-    height: 100%;
-    transition: var(--hex-transition);
-}
-
-/* Hover */
-
-.hexagon:hover {
-    > svg {
-        @include hoverEffect(0.3s ease, 10deg, 1.3);
-    }
-}
-
-/* Click Effect */
-
-.fill-html {
-    fill: var(--color-html);
-}
-
-.fill-css {
-    fill: var(--color-css);
-}
-
-.fill-sass {
-    fill: var(--color-sass);
-}
-
-.fill-react {
-    fill: var(--color-react);
-}
-
-.fill-angular {
-    fill: var(--color-angular);
-}
-
-.fill-vue {
-    fill: var(--color-vue);
-}
-
-.fill-js {
-    fill: var(--color-javascript);
-}
-
-.fill-csharp {
-    fill: var(--color-csharp);
-}
-
-.fill-ts {
-    fill: var(--color-ts);
-}
-
-.fill-ionic {
-    fill: var(--color-ionic);
-}
-
-.fill-node {
-    fill: var(--color-node);
-}
-
-.fill-sqlserver {
-    fill: var(--color-sqlserver);
-}
-
-.fill-git {
-    fill: var(--color-git);
-}
-
-.fill-docker {
-    fill: var(--color-docker);
-}
-
-.fill-gulp {
-    fill: var(--color-gulp);
-}
-
-.fill-unity {
-    fill: var(--color-unity);
-}
-
-.fill-unreal {
-    fill: var(--color-unreal);
-}
-
-/* Colors */
-
-.fill-sass {
-    fill: var(--color-sass);
-}
-
-/* Spacing */
-
-.hexagon:nth-child(6n+4),
-.hexagon:nth-child(6n+5),
-.hexagon:nth-child(6n+6),
-.hex-selected:nth-child(6n+4),
-.hex-selected:nth-child(6n+5),
-.hex-selected:nth-child(6n+6) {
-    margin-left: calc(var(--hex-width) / 2 + var(--hex-between) / 2)
-}
-/* End Hexagons */
-
-
-.grid-container {
+.skills-container {
+    /* Location of the image */
     height: 100vh;
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 100%;
-    grid-gap: 0px 2em;
-    grid-template-areas: ". .";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(45, 76, 102);
+    padding-top: 70px;
+}
+
+h1 {
+	color: #fff;
+    font-family: sans-serif;
+	border-bottom: 3px solid #16e28a;
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 72px;
+	letter-spacing: 15px;
+    margin-bottom: 30px;
+	text-align: center;
+	text-indent: 24px;
+	text-transform: uppercase;
+}
+
+p {
+	color: #fff;
+	font-size: 28px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 48px;
+	max-width: 640px;
+	margin: 0 auto 48px;
+	text-align: center;
 }
