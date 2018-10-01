@@ -5,7 +5,6 @@ $color_grey: #e2e2e2;
 $color_grey_dark: #a2a2a2;
 
  /* Colors */
-$color-hex-selected:#FFFFFF;
 $color-html:        #E34F26;
 $color-css:         #1572B6;
 $color-sass:        #CC6699;
@@ -25,7 +24,7 @@ $color-unity:       #000000;
 $color-unreal:      rgba(35, 35, 35, 0.7);
 
 .cardContainer {
-    display: block;
+    display: flex;
     background-color: rgb(238, 253, 247);
     width: 450px;
     height: 100%;
@@ -34,37 +33,44 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
     margin: 1em;
 }
 
+.imageContainer {
+    padding: 15px 15px 10px 15px;
+    background-color: white;
+    border: silver 2px solid;
+}
 .iconContainer {
-    margin-top: 165px;
+    margin-top: 255px;
     margin-left: 10px;
-    max-width: 70px;
-    h2 {
-        font-size: 12px;
-    }
-    span {
-        border: 1px gray solid;
-        border-radius: 100px;
-        padding: 0 3px;
-    }
-    .line {
-        display: flex;
-        white-space: nowrap;
-    }
-    .line:before,
-    .line:after {
-        background: linear-gradient(to bottom, silver , $color_grey_dark) no-repeat center / 98% .15em;
-        content: '';
-        display: flex;
-        width: 50%;
-    }
+    width: 100px;
 }
-/* Icons */
-
-svg {
-    height: 100%;
-    width: 70px;
+h2 {
+    font-size: 12px;
+}
+span {
+    border: 1px gray solid;
+    border-radius: 100px;
+    padding: 0 3px;
+    background-color: white;
+}
+.line {
+    display: flex;
+    white-space: nowrap;
+    margin: 0px;
+}
+.line:before,
+.line:after {
+    background: linear-gradient(to bottom, silver , $color_grey_dark) no-repeat center / 98% .2em;
+    content: '';
+    display: flex;
+    width: 50%;
 }
 
+.line-top {
+    margin-bottom: -9px;
+}
+.line-bottom {
+    margin-top: -9px;
+}
 /* Color Fill */
 
 .fill-html {
