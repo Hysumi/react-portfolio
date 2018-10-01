@@ -51,16 +51,21 @@ p {
 
 /* Cards */
 
-.cards {
-    position: relative;
+.ruleCardContainer {
     width: 300px;
-    height: 400px;
+    height: 100px;
+    padding-top: 5px;
+    padding-left: 35px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 50px;
+    background-color:rgba(22, 226, 138, 0.2);
 }
 
 .rulesContainer {
     position: relative;
-    width: 300px;
-    height: 440px;
+    width: 450px;
+    height: 380px;
     overflow: hidden;
     background-color: #eee;
     border-radius:5px;
@@ -75,15 +80,15 @@ p {
     float: left;
     width: 100%;
     text-transform: uppercase;
-    padding: 1em;
-    border-bottom: 0.1em solid #16e28a;
-    background-color:rgba(22, 226, 138, 0.2);
+    padding-top: 5px;
+    padding-bottom: 30px;
+    padding-left: 25px;
 }
 
 .rulesContent {
     position: absolute;
     background-color:rgba(22, 226, 138, 0.1);
-    padding-top: 70px;
+    padding: 1em;
     height: 100%;
     width: 100%;
     border-radius:5px;
@@ -99,8 +104,8 @@ p {
     display: block;
     clear: both;
     counter-increment: list;
-    padding-bottom: 2rem;
-    font-size: 1.1rem;
+    font-size: 1em;
+    margin-bottom: 1.5em;
     line-height: 1.375;
     position: relative;
 }
@@ -134,17 +139,15 @@ p {
     z-index: -1;
     border-top-left-radius: 3px;
 }
-
+.oneLine {
+    line-height: 2.5;
+}
 .headline {
     padding: 0rem 0 0 0;
     margin: 0 0 1rem 0;
     font: normal 2rem ;
 }
 
-.techContainer {
-    width: 700px;
-    background-color: white;
-}
 /* End of Cards */
 
 @media only screen and (max-width: 1279px) {
