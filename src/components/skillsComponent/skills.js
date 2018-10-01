@@ -18,7 +18,6 @@ class Skills extends Component {
                     <BasicCard/>
                     <BasicCard/>
                     <BasicCard/>
-
                 </div>
             </div>
         );

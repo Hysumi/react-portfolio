@@ -77,6 +77,51 @@ class BasicCard extends Component {
                     </div>
                     <h2 className="line line-bottom"><span>SASS</span></h2>
                 </div>
+                <div className="iconContainer">
+                    <h2 className="line line-top"><span>Lv. 5</span></h2>
+                    <div className="imageContainer">
+                        <svg role="img" viewBox={Icons[2].viewBox} xmlns="http://www.w3.org/2000/svg">
+                            <path className="fill-sass" key={Icons[2].key} d={Icons[2].path}/>
+                        </svg>
+                    </div>
+                    <h2 className="line line-bottom"><span>SASS</span></h2>
+                </div>
+                <div className="iconContainer">
+                    <h2 className="line line-top"><span>Lv. 5</span></h2>
+                    <div className="imageContainer">
+                        <svg role="img" viewBox={Icons[2].viewBox} xmlns="http://www.w3.org/2000/svg">
+                            <path className="fill-sass" key={Icons[2].key} d={Icons[2].path}/>
+                        </svg>
+                    </div>
+                    <h2 className="line line-bottom"><span>SASS</span></h2>
+                </div>
+                <div className="iconContainer">
+                    <h2 className="line line-top"><span>Lv. 5</span></h2>
+                    <div className="imageContainer">
+                        <svg role="img" viewBox={Icons[2].viewBox} xmlns="http://www.w3.org/2000/svg">
+                            <path className="fill-sass" key={Icons[2].key} d={Icons[2].path}/>
+                        </svg>
+                    </div>
+                    <h2 className="line line-bottom"><span>SASS</span></h2>
+                </div>
+                <div className="iconContainer">
+                    <h2 className="line line-top"><span>Lv. 5</span></h2>
+                    <div className="imageContainer">
+                        <svg role="img" viewBox={Icons[2].viewBox} xmlns="http://www.w3.org/2000/svg">
+                            <path className="fill-sass" key={Icons[2].key} d={Icons[2].path}/>
+                        </svg>
+                    </div>
+                    <h2 className="line line-bottom"><span>SASS</span></h2>
+                </div>
+                <div className="iconContainer">
+                    <h2 className="line line-top"><span>Lv. 5</span></h2>
+                    <div className="imageContainer">
+                        <svg role="img" viewBox={Icons[2].viewBox} xmlns="http://www.w3.org/2000/svg">
+                            <path className="fill-sass" key={Icons[2].key} d={Icons[2].path}/>
+                        </svg>
+                    </div>
+                    <h2 className="line line-bottom"><span>SASS</span></h2>
+                </div>
             </div>
         );
     }

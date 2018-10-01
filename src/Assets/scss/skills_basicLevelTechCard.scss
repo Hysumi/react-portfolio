@@ -24,7 +24,9 @@ $color-unity:       #000000;
 $color-unreal:      rgba(35, 35, 35, 0.7);
 
 .cardContainer {
+    justify-content: center;
     display: flex;
+    flex-wrap: wrap;
     background-color: rgb(238, 253, 247);
     width: 450px;
     height: 100%;
@@ -39,9 +41,8 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
     border: silver 2px solid;
 }
 .iconContainer {
-    margin-top: 255px;
-    margin-left: 10px;
-    width: 100px;
+    margin: 0.5em;
+    width: 70px;
 }
 h2 {
     font-size: 12px;
