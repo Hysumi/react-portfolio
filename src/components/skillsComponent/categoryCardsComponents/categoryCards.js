@@ -3,9 +3,9 @@ import React, { Component } from "react";
 // components
 
 // imports
-import "../../../Assets/css/skills.min.css";
+import "../../../Assets/css/skills_basicCard.min.css";
 
-class CategoryCard extends Component {
+class BasicCategoryCard extends Component {
     render () {
         return (
             <div className="ruleCardContainer">
@@ -15,10 +15,10 @@ class CategoryCard extends Component {
                 <div className="rulesContainer">
                     <div className="rulesContent">
                         <ol className="levelsList">
-                            <li className="levelItem oneLine">
+                            <li className="levelItem">
                                 Li sobre o assunto.
                             </li>
-                            <li className="levelItem oneLine">
+                            <li className="levelItem">
                                 Estudei sobre o Assunto.
                             </li>
                             <li className="levelItem">
@@ -38,4 +38,4 @@ class CategoryCard extends Component {
     }
 }
 
-export default CategoryCard;
+export default BasicCategoryCard;
