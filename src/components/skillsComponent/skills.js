@@ -15,7 +15,9 @@ class Skills extends Component {
                 <p>Em cada Categoria, classifico meu conhecimento técnico com base no que estudei e/ou desenvolvi em níveis de 1 à 10.</p>
 
                 <div className="skills-flex-container">
-                    <CategoryCard/>
+                    <div className="cardContainer">
+                        <CategoryCard/>
+                    </div>
                 </div>
             </div>
         );

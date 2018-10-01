@@ -6,7 +6,7 @@
 
 .skills-container {
     /* Location of the image */
-    height: 100vh;
+    height: 100%;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -55,7 +55,7 @@ p {
     width: 300px;
     height: 100px;
     padding-top: 5px;
-    padding-left: 35px;
+    padding-left: 15px;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 5px;
     border-top-left-radius: 50px;
@@ -64,8 +64,8 @@ p {
 
 .rulesContainer {
     position: relative;
-    width: 450px;
-    height: 380px;
+    width: 400px;
+    height: 375px;
     overflow: hidden;
     background-color: #eee;
     border-radius:5px;
@@ -142,12 +142,15 @@ p {
 .oneLine {
     line-height: 2.5;
 }
-.headline {
-    padding: 0rem 0 0 0;
-    margin: 0 0 1rem 0;
-    font: normal 2rem ;
-}
 
+.cardContainer {
+    background-color: white;
+    width: 450px;
+    height: 100%;
+    padding: 1em 0.5em;
+    border-radius: 5px;
+    margin-bottom: 70px;
+}
 /* End of Cards */
 
 @media only screen and (max-width: 1279px) {
