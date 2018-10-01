@@ -14,16 +14,12 @@ class BasicCard extends Component {
         return (
             <div className="cardContainer">
                 <BasicCategoryCard/>
-                <div className="skill-card">
-                    <div className="levelContainer">
-                        <span>Nível</span>
-                        <span>2</span>
-                    </div>
-                    <div className="techContainer">
-                        <svg role="img" viewBox={Icons[1].viewBox} xmlns="http://www.w3.org/2000/svg">
-                            <path className="fill-html" key={Icons[1].key} d={Icons[1].path}/>
-                        </svg>
-                    </div>
+                <div className="iconContainer">
+                    <h2 className="line"><span>Lv. 5</span></h2>
+                    <svg role="img" viewBox={Icons[1].viewBox} xmlns="http://www.w3.org/2000/svg">
+                        <path className="fill-html" key={Icons[1].key} d={Icons[1].path}/>
+                    </svg>
+                    <h2 className="line"><span>HTML</span></h2>
                 </div>
             </div>
         );

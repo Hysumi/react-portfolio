@@ -16,6 +16,9 @@ class Skills extends Component {
 
                 <div className="skills-flex-container">
                     <BasicCard/>
+                    <BasicCard/>
+                    <BasicCard/>
+
                 </div>
             </div>
         );
