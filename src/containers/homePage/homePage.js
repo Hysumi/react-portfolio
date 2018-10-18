@@ -12,30 +12,9 @@ class HomePage extends Component {
     render () {
         return (
             <div className="mainContainer">
-                <div class="homeContainer">
-                    <h1>
-                        teste
-                    </h1>
-                </div>
-                <div class="contentContainer">
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-
+                <div className="contentContainer">
+                <br/>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 </div>
             </div>
         );
