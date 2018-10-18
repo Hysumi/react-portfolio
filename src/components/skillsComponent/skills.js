@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 
-// components
 
 // imports
-// import "../../assets/css/skills.min.css";
+import "../../assets/bundles/skillsComponent/skills.min.css";
 
 class Skills extends Component {
     render () {

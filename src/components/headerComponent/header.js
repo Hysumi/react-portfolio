@@ -123,8 +123,8 @@ class Header extends Component {
                 <div className="navBar">
                     <div className="navBar__container">
                         <div className="navBar__item" onClick={this.scrollToTop}>Home</div>
-                        <div className="navBar__item"onClick={this.navClicked}>
-                            <Link
+                        <div className="navBar__item" onClick={this.navClicked}>
+                            <Link className="navBar__link"
                                 to="skills"
                                 smooth={true}
                                 duration={800}
@@ -133,7 +133,7 @@ class Header extends Component {
                             </Link>
                         </div>
                         <div className="navBar__item">
-                            <Link
+                            <Link className="navBar__link"
                                 to="aboutMe"
                                 smooth={true}
                                 duration={800}
@@ -142,7 +142,7 @@ class Header extends Component {
                             </Link>
                         </div>
                         <div className="navBar__item">Projects</div>
-                        <div className="navBar__item"onClick={this.scrollToBottom}>
+                        <div className="navBar__item" onClick={this.scrollToBottom}>
                             Contact
                         </div>
                     </div>

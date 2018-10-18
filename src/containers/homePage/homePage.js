@@ -13,8 +13,9 @@ class HomePage extends Component {
         return (
             <div className="mainContainer">
                 <div className="contentContainer">
-                <br/>
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <Element name="skills">
+                        <Skills/>
+                    </Element>
                 </div>
             </div>
         );
