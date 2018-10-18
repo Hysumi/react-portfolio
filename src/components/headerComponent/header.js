@@ -13,7 +13,7 @@ class Header extends Component {
 
         this.state = {
             lastScrollTop: 0,
-            navClass: "header header--down",
+            navClass: "nav-down",
             navClicked: false
         };
 
@@ -57,13 +57,13 @@ class Header extends Component {
 
     hideHeader () {
         this.setState({
-            navClass: "header header--up"
+            navClass: "nav-up"
         });
     }
 
     showHeader () {
         this.setState({
-            navClass: "header header--down"
+            navClass: "nav-down"
         });
     }
 
@@ -103,7 +103,7 @@ class Header extends Component {
             this._timeout = null;
             if (this.state.navClicked) {
                 this.setState({
-                    navClass: "header header--up",
+                    navClass: "nav-up",
                     navClicked: false
                 });
             }
@@ -120,49 +120,36 @@ class Header extends Component {
 
         return (
             <header className={this.state.navClass}>
-                <div className="navBar">
-                    <input className="navBar_input" type="checkbox" id="navBar_input" />
-
-                    <label className="menu_icon" htmlFor="navBar_input"> <span className="nav_icon"></span></label>
-                    <ul className="navBar_menu">
-                        <li>
-                            <div className="navigationBar__item" onClick={this.scrollToTop}>
-                                Home
+                <div className="navigationBar">
+                    <div className="navigationBar__container">
+                        <div className="navigationBar__item navigationBar__item--first" onClick={this.scrollToTop}>
+                            Home
+                        </div>
+                        <Link
+                            to="skills"
+                            smooth={true}
+                            duration={800}
+                            offset={0}>
+                            <div className="navigationBar__item" onClick={this.navClicked}>
+                                Skills
                             </div>
-                        </li>
-                        <li>
-                            <Link
-                                to="skills"
-                                smooth={true}
-                                duration={800}
-                                offset={0}>
-                                <div className="navigationBar__item" onClick={this.navClicked}>
-                                    Skills
-                                </div>
-                            </Link>    
-                        </li>
-                        <li>
-                            <Link
-                                to="aboutMe"
-                                smooth={true}
-                                duration={800}
-                                offset={0}>
-                                <div className="navigationBar__item">
-                                    Experience
-                                </div>
-                            </Link>    
-                        </li>
-                        <li> 
+                        </Link>
+                        <Link
+                            to="aboutMe"
+                            smooth={true}
+                            duration={800}
+                            offset={0}>
                             <div className="navigationBar__item">
-                                Projects
+                                Experience
                             </div>
-                        </li>
-                        <li> 
-                            <div className="navigationBar__item" onClick={this.scrollToBottom}>
-                                Contact
-                            </div>
-                        </li>
-                    </ul>
+                        </Link>
+                        <div className="navigationBar__item">
+                            Projects
+                        </div>
+                        <div className="navigationBar__item" onClick={this.scrollToBottom}>
+                            Contact
+                        </div>
+                    </div>
                 </div>
             </header>
         );
