@@ -1,15 +1,31 @@
-/*
- * Vars
- */
-$header-height: 70px;
-$header-navItemColor: #afafaf;
-$header-navItemBackgroundColor: rgba(156, 156, 156, 0.5);
-
 $black: #010000;
 $white: #ffffff;
 $lightGrey: #e6e6e6;
 $darkGrey: #333;
 $red: #ff1755;
+$lighter: rgba(182, 147, 132, 0.5); 
+$light: #ffd0bc; 
+$main: #bd9184; 
+$button: #dc7c40;
+$darkBrown: #412f2f;
+$dark: #201718;
+
+
+/*
+ * Mixins
+ */
+@mixin scaleX ($e) {
+    -webkit-transform: scaleX($e);
+    -moz-transform: scaleX($e);
+    transition: $e;
+}
+
+@mixin transition ($e) {
+    -webkit-transition: $e;
+    -moz-transition: $e;
+    transition: $e;
+}
+
 
 /*
  * Fonts

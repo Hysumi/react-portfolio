@@ -6,7 +6,6 @@ import {
 
 // components
 import Header from "./components/headerComponent/header";
-import Footer from "./components/footerComponent/footer";
 import Homepage from "./containers/pages/homePage";
 
 class App extends Component {
@@ -16,7 +15,8 @@ class App extends Component {
                 <div className="App">
                     <Header />
                     <Route exact path="/" component={Homepage} />
-                    <Footer />
+                    <br></br>
+                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                 </div>
             </Router>
         );

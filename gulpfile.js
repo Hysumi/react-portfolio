@@ -6,28 +6,43 @@ var rename = require('gulp-rename');
 var changed = require('gulp-changed');
 
 var paths = {
-    styles: {
-      src: './src/Assets/scss/*.scss',
-      dest: './src/Assets/css'
+    components: {
+      src: './src/components/**/*.scss',
+      dest: './src/assets/bundles'
+    },
+    library: {
+        src: './src/library/**/*.scss',
+        dest: './src/assets/bundles'
     }
 };
 
-function styles() {
-    return gulp.src(paths.styles.src)
+function components() {
+    return gulp.src(paths.components.src)
     .pipe(sass())
     .pipe(minifyCSS())
     .pipe(rename({suffix: '.min'}))
-    .pipe(changed(paths.styles.dest))
-    .pipe(gulp.dest(paths.styles.dest));
+    .pipe(changed(paths.components.dest))
+    .pipe(gulp.dest(paths.components.dest));
+}
+
+function library () {
+    return gulp.src(paths.library.src)
+    .pipe(sass())
+    .pipe(minifyCSS())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(changed(paths.library.dest))
+    .pipe(gulp.dest(paths.library.dest));
 }
 
 function watch() {
-    gulp.watch(paths.styles.src, styles);
+    gulp.watch(paths.components.src, components);
+    gulp.watch(paths.library.src, components);
 }
-exports.styles = styles;
+
+exports.components = components;
 exports.watch = watch;
 
-var build = gulp.series(styles);
+var build = gulp.series(library, components);
 var watch = gulp.series(watch);
 
 gulp.task('watch', watch);

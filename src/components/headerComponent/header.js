@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 // includes
-import "../../Assets/css/header.min.css";
+import "../../assets/bundles/headerComponent/header.min.css";
 
 const delta = 5;
 const navbarHeight = 70;
@@ -13,7 +13,7 @@ class Header extends Component {
 
         this.state = {
             lastScrollTop: 0,
-            navClass: "nav-down",
+            navClass: "header header--down",
             navClicked: false
         };
 
@@ -57,13 +57,13 @@ class Header extends Component {
 
     hideHeader () {
         this.setState({
-            navClass: "nav-up"
+            navClass: "header header--up"
         });
     }
 
     showHeader () {
         this.setState({
-            navClass: "nav-down"
+            navClass: "header header--down"
         });
     }
 
@@ -103,7 +103,7 @@ class Header extends Component {
             this._timeout = null;
             if (this.state.navClicked) {
                 this.setState({
-                    navClass: "nav-up",
+                    navClass: "header header--up",
                     navClicked: false
                 });
             }
@@ -120,36 +120,49 @@ class Header extends Component {
 
         return (
             <header className={this.state.navClass}>
-                <div className="navigationBar">
-                    <div className="navigationContainer">
-                        <div className="navItem" onClick={this.scrollToTop}>
-                            Home
-                        </div>
-                        <Link
-                            to="skills"
-                            smooth={true}
-                            duration={800}
-                            offset={0}>
-                            <div className="navItem" onClick={this.navClicked}>
-                                Skills
+                <div className="navBar">
+                    <input className="navBar_input" type="checkbox" id="navBar_input" />
+
+                    <label className="menu_icon" htmlFor="navBar_input"> <span className="nav_icon"></span></label>
+                    <ul className="navBar_menu">
+                        <li>
+                            <div className="navigationBar__item" onClick={this.scrollToTop}>
+                                Home
                             </div>
-                        </Link>
-                        <Link
-                            to="aboutMe"
-                            smooth={true}
-                            duration={800}
-                            offset={0}>
-                            <div className="navItem">
-                                Experience
+                        </li>
+                        <li>
+                            <Link
+                                to="skills"
+                                smooth={true}
+                                duration={800}
+                                offset={0}>
+                                <div className="navigationBar__item" onClick={this.navClicked}>
+                                    Skills
+                                </div>
+                            </Link>    
+                        </li>
+                        <li>
+                            <Link
+                                to="aboutMe"
+                                smooth={true}
+                                duration={800}
+                                offset={0}>
+                                <div className="navigationBar__item">
+                                    Experience
+                                </div>
+                            </Link>    
+                        </li>
+                        <li> 
+                            <div className="navigationBar__item">
+                                Projects
                             </div>
-                        </Link>
-                        <div className="navItem">
-                            Projects
-                        </div>
-                        <div className="navItem" onClick={this.scrollToBottom}>
-                            Contact
-                        </div>
-                    </div>
+                        </li>
+                        <li> 
+                            <div className="navigationBar__item" onClick={this.scrollToBottom}>
+                                Contact
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </header>
         );
