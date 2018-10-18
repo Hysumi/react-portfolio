@@ -49,7 +49,7 @@ function containers () {
 
 function watch() {
     gulp.watch(paths.components.src, components);
-    gulp.watch(paths.library.src, components);
+    gulp.watch(paths.library.src, library);
     gulp.watch(paths.containers.src, containers);
 }
 
