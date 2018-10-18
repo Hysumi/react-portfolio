@@ -1,80 +1,100 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:400,300,700|Pacifico|Julius+Sans+One";
 @import "../../library/config/config.scss";
 
-/*
- * Vars
- */
+
+
 $height: 70px;
 $navItemColor: #afafaf;
-$navItemBackgroundColor: rgba(156, 156, 156, 0.5);
+$navItemBackgroundColor: white;
 
-header {
-    z-index: 99;
-    background: rgba(255,255,255,.95);
-    height: $height;
-    position: fixed;
+.navBar {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: $navItemBackgroundColor;
     top: 0;
-    transition: top 0.1s ease-in-out;
-    width: 100%;
-    -webkit-box-shadow:  0px 0px 5px rgba(204, 204, 204, 0.6);
-    box-shadow: 0px 0px 5px rgba(204, 204, 204, 0.6);
-    box-sizing: content-box;
-    line-height: $height;
-    text-transform: uppercase;
-    font-family: sans-serif;
-}
+    height: 38px;
+    z-index: 1;
 
-.navigationBar {
-    position: relative;
-    height: $height;
-    width: 100%;
-    display: flex;
+    &__label {
+        color: $navItemColor;
+        display: block;
+        line-height: 2;
+        text-align: center;
+        cursor: pointer;
+        margin: 0;
+    }
     
-    &__container {
-        display: flex;
-        flex-flow: row wrap;
-        margin-left: auto;
-        margin-right: auto;
+    &__label::after {
+        content: '\25bc';
+        font-size: 0.7em;
+        margin-left: 0.5em;
+    }
+
+    &__list {
+        background-color: $navItemBackgroundColor;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__list,  [id^='toggle'] {
+        display: none;
+    }
+    
+    [id^='toggle']:checked ~ &__list {
+        display: inline-block;
     }
 
     &__item {
-        margin-right: 1em;
-        font-size: 1em;
         cursor: pointer;
-        position: relative;
-        text-decoration: none;
-        color: $navItemColor;
-        padding: 0;
-        font-family: "Roboto";
-        text-transform: none;
-        text-align: center;
-        &:before{
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            top: 2.5em;
-            left: 0;
-            background-color: $navItemBackgroundColor;
-            visibility: hidden;
-            @include scaleX(0);
-            @include transition(all 0.3s ease-in-out 0s);
-        }
-        &:hover:before{
-            visibility: visible;
-            @include scaleX(1);
-        }
+        display: block;
+    }
 
-        &--first {
-            margin-left: 1em;
-        }
+    &__link {
+        color: $navItemColor;
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        word-wrap: break-word;
+        @include transition(.25s all ease);
+    }
+    &__list_item &__list_item &__link,
+    &__item &__item {
+        padding: 10px 10px 10px 30px;
+    }
+    
+    &__link:hover,
+    &__link:active:hover{
+        background: $navItemColor;
+        color: $navItemBackgroundColor;
     }
 }
 
-.nav-up {
-    top: -($height + 1px + 5px);
-}
+@media all and (min-width : 425px) {
+    .navBar {
+        text-align: center;
+        &_label {
+            display: none;
+        }
 
-@media all and (min-width : 900px) {
-
+        &_list {
+            display: inline-block;
+            width: auto;
+            &_item {
+                display: inline-block;
+                position: relative;
+            }
+        }
+        &_list_item &_list {
+            position: absolute;
+        }
+        &_list_item &_list_item &_link,
+        &_list_item &_list_item {
+            padding: 10px 20px;
+        }
+    }
 }
