@@ -120,47 +120,33 @@ class Header extends Component {
 
         return (
             <header className={this.state.navClass}>
-                <nav class='navBar'>
-                    <input type='checkbox' id='toggle'/>
-                    <label htmlFor='toggle' class='navBar__label'>Menu</label>
-                    <ul class='navBar__list'>
-                        <li class='navBar__item'>
-                            <div class='navBar__link' onClick={this.scrollToTop}>Home</div>
-                        </li>
-                        <li class='navBar__item'>
-                            <div className="navBar__link" onClick={this.navClicked}>
-                                <Link
-                                    to="skills"
-                                    smooth={true}
-                                    duration={800}
-                                    offset={0}>
-                                        Skills
-                                </Link>
-                            </div>
-                        </li>
-                        <li class='navBar__item'>
-                            <div className="navBar__link">
-                                <Link
-                                    to="aboutMe"
-                                    smooth={true}
-                                    duration={800}
-                                    offset={0}>
-                                        Experience
-                                </Link>
-                            </div>
-                        </li>
-                        <li class='navBar__item'>
-                            <div className="navBar__link">
-                                Projects
-                            </div>
-                        </li>
-                        <li class='navBar__item'>
-                            <div className="navBar__link" onClick={this.scrollToBottom}>
-                                Contact
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
+                <div className="navBar">
+                    <div className="navBar__container">
+                        <div className="navBar__item" onClick={this.scrollToTop}>Home</div>
+                        <div className="navBar__item"onClick={this.navClicked}>
+                            <Link
+                                to="skills"
+                                smooth={true}
+                                duration={800}
+                                offset={0}>
+                                    Skills
+                            </Link>
+                        </div>
+                        <div className="navBar__item">
+                            <Link
+                                to="aboutMe"
+                                smooth={true}
+                                duration={800}
+                                offset={0}>
+                                    Experience
+                            </Link>
+                        </div>
+                        <div className="navBar__item">Projects</div>
+                        <div className="navBar__item"onClick={this.scrollToBottom}>
+                            Contact
+                        </div>
+                    </div>
+                </div>
             </header>
         );
     }

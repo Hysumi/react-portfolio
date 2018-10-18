@@ -1,100 +1,74 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:400,300,700|Pacifico|Julius+Sans+One";
 @import "../../library/config/config.scss";
 
-
-
 $height: 70px;
-$navItemColor: #afafaf;
-$navItemBackgroundColor: white;
+$navItemColor: #979797;
+$navItemBackgroundColor: rgba(255,255,255,.95);
 
-.navBar {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+header {
+    z-index: 99;
+    background: $navItemBackgroundColor;
+    height: $height;
     width: 100%;
-    background-color: $navItemBackgroundColor;
+    position: fixed;
     top: 0;
-    height: 38px;
-    z-index: 1;
+    transition: top 0.1s ease-in-out;
+    font-family: "Roboto";
 
-    &__label {
-        color: $navItemColor;
-        display: block;
-        line-height: 2;
-        text-align: center;
-        cursor: pointer;
-        margin: 0;
-    }
-    
-    &__label::after {
-        content: '\25bc';
-        font-size: 0.7em;
-        margin-left: 0.5em;
-    }
+}
 
-    &__list {
-        background-color: $navItemBackgroundColor;
-        list-style: none;
-        margin: 0;
-        padding: 0;
+.navBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $navItemBackgroundColor;
+    text-align: center;
+    padding: 0 2em;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 0;
         width: 100%;
-        text-align: center;
-    }
-
-    &__list,  [id^='toggle'] {
-        display: none;
-    }
-    
-    [id^='toggle']:checked ~ &__list {
-        display: inline-block;
+        height: $height;
+        -webkit-box-shadow:  0 0 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        background: $navItemBackgroundColor;
+        z-index: 10;
     }
 
     &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        color: $navItemColor;
+        letter-spacing: 0.1em;
+        transition: all 0.5s ease;
+        font-size: 0.6em;
+        margin: 0 .5em;
         cursor: pointer;
-        display: block;
     }
 
-    &__link {
-        color: $navItemColor;
-        display: block;
-        padding: 10px 20px;
-        text-decoration: none;
-        word-wrap: break-word;
-        @include transition(.25s all ease);
-    }
-    &__list_item &__list_item &__link,
-    &__item &__item {
-        padding: 10px 10px 10px 30px;
-    }
-    
-    &__link:hover,
-    &__link:active:hover{
+    &__item:active:hover{
         background: $navItemColor;
         color: $navItemBackgroundColor;
     }
 }
 
-@media all and (min-width : 425px) {
-    .navBar {
-        text-align: center;
-        &_label {
-            display: none;
-        }
+.nav-up {
+    top: -($height + 1px + 5px);
+}
 
-        &_list {
-            display: inline-block;
-            width: auto;
-            &_item {
-                display: inline-block;
-                position: relative;
-            }
+@media (min-width: 768px) {
+	.navBar__item {
+        font-size: 0.75em;
+        margin: 0 .9em;
+        &:hover {
+            background: $navItemColor;
+            color: $navItemBackgroundColor;
         }
-        &_list_item &_list {
-            position: absolute;
-        }
-        &_list_item &_list_item &_link,
-        &_list_item &_list_item {
-            padding: 10px 20px;
-        }
-    }
+	}
 }
