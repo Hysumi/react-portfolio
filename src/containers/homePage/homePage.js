@@ -11,10 +11,31 @@ class HomePage extends Component {
 
     render () {
         return (
-            <div className="MainContainer">
-                <div className="container-fluid">
-                    <div className="container-content">
-                    </div>
+            <div className="mainContainer">
+                 <div class="homeContainer">
+                    <h1>
+                        teste
+                    </h1>
+                </div>
+                <div class="contentContainer">
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   
                 </div>
             </div>
         );

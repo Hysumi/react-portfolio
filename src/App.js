@@ -15,13 +15,6 @@ class App extends Component {
                 <div className="App">
                     <Header />
                     <Route exact path="/" component={Homepage} />
-                    <br></br>
-                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                 </div>
             </Router>
         );
