@@ -6,7 +6,7 @@ import {
 
 // components
 import Header from "./components/headerComponent/header";
-import Homepage from "./containers/pages/homePage";
+import Homepage from "./containers/homePage/homePage";
 
 class App extends Component {
     render () {
