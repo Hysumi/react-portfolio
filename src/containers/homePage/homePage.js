@@ -13,7 +13,7 @@ class HomePage extends Component {
         return (
             <div className="mainContainer">
                 <div className="contentContainer">
-                    <Element name="skills">
+                    <Element className="skillElement" name="skills">
                         <Skills/>
                     </Element>
                 </div>
