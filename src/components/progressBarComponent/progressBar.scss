@@ -33,24 +33,39 @@ h1 {
     p:nth-child(2) {
         float: right;
         position: relative;
-        @include transformY(-.3em);
+        @include transformY(-.25em);
     }
 }
 
 .skill {
-    background: #262626;
     box-sizing: border-box;
-    border: 1px solid $subColor;
     border-radius: 2px;
     height: 15px;
-    width: 85%;
+    width: 80%;
+    &--basic {
+        border: 1px solid $basic;
+    }
+    &--intermediate {
+        border: 1px solid $intermediate;
+    }
+    &--advanced {
+        border: 1px solid $advanced;
+    }
 }
 
 .skill__level {
-    background: $subColor;
     width: 7%;
     height: 6px;
     display: inline-block;
     margin: 0 1.5%;
     @include transformY(-.53em);
+    &--basic {
+        background: $basic;
+    }
+    &--intermediate {
+        background: $intermediate;
+    }
+    &--advanced {
+        background: $advanced;
+    }
 }

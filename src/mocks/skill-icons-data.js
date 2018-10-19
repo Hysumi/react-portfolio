@@ -7,7 +7,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "fill--html",
+        classIcon: "fill--html",
         level: "5"
     },
     {
@@ -17,8 +17,8 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "fill--css",
-        level: "9"
+        classIcon: "fill--css",
+        level: "8"
     },
     {
         name: "SASS",
@@ -27,8 +27,8 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "fill--sass",
-        level: "9"
+        classIcon: "fill--sass",
+        level: "8"
     },
     {
         name: "React",
@@ -44,7 +44,7 @@ export const Icons = [
             r: "2.139"
         },
         viewBox: "0 0 24 24",
-        class: "fill--react",
+        classIcon: "fill--react",
         level: "5"
     },
     {
@@ -55,7 +55,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "fill--angular",
+        classIcon: "fill--angular",
         level: "4"
     },
     {
@@ -65,7 +65,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "fill--vue",
+        classIcon: "fill--vue",
         level: "3"
     },
     {
@@ -75,7 +75,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "-0.5 0 25 25",
-        class: "fill--js",
+        classIcon: "fill--js",
         level: "5"
     },
     {
@@ -85,7 +85,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 125 125",
-        class: "fill--csharp",
+        classIcon: "fill--csharp",
         level: "6"
     },
     {
@@ -95,7 +95,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "-10 0 270 270",
-        class: "fill--ts",
+        classIcon: "fill--ts",
         level: "3"
     },
     {
@@ -109,7 +109,7 @@ export const Icons = [
             r: "90"
         },
         viewBox: "45 45 425 425",
-        class: "fill--ionic",
+        classIcon: "fill--ionic",
         level: "5"
     },
     {
@@ -120,7 +120,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 600 600",
-        class: "fill--node",
+        classIcon: "fill--node",
         level: "4"
     },
     {
@@ -130,7 +130,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 1000 1000",
-        class: "fill--sqlserver",
+        classIcon: "fill--sqlserver",
         level: "6"
     },
     {
@@ -140,7 +140,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "fill--git",
+        classIcon: "fill--git",
         level: "7"
     },
     {
@@ -150,7 +150,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "fill--docker",
+        classIcon: "fill--docker",
         level: "3"
     },
     {
@@ -160,7 +160,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "0 0 24 24",
-        class: "fill--gulp",
+        classIcon: "fill--gulp",
         level: "6"
     },
     {
@@ -170,7 +170,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "100 100 800 800",
-        class: "fill--unity",
+        classIcon: "fill--unity",
         level: "4"
     },
     {
@@ -180,7 +180,7 @@ export const Icons = [
         ],
         circle:{},
         viewBox: "3 3 26 26",
-        class: "fill--unreal",
+        classIcon: "fill--unreal",
         level: "2"
     },
 ];
