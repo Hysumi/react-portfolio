@@ -10,13 +10,11 @@ class ProgressBar extends Component {
 
     renderSkillBar (skillRows, containerKey, lv) {
         let skillBorderClass = "skill skill--";
-        if (lv <= 5){
+        if (lv <= 5) {
             skillBorderClass += "basic";
-        }
-        else if (lv > 5 && lv < 7) {
+        } else if (lv > 5 && lv < 7) {
             skillBorderClass += "intermediate";
-        }
-        else {
+        } else {
             skillBorderClass += "advanced";
         }
         return (
@@ -28,18 +26,16 @@ class ProgressBar extends Component {
 
     renderSkillLevel (lv, key) {
         let skillClass = "skill__level skill__level--";
-        if (lv <= 4){
+        if (lv <= 4) {
             skillClass += "basic";
-        }
-        else if (lv > 4 && lv < 6) {
+        } else if (lv > 4 && lv < 6) {
             skillClass += "intermediate";
-        }
-        else {
+        } else {
             skillClass += "advanced";
         }
         return (
-                <div key={key}className={skillClass}></div>
-            );
+            <div key={key}className={skillClass}></div>
+        );
     }
 
     render () {

@@ -1,12 +1,13 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:400,300,700|Pacifico|Julius+Sans+One";
 @import "../../library/config/config.scss";
 
+$heightMobile: 50px;
 $height: 70px;
 
 header {
     z-index: 99;
     background: $navItemBackgroundColor;
-    height: $height;
+    height: $heightMobile;
     width: 100%;
     position: fixed;
     top: 0;
@@ -30,7 +31,7 @@ header {
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: $height;
+        height: $heightMobile;
         -webkit-box-shadow:  0 0 20px rgba(0, 0, 0, 0.3);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         background: $navItemBackgroundColor;
@@ -58,16 +59,22 @@ header {
     &__link {
         width: 100%;
         height: 100%;
-        line-height: 7;
+        margin-top: 3.75em;
     }
 }
 
 .nav-up {
-    top: -($height + 1px + 5px);
+    top: -($heightMobile + 1px + 5px);
 }
 
 @media (min-width: 768px) {
+    header {
+        height: $height;
+    }
     .navBar{
+        &__container {
+            height: $height;
+        }
         &__item {
             font-size: 0.75em;
             padding: 0 .9em;
@@ -78,7 +85,7 @@ header {
         }
         
         &__link {
-            line-height: 5.9;   
+            margin-top: 4.25em;  
         }
     }
 }
