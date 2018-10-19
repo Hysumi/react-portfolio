@@ -4,7 +4,7 @@ import React, { Component } from "react";
 // imports
 import "../../assets/bundles/skillsComponent/skills.min.css";
 
-// components 
+// components
 import ProgressBar from "../progressBarComponent/progressBar";
 
 class Skills extends Component {
