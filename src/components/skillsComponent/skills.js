@@ -6,6 +6,7 @@ import "../../assets/bundles/skillsComponent/skills.min.css";
 
 // components
 import ProgressBar from "../progressBarComponent/progressBar";
+import Metric from "../metricComponent/metric";
 
 class Skills extends Component {
     render () {
@@ -15,7 +16,9 @@ class Skills extends Component {
                     <div className="skills">
                         <ProgressBar/>
                     </div>
-                    <div className="metric">2</div>
+                    <div className="metric">
+                        <Metric/>
+                    </div>
                 </div>
             </div>
         );
