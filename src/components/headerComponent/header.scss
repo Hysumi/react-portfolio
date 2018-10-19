@@ -67,7 +67,7 @@ header {
     top: -($heightMobile + 1px + 5px);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     header {
         height: $height;
     }
@@ -87,5 +87,9 @@ header {
         &__link {
             margin-top: 4.25em;  
         }
+    }
+    
+    .nav-up {
+        top: -($height + 1px + 5px);
     }
 }
