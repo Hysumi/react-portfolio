@@ -116,8 +116,6 @@ class Header extends Component {
      */
 
     render () {
-
-
         return (
             <header className={this.state.navClass}>
                 <div className="navBar">

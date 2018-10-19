@@ -4,12 +4,14 @@ import React, { Component } from "react";
 // imports
 import "../../assets/bundles/skillsComponent/skills.min.css";
 
+// components 
+import ProgressBar from "../progressBarComponent/progressBar";
+
 class Skills extends Component {
     render () {
         return (
             <div className="skills-container">
-                <h1>Skills</h1>
-                <p>After thirteen years of searching, Anderson, a salesman from Los Angeles, found the envelope. It was empty.</p>
+                <ProgressBar/>
             </div>
         );
     }

@@ -1,10 +1,31 @@
 /*
+ * Variables
+ */
+
+$mainColor: #4c4c4c;
+$subColor: #fff;
+$light: rgba(220, 220, 220, 0.95);
+$navItemBackgroundColor: rgba(255,255,255,.95);
+
+/*
  * Mixins
  */
 @mixin scaleX ($e) {
     -webkit-transform: scaleX($e);
     -moz-transform: scaleX($e);
     transition: $e;
+}
+
+@mixin transformY ($e) {
+  -webkit-transform: translateY($e);
+  -moz-transform: translateY($e);
+  transform: translateY($e);
+}
+
+@mixin transformX ($e) {
+  -webkit-transform: translateX($e);
+  -moz-transform: translateX($e);
+  transform: translateX($e);
 }
 
 @mixin transition ($e) {

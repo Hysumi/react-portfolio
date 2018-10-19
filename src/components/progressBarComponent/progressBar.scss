@@ -1,0 +1,56 @@
+@import '../../library/config/config.scss';
+
+.skillsMain {
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    background: $mainColor;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
+    padding: 1em;
+    @include transformX(-50%);
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.skillContainer {
+    box-sizing: border-box;
+    margin: 20px 0;
+
+    p {
+        color: #fff;
+        padding: 0;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    p:nth-child(2) {
+        float: right;
+        position: relative;
+        @include transformY(-.3em);
+    }
+}
+
+.skill {
+    background: #262626;
+    box-sizing: border-box;
+    border: 1px solid $subColor;
+    border-radius: 2px;
+    height: 15px;
+    width: 85%;
+}
+
+.skill__level {
+    background: $subColor;
+    width: 7%;
+    height: 6px;
+    display: inline-block;
+    margin: 0 1.5%;
+    @include transformY(-.53em);
+}

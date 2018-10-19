@@ -2,8 +2,6 @@
 @import "../../library/config/config.scss";
 
 $height: 70px;
-$navItemColor: #979797;
-$navItemBackgroundColor: rgba(255,255,255,.95);
 
 header {
     z-index: 99;
@@ -44,7 +42,7 @@ header {
         justify-content: center;
         align-items: center;
         flex: 1;
-        color: $navItemColor;
+        color: $mainColor;
         letter-spacing: 0.1em;
         transition: all 0.5s ease;
         font-size: 0.6em;
@@ -53,14 +51,14 @@ header {
     }
 
     &__item:active:hover{
-        background: $navItemColor;
+        background: $mainColor;
         color: $navItemBackgroundColor;
     }
     
     &__link {
         width: 100%;
         height: 100%;
-        line-height: 5.9;
+        line-height: 7;
     }
 }
 
@@ -69,12 +67,18 @@ header {
 }
 
 @media (min-width: 768px) {
-	.navBar__item {
-        font-size: 0.75em;
-        padding: 0 .9em;
-        &:hover {
-            background: $navItemColor;
-            color: $navItemBackgroundColor;
+    .navBar{
+        &__item {
+            font-size: 0.75em;
+            padding: 0 .9em;
+            &:hover {
+                background: $mainColor;
+                color: $navItemBackgroundColor;
+            } 
         }
-	}
+        
+        &__link {
+            line-height: 5.9;   
+        }
+    }
 }
