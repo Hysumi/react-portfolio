@@ -32,6 +32,9 @@
 }
 
 @media (min-width: 769px) {
+    .skills_grid {
+        margin: 0 1em 0 2em;
+    }
     .skills__container {
         padding: 70px 0;
     }
@@ -39,7 +42,7 @@
 
 @media (min-width: 930px){
     .skills__grid {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -49,6 +52,6 @@
         margin: 0 auto;
     }
     .skills__grid {
-        grid-template-columns: 652px 325px;
+        grid-template-columns: 487px 487px;
     }
 }
