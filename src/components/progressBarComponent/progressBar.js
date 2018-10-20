@@ -33,7 +33,7 @@ class ProgressBar extends Component {
         });
         return (
             <div className="skillsMain">
-                <h1>Skills</h1>
+                <h1>Technologies</h1>
                 {Icons.map((icon, i) =>
                     <div key={i} className="skillContainer">
                         <p>{icon.name}</p>

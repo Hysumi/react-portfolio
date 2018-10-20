@@ -9,23 +9,16 @@
     padding: 1em;
 }
 
-h1 {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: $mainColor;
-    letter-spacing: 2px;
-}
-
 .skillContainer {
     box-sizing: border-box;
-    margin: 20px 0;
-
+    margin: .95em 0;
+    
     p {
         color: $mainColor;
         padding: 0;
         font-weight: bold;
         letter-spacing: 1px;
+        margin-bottom: .3em;
     }
 
     p:nth-child(2) {

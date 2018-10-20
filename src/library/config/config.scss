@@ -73,3 +73,15 @@ $navItemBackgroundColor: rgba(255,255,255,.95);
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
+
+/*
+ * Globals 
+ */
+
+h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: $mainColor;
+  letter-spacing: 2px;
+}
