@@ -20,7 +20,7 @@ section {
 
 .title {
     position: relative;
-    margin-bottom: 1em;
+    margin: 1em 0;
     color: $mainColor;
     &::after {
         position: absolute;

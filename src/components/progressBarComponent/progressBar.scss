@@ -1,4 +1,21 @@
 @import '../../library/config/config.scss';
+$color-html:        #E34F26;
+$color-css:         #1572B6;
+$color-sass:        #CC6699;
+$color-react:       #61DAFB;
+$color-angular:     #DD0031;
+$color-vue:         #4FC08D;
+$color-javascript:  #FFC107;;
+$color-csharp:      #803970;
+$color-ts:          #028be8;
+$color-ionic:       #509CF6;
+$color-node:        #339933;
+$color-sqlserver:   #750000;
+$color-git:         #F14E32;
+$color-docker:      #1488C6;
+$color-gulp:        #DA4648;
+$color-unity:       #000000;
+$color-unreal:      rgba(35, 35, 35, 0.7);
 
 .skillsMain {
     width: 100%;
@@ -11,21 +28,39 @@
 
 .skillContainer {
     box-sizing: border-box;
-    margin: .95em 0;
-    
-    p {
-        color: $mainColor;
-        padding: 0;
-        font-weight: bold;
-        letter-spacing: 1px;
-        margin-bottom: .3em;
-    }
+    margin: .5em 0;
+}
 
-    p:nth-child(2) {
-        float: right;
-        position: relative;
-        @include transformY(-.25em);
-    }
+.skillTitleContainer {
+    margin-bottom: .5em;
+}
+.icon {
+    height: 25px;
+    width: 25px;
+    @include transformY(7px);
+    margin-right: .5em;
+    &--html         { fill: $color-html }
+    &--css          { fill: $color-css }
+    &--sass         { fill: $color-sass }
+    &--react        { fill: $color-react }
+    &--angular      { fill: $color-angular }
+    &--vue          { fill: $color-vue }
+    &--js           { fill: $color-javascript }
+    &--csharp       { fill: $color-csharp }
+    &--ts           { fill: $color-ts }
+    &--ionic        { fill: $color-ionic }
+    &--node         { fill: $color-node }
+    &--sqlserver    { fill: $color-sqlserver }
+    &--git          { fill: $color-git }
+    &--docker       { fill: $color-docker }
+    &--gulp         { fill: $color-gulp }
+    &--unity        { fill: $color-unity }
+    &--unreal       { fill: $color-unreal }
+}
+
+.skillTitle {
+    color: $mainColor;
+    font-weight: bold;
 }
 
 .skill {
@@ -33,7 +68,6 @@
     border-radius: 2px;
     border: 1px solid $mainColor;
     height: 15px;
-    width: 80%;
 }
 
 .skill__level {
