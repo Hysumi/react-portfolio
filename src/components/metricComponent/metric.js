@@ -10,7 +10,7 @@ class Metric extends Component {
                 <section>
                     <h1 className="mainTitle">Metric</h1>
                     <p>I created this metric to measure my skill levels. Below are the explanations of each level:</p>
-                    
+
                     <h5 className="title title--basic">Basic - Knowing the technology</h5>
                     <h6 className="title title__level">Level 1:</h6>
                     <p>I read about the content.</p>
