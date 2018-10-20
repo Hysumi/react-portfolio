@@ -4,8 +4,9 @@ article {
     display: grid;
     grid-template-columns: [main-start] minmax(0, 56em) [main-end];
     grid-gap: 1em;
-    background-color: $lighter;
+    background-color: $light;
     padding: 1em;
+    box-shadow: 0 3px 10px rgba(0,0,0,.5);
 }
   
 section {
@@ -37,6 +38,9 @@ section {
     }
     &--advanced::after {
         background: $advanced;
+    }
+    &--specialist::after {
+        background: $specialist;
     }
     &__level {
         margin-bottom: 0;

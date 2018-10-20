@@ -161,7 +161,7 @@ export const Icons = [
         circle:{},
         viewBox: "0 0 24 24",
         classIcon: "fill--gulp",
-        level: "6"
+        level: "5"
     },
     {
         name: "Unity",

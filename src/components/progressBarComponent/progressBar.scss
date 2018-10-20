@@ -3,7 +3,7 @@
 .skillsMain {
     width: 100%;
     position: relative;
-    background: $mainColor;
+    background: $lighter;
     box-sizing: border-box;
     box-shadow: 0 3px 10px rgba(0,0,0,.5);    
     padding: 1em;
@@ -13,7 +13,7 @@ h1 {
     margin: 0;
     padding: 0;
     text-align: center;
-    color: #fff;
+    color: $mainColor;
     letter-spacing: 2px;
 }
 
@@ -22,7 +22,7 @@ h1 {
     margin: 20px 0;
 
     p {
-        color: #fff;
+        color: $mainColor;
         padding: 0;
         font-weight: bold;
         letter-spacing: 1px;
@@ -38,17 +38,9 @@ h1 {
 .skill {
     box-sizing: border-box;
     border-radius: 2px;
+    border: 1px solid $mainColor;
     height: 15px;
     width: 80%;
-    &--basic {
-        border: 1px solid $basic;
-    }
-    &--intermediate {
-        border: 1px solid $intermediate;
-    }
-    &--advanced {
-        border: 1px solid $advanced;
-    }
 }
 
 .skill__level {
