@@ -45,10 +45,10 @@ header {
         flex: 1;
         color: $mainColor;
         letter-spacing: 0.1em;
-        transition: all 0.5s ease;
         font-size: 0.6em;
         padding: 0 .5em;
         cursor: pointer;
+        @include transition(all 0.5s ease);
     }
 
     &__item:active:hover{

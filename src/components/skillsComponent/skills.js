@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 // imports
 import "../../assets/bundles/skillsComponent/skills.min.css";
 
@@ -13,13 +12,24 @@ class Skills extends Component {
         return (
             <div className="skills__container">
                 <h1 className="mainTitle">Skills</h1>
-                <p className="description">In this section you can see what technologies i know and what is my mastery level with each one.</p>
+                <p className="description">In this section you can see what technologies i know and what is my mastery level with each one.
+                    To measure my mastery, I created a metric to define my skill levels.</p>
+                <div className="metrics__container">
+                    <input type="checkbox" className="showMetrics__state" id="showMetrics" />
+                    <div className="showMetrics__wrap">
+                        <div className="showMetrics__target">
+                            <Metric/>
+                        </div>
+                    </div>
+                    <label htmlFor="showMetrics" className="showMetrics__trigger">
+                    </label>
+                </div>
+            
                 <div className="skills__grid">
                     <div className="skills">
                         <ProgressBar/>
                     </div>
                     <div className="metric">
-                        <Metric/>
                     </div>
                 </div>
             </div>
