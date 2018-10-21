@@ -1,20 +1,22 @@
 @import '../../library/config/config.scss';
 
 article {
-    display: grid;
-    grid-template-columns: [main-start] minmax(0, 56em) [main-end];
-    grid-gap: 1em;
     background-color: $light;
+    margin: 1em;
     padding: 1em;
+    box-shadow: 0 3px 10px rgba(0,0,0,.5);
 }
   
 section {
-    grid-column: main;
+    display: inline-block;
+    text-align: left;
+    max-width: 550px;
 }
 
 .mainTitle {
     color: $mainColor;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .title {

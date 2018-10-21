@@ -14,7 +14,7 @@
 
 .description {
     text-align: center;
-    padding: 0 .7em;
+    padding: 0 1em;
 }
 
 .skills__grid {
@@ -34,10 +34,6 @@
 .showMetrics__state {
     display: none;
 }
-  
-.showMetrics__wrap {
-    display: inline-block;
-}
 
 .showMetrics__target {
     display: none;
@@ -48,7 +44,13 @@
     display: inline-block;
     font-size: inherit;
 }
-  
+ 
+.showMetrics__trigger {
+    cursor: pointer;
+    padding: .5em;
+    margin-bottom: 1rem;
+}
+
 .showMetrics__state ~ .showMetrics__trigger::before {
     content: 'Click here to see the metric!';
     font-size: 1rem;
@@ -62,17 +64,13 @@
 
 .showMetrics__state ~ .showMetrics__trigger::after {
     content: ' \25BE';
+    font-size: 1.25rem;
 }
 
 .showMetrics__state:checked ~ .showMetrics__trigger::after {
     content: ' \25B4';
+    font-size: 1.25rem;
 }
-
-.showMetrics__trigger {
-    cursor: pointer;
-    padding: .5em;
-}
-
 
 .showMetrics__state:checked ~ .showMetrics__trigger:active:hover,
 .showMetrics__state ~ .showMetrics__trigger:active:hover {

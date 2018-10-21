@@ -24,7 +24,7 @@ class Skills extends Component {
                     <label htmlFor="showMetrics" className="showMetrics__trigger">
                     </label>
                 </div>
-            
+
                 <div className="skills__grid">
                     <div className="skills">
                         <ProgressBar/>
