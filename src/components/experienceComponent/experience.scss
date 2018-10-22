@@ -126,16 +126,12 @@
         color: $lighter;
         font-size: 12px;
         box-shadow:  inset 0 2px 0 rgba(0, 0, 0, 0.08);
-        border-radius: 2px;
+        border-radius: 2px;    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         &__title, &__date {  
-            width: calc(50% - 2px);
             display: inline-block;
-        }
-        @media (max-width: 500px) {
-            .timeline__content__info__title, .timeline__content__info__date {  
-                display: block;
-                width:100%;
-            } 
+            margin: 0 .5em;
         }
     }
 
