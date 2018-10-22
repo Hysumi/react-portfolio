@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Element, scroller } from "react-scroll";
 
 // imports
 import "../../assets/bundles/skillsComponent/skills.min.css";
@@ -8,6 +9,31 @@ import ProgressBar from "../progressBarComponent/progressBar";
 import Metric from "../metricComponent/metric";
 
 class Skills extends Component {
+    constructor (props) {
+        super(props);
+
+        this.state = {
+            isMetricScrollHide: true
+        };
+
+        this.scrollToTop = this.scrollToTop.bind(this);
+    }
+
+    scrollToTop () {
+        var offsetScroll = 0;
+        if(!this.state.isMetricScrollHide) {
+            offsetScroll = -218;
+        }
+        scroller.scrollTo("metric", {
+            smooth:true,
+            duration:800,
+            offset: offsetScroll
+        });
+        this.setState({
+            isMetricScrollHide: !this.state.isMetricScrollHide
+        });
+    }
+
     render () {
         return (
             <div className="skills__container">
@@ -18,10 +44,12 @@ class Skills extends Component {
                     <input type="checkbox" className="showMetrics__state" id="showMetrics" />
                     <div className="showMetrics__wrap">
                         <div className="showMetrics__target">
-                            <Metric/>
+                            <Element name="metric">
+                                <Metric/>
+                            </Element>
                         </div>
                     </div>
-                    <label htmlFor="showMetrics" className="showMetrics__trigger">
+                    <label htmlFor="showMetrics" className="showMetrics__trigger" onClick={this.scrollToTop}> 
                     </label>
                 </div>
 
