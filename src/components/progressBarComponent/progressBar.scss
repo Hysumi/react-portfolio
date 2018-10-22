@@ -18,17 +18,18 @@ $color-unity:       #000000;
 $color-unreal:      rgba(35, 35, 35, 0.7);
 
 .skillsMain {
-    width: 100%;
-    position: relative;
+    max-width: 750px;
     background: $lighter;
     box-sizing: border-box;
     box-shadow: 0 3px 10px rgba(0,0,0,.5);    
     padding: 1em;
+    margin: 1em;
 }
 
 .skillContainer {
     box-sizing: border-box;
-    margin: .5em 0;
+    margin: 0 auto;
+    padding: .5em;
 }
 
 .skillTitleContainer {
@@ -63,11 +64,17 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
     font-weight: bold;
 }
 
+.techContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .skill {
     box-sizing: border-box;
     border-radius: 2px;
     border: 1px solid $mainColor;
     height: 15px;
+    width: 165px;
 }
 
 .skill__level {
@@ -84,5 +91,12 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
     }
     &--advanced {
         background: $advanced;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .skillsMain {
+        margin: 0 auto;
     }
 }

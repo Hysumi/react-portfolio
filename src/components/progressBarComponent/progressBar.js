@@ -34,20 +34,23 @@ class ProgressBar extends Component {
         return (
             <div className="skillsMain">
                 <h1>Technologies</h1>
-                {Icons.map((icon, i) =>
-                    <div key={i} className="skillContainer">
-                        <div className="skillTitleContainer">
-                            <svg className={icon.classIcon} role="img" viewBox={icon.viewBox} xmlns="http://www.w3.org/2000/svg">
-                                <circle cx={icon.circle.cx} cy={icon.circle.cy} r={icon.circle.r}/>
-                                {icon.path.map((d, j) =>
-                                    <path key={j} d={d}/>)}
-                            </svg>
-                            <span className="skillTitle">{icon.name} - Lv: {icon.level}</span>
-                        </div>
-                        <div className="skill">
-                            {skillRows[i].map((row, k) => (this.renderSkillLevel(row, k)))}
-                        </div>
-                    </div>)}
+                <div className="techContainer">
+                    {Icons.map((icon, i) =>
+                        <div key={i} className="skillContainer">
+                            <div className="skillTitleContainer">
+                                <svg className={icon.classIcon} role="img" viewBox={icon.viewBox} xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx={icon.circle.cx} cy={icon.circle.cy} r={icon.circle.r}/>
+                                    {icon.path.map((d, j) =>
+                                        <path key={j} d={d}/>)}
+                                </svg>
+                                <span className="skillTitle">{icon.name} - Lv: {icon.level}</span>
+                            </div>
+                            <div className="skill">
+                                {skillRows[i].map((row, k) => (this.renderSkillLevel(row, k)))}
+                            </div>
+                        </div>)}
+                </div>
+
             </div>
         );
     }

@@ -21,12 +21,13 @@ class Skills extends Component {
 
     scrollToTop () {
         var offsetScroll = 0;
-        if(!this.state.isMetricScrollHide) {
+        if (!this.state.isMetricScrollHide) {
             offsetScroll = -218;
         }
         scroller.scrollTo("metric", {
             smooth:true,
-            duration:800,
+            delay: 0,
+            duration: 0,
             offset: offsetScroll
         });
         this.setState({
@@ -49,17 +50,10 @@ class Skills extends Component {
                             </Element>
                         </div>
                     </div>
-                    <label htmlFor="showMetrics" className="showMetrics__trigger" onClick={this.scrollToTop}> 
+                    <label htmlFor="showMetrics" className="showMetrics__trigger" onClick={this.scrollToTop}>
                     </label>
                 </div>
-
-                <div className="skills__grid">
-                    <div className="skills">
-                        <ProgressBar/>
-                    </div>
-                    <div className="metric">
-                    </div>
-                </div>
+                <ProgressBar/>
             </div>
         );
     }

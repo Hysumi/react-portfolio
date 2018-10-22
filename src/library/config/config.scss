@@ -83,5 +83,19 @@ h1 {
   padding: 0;
   text-align: center;
   color: $mainColor;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+
+article {
+  background-color: $light;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 0 3px 10px rgba(0,0,0,.5);
+}
+
+section {
+  display: inline-block;
+  text-align: left;
+  max-width: 550px;
 }
