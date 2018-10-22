@@ -12,11 +12,6 @@
     font-family: "Roboto";
 }
 
-.description {
-    text-align: center;
-    padding: 0 1em;
-}
-
 .metrics__container {
     text-align: center;
 }
@@ -69,16 +64,7 @@
     @include transition(all 0.2s ease);
 }
 
-@media (min-width: 360px) {
-    .skills__grid {
-        margin: 0 1em;
-    }
-}
-
 @media (min-width: 769px) {
-    .skills_grid {
-        margin: 0 1em 0 2em;
-    }
     .skills__container {
         padding: 70px 0;
     }
@@ -90,19 +76,10 @@
     }
 }
 
-@media (min-width: 930px){
-    .skills__grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 @media (min-width: 1024px) {
     .skills__container {
         width: 1024px;
         margin: 0 auto;
-    }
-    .skills__grid {
-        grid-template-columns: 487px 487px;
     }
 }
 

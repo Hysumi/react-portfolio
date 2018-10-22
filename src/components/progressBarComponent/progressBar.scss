@@ -17,7 +17,7 @@ $color-gulp:        #DA4648;
 $color-unity:       #000000;
 $color-unreal:      rgba(35, 35, 35, 0.7);
 
-.skillsMain {
+.progressBarMain {
     max-width: 750px;
     background: $lighter;
     box-sizing: border-box;
@@ -65,7 +65,7 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
     font-weight: bold;
 }
 
-.skillsContainer {
+.progressBarContainer {
     display: flex;
     flex-wrap: wrap;
 }
@@ -99,7 +99,7 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
 }
 
 @media (min-width: 769px) {
-    .skillsMain {
+    .progressBarMain {
         margin: 0 auto;
     }
 }

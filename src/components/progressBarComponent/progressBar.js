@@ -32,9 +32,9 @@ class ProgressBar extends Component {
             skillRows.push(skillRow);
         });
         return (
-            <div className="skillsMain">
+            <div className="progressBarMain">
                 <h1>Technologies</h1>
-                <div className="skillsContainer">
+                <div className="progressBarContainer">
                     {Icons.map((icon, i) =>
                         <div key={i} className="skillLevel__container">
                             <div className="skillLevel__titleContainer">
