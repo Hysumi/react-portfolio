@@ -9,7 +9,7 @@ import Icons from "../../mocks/skill-icons-data";
 class ProgressBar extends Component {
 
     renderSkillLevel (lv, key) {
-        let skillClass = "skill__level skill__level--";
+        let skillClass = "skillLevel__level skillLevel__level--";
         if (lv <= 4) {
             skillClass += "basic";
         } else if (lv > 4 && lv < 7) {
@@ -34,18 +34,18 @@ class ProgressBar extends Component {
         return (
             <div className="skillsMain">
                 <h1>Technologies</h1>
-                <div className="techContainer">
+                <div className="skillsContainer">
                     {Icons.map((icon, i) =>
-                        <div key={i} className="skillContainer">
-                            <div className="skillTitleContainer">
+                        <div key={i} className="skillLevel__container">
+                            <div className="skillLevel__titleContainer">
                                 <svg className={icon.classIcon} role="img" viewBox={icon.viewBox} xmlns="http://www.w3.org/2000/svg">
                                     <circle cx={icon.circle.cx} cy={icon.circle.cy} r={icon.circle.r}/>
                                     {icon.path.map((d, j) =>
                                         <path key={j} d={d}/>)}
                                 </svg>
-                                <span className="skillTitle">{icon.name} - Lv: {icon.level}</span>
+                                <span className="skillLevel__title">{icon.name} - Lv: {icon.level}</span>
                             </div>
-                            <div className="skill">
+                            <div className="skillLevel__progressBar">
                                 {skillRows[i].map((row, k) => (this.renderSkillLevel(row, k)))}
                             </div>
                         </div>)}

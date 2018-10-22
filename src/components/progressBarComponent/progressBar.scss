@@ -26,74 +26,76 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
     margin: 1em;
 }
 
-.skillContainer {
+.skillLevel__container {
     box-sizing: border-box;
     margin: 0 auto;
     padding: .5em;
 }
 
-.skillTitleContainer {
+.skillLevel__titleContainer {
     margin-bottom: .5em;
-}
-.icon {
-    height: 25px;
-    width: 25px;
-    @include transformY(7px);
-    margin-right: .5em;
-    &--html         { fill: $color-html }
-    &--css          { fill: $color-css }
-    &--sass         { fill: $color-sass }
-    &--react        { fill: $color-react }
-    &--angular      { fill: $color-angular }
-    &--vue          { fill: $color-vue }
-    &--js           { fill: $color-javascript }
-    &--csharp       { fill: $color-csharp }
-    &--ts           { fill: $color-ts }
-    &--ionic        { fill: $color-ionic }
-    &--node         { fill: $color-node }
-    &--sqlserver    { fill: $color-sqlserver }
-    &--git          { fill: $color-git }
-    &--docker       { fill: $color-docker }
-    &--gulp         { fill: $color-gulp }
-    &--unity        { fill: $color-unity }
-    &--unreal       { fill: $color-unreal }
+
+    > .icon {
+        height: 25px;
+        width: 25px;
+        @include transformY(7px);
+        margin-right: .5em;
+        &--html         { fill: $color-html }
+        &--css          { fill: $color-css }
+        &--sass         { fill: $color-sass }
+        &--react        { fill: $color-react }
+        &--angular      { fill: $color-angular }
+        &--vue          { fill: $color-vue }
+        &--js           { fill: $color-javascript }
+        &--csharp       { fill: $color-csharp }
+        &--ts           { fill: $color-ts }
+        &--ionic        { fill: $color-ionic }
+        &--node         { fill: $color-node }
+        &--sqlserver    { fill: $color-sqlserver }
+        &--git          { fill: $color-git }
+        &--docker       { fill: $color-docker }
+        &--gulp         { fill: $color-gulp }
+        &--unity        { fill: $color-unity }
+        &--unreal       { fill: $color-unreal }
+    }
 }
 
-.skillTitle {
+.skillLevel__title {
     color: $mainColor;
     font-weight: bold;
 }
 
-.techContainer {
+.skillsContainer {
     display: flex;
     flex-wrap: wrap;
 }
 
-.skill {
+.skillLevel__progressBar {
     box-sizing: border-box;
     border-radius: 2px;
     border: 1px solid $mainColor;
     height: 15px;
     width: 165px;
     padding-left: .2em;
+}
 
-    &__level {
-        width: .65em;
-        height: .65em;
-        border-radius: 50px;
-        display: inline-block;
-        margin: 0 .165em;
-        @include transformY(-.35em);
-        &--basic {
-            background: $basic;
-        }
-        &--intermediate {
-            background: $intermediate;
-        }
-        &--advanced {
-            background: $advanced;
-        }
+.skillLevel__level {
+    width: .65em;
+    height: .65em;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 0 .165em;
+    @include transformY(-.35em);
+    &--basic {
+        background: $basic;
     }
+    &--intermediate {
+        background: $intermediate;
+    }
+    &--advanced {
+        background: $advanced;
+    }
+    
 }
 
 @media (min-width: 769px) {
