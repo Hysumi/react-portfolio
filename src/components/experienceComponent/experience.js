@@ -3,8 +3,6 @@ import React, { Component } from "react";
 // includes
 import "../../assets/bundles/experienceComponent/experience.min.css";
 
-// components
-
 class Experience extends Component {
     render () {
         return (
