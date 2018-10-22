@@ -76,26 +76,25 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
     height: 15px;
     width: 165px;
     padding-left: .2em;
-}
 
-.skill__level {
-    width: .65em;
-    height: .65em;
-    border-radius: 50px;
-    display: inline-block;
-    margin: 0 .165em;
-    @include transformY(-.35em);
-    &--basic {
-        background: $basic;
-    }
-    &--intermediate {
-        background: $intermediate;
-    }
-    &--advanced {
-        background: $advanced;
+    &__level {
+        width: .65em;
+        height: .65em;
+        border-radius: 50px;
+        display: inline-block;
+        margin: 0 .165em;
+        @include transformY(-.35em);
+        &--basic {
+            background: $basic;
+        }
+        &--intermediate {
+            background: $intermediate;
+        }
+        &--advanced {
+            background: $advanced;
+        }
     }
 }
-
 
 @media (min-width: 769px) {
     .skillsMain {
