@@ -8,7 +8,7 @@ export const Icons = [
         circle:{},
         viewBox: "0 0 24 24",
         classIcon: "icon icon--html",
-        level: "5"
+        level: "10"
     },
     {
         name: "CSS",
