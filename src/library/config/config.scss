@@ -2,7 +2,9 @@
  * Variables
  */
 
-$mainColor: #4c4c4c;
+$mainColor: #5f5f5f;
+$mainDarker: rgba(63, 63, 63, 0.95);
+$mainDarkerAlpha: rgba(63, 63, 63, 0.50);
 $subColor: #fff;
 $light: rgba(220, 220, 220, 0.95);
 $lighter: #eaeaea;
@@ -21,16 +23,22 @@ $navItemBackgroundColor: rgba(255,255,255,.95);
     transition: $e;
 }
 
-@mixin transformY ($e) {
+@mixin TranslateY ($e) {
     -webkit-transform: translateY($e);
     -moz-transform: translateY($e);
     transform: translateY($e);
 }
 
-@mixin transformX ($e) {
+@mixin TranslateX ($e) {
     -webkit-transform: translateX($e);
     -moz-transform: translateX($e);
     transform: translateX($e);
+}
+
+@mixin TranslateZ ($e) {
+  -webkit-transform: translateZ($e);
+  -moz-transform: translateZ($e);
+  transform: translateZ($e);
 }
 
 @mixin transition ($e) {

@@ -38,7 +38,7 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
     > .icon {
         height: 25px;
         width: 25px;
-        @include transformY(7px);
+        @include TranslateY(7px);
         margin-right: .5em;
         &--html         { fill: $color-html }
         &--css          { fill: $color-css }
@@ -85,7 +85,7 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
     border-radius: 50px;
     display: inline-block;
     margin: 0 .165em;
-    @include transformY(-.35em);
+    @include TranslateY(-.35em);
     &--basic {
         background: $basic;
     }
