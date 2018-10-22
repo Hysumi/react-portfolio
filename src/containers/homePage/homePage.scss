@@ -16,7 +16,10 @@
    padding-top: 100vh;
 }
 
-.skillElement {
+.element {
     background-color: $light;
     margin: 0px;
+    &--reverseColor {
+        background-color: $mainColor;
+    }
 }

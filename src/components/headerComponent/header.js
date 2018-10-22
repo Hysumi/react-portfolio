@@ -132,7 +132,7 @@ class Header extends Component {
                         </div>
                         <div className="navBar__item">
                             <Link className="navBar__link"
-                                to="aboutMe"
+                                to="experience"
                                 smooth={true}
                                 duration={800}
                                 offset={0}>

@@ -6,6 +6,7 @@ import "../../assets/bundles/homePage/homePage.min.css";
 
 // components
 import Skills from "../../components/skillsComponent/skills";
+import Experience from "../../components/experienceComponent/experience";
 
 class HomePage extends Component {
 
@@ -13,8 +14,11 @@ class HomePage extends Component {
         return (
             <div className="mainContainer">
                 <div className="contentContainer">
-                    <Element className="skillElement" name="skills">
+                    <Element className="element" name="skills">
                         <Skills/>
+                    </Element>
+                    <Element className="element element--reverseColor" name="experience">
+                        <Experience/>
                     </Element>
                 </div>
             </div>

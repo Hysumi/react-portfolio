@@ -22,15 +22,15 @@ $navItemBackgroundColor: rgba(255,255,255,.95);
 }
 
 @mixin transformY ($e) {
-  -webkit-transform: translateY($e);
-  -moz-transform: translateY($e);
-  transform: translateY($e);
+    -webkit-transform: translateY($e);
+    -moz-transform: translateY($e);
+    transform: translateY($e);
 }
 
 @mixin transformX ($e) {
-  -webkit-transform: translateX($e);
-  -moz-transform: translateX($e);
-  transform: translateX($e);
+    -webkit-transform: translateX($e);
+    -moz-transform: translateX($e);
+    transform: translateX($e);
 }
 
 @mixin transition ($e) {
@@ -43,35 +43,35 @@ $navItemBackgroundColor: rgba(255,255,255,.95);
  * Scrollbar 
  */
 ::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
+   width: 0px;
+   height: 0px;
 }
 ::-webkit-scrollbar-button {
-  width: 0px;
-  height: 0px;
+    width: 0px;
+    height: 0px;
 }
 ::-webkit-scrollbar-thumb {
-  background: transparent;
-  border: none;
+    background: transparent;
+    border: none;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: transparent;
+    background: transparent;
 }
 ::-webkit-scrollbar-thumb:active {
-  background: transparent;
+    background: transparent;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
-  border: none;
+    background: transparent;
+    border: none;
 }
 ::-webkit-scrollbar-track:hover {
-  background: #ffffff;
+    background: #ffffff;
 }
 ::-webkit-scrollbar-track:active {
-  background: transparent;
+    background: transparent;
 }
 ::-webkit-scrollbar-corner {
-  background: transparent;
+    background: transparent;
 }
 
 /*
@@ -79,34 +79,45 @@ $navItemBackgroundColor: rgba(255,255,255,.95);
  */
 
 h1 {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  color: $mainColor;
-  letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: $mainColor;
+    letter-spacing: 1px;
 }
-
 
 article {
-  background-color: $light;
-  margin: 1em;
-  padding: 1em;
-  box-shadow: 0 3px 10px rgba(0,0,0,.5);
-}
-
-section {
-  display: block;
-  text-align: left;
-  max-width: 550px;
+    background-color: $light;
+    margin: 1em;
+    padding: 1em;
+    box-shadow: 0 3px 10px rgba(0,0,0,.5);
 }
 
 .mainTitle {
-  color: $mainColor;
-  margin-bottom: 20px;
-  text-align: center;
+    color: $mainColor;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .description {
-  text-align: center;
-  padding: 0 1em;
+    text-align: center;
+    padding: 0 1em;
+}
+
+.elementContainer {
+    height: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: $light;
+    padding: 50px 0;
+    font-family: "Roboto";
+}
+
+
+@media (min-width: 769px) {
+  .elementContainer {
+      padding: 70px 0;
+  }
 }

@@ -1,17 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:400,300,700|Pacifico|Julius+Sans+One";
 @import '../../library/config/config.scss';
 
-.skills__container {
-    height: auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: $light;
-    padding: 50px 0;
-    font-family: "Roboto";
-}
-
 .metrics__container {
     text-align: center;
 }
@@ -65,9 +54,6 @@
 }
 
 @media (min-width: 769px) {
-    .skills__container {
-        padding: 70px 0;
-    }
     .showMetrics__state:checked ~ .showMetrics__trigger:hover,
     .showMetrics__state ~ .showMetrics__trigger:hover {
         background: $mainColor;
