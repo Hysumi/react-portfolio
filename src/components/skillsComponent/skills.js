@@ -37,8 +37,8 @@ class Skills extends Component {
 
     render () {
         return (
-            <div className="elementContainer">
-                <h1 className="mainTitle">Skills</h1>
+            <div className="elementContainer elementContainer--skills">
+                <h1 className="mainTitle mainTitle--skills">Skills</h1>
                 <p className="description">In this section you can see what technologies i know and what is my mastery level with each one.
                     To measure my mastery, I created a metric to define my skill levels.</p>
                 <div className="metrics__container">

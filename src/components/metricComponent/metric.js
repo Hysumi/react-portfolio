@@ -8,7 +8,7 @@ class Metric extends Component {
         return (
             <article>
                 <section className="metricContent">
-                    <h1 className="mainTitle">Metric</h1>
+                    <h1 className="mainTitle mainTitle--skills">Metric</h1>
                 </section>
                 <section className="metricContent">
                     <h5 className="secTitle secTitle--basic">Basic - Knowing the technology</h5>

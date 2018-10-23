@@ -1,6 +1,17 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:400,300,700|Pacifico|Julius+Sans+One";
 @import '../../library/config/config.scss';
 
+.elementContainer--skills {
+    background-color: $light;
+    padding: 50px 0;
+    font-family: "Roboto";
+}
+
+.mainTitle--skills {
+    color: $mainColor;
+    text-align: center;
+}
+
 .metrics__container {
     text-align: center;
 }

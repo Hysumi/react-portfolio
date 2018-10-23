@@ -1,14 +1,16 @@
 @import '../../library/config/config.scss';
 
-.elementContainer--reverseColor {
+.elementContainer--experience {
+    padding: 50px 0;
+    font-family: "Roboto";
     background-color: $mainColor;
 }
 
-.mainTitle--reverseColor {
+.mainTitle--experience {
   color: $lighter;
 }
 
-.mainTitle--experience {
+.mainTitle--company {
     color: $lighter;
     text-align: left;
     margin-bottom: .5em;

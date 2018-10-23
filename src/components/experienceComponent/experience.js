@@ -6,14 +6,14 @@ import "../../assets/bundles/experienceComponent/experience.min.css";
 class Experience extends Component {
     render () {
         return (
-            <div className="elementContainer elementContainer--reverseColor">
-                <h1 className="mainTitle mainTitle--reverseColor">Experience</h1>
+            <div className="elementContainer elementContainer--experience">
+                <h1 className="mainTitle mainTitle--experience">Experience</h1>
                 <section className="timeline__container">
                     <div className="timeline__block">
                         <div className="timeline__circle">
                         </div>
                         <div className="timeline__content">
-                            <h2 className="mainTitle mainTitle--experience">Linx</h2>
+                            <h2 className="mainTitle mainTitle--company">Linx</h2>
                             <div className=" timeline__content__info">
                                 <span className="timeline__content__info__title">
                                     Full Stack Developer
@@ -40,7 +40,7 @@ class Experience extends Component {
                         <div className="timeline__circle">
                         </div>
                         <div className="timeline__content">
-                            <span className="mainTitle mainTitle--experience">End of academic experience.</span>
+                            <span className="mainTitle mainTitle--company">End of academic experience.</span>
                         </div>
                     </div>
 
@@ -48,7 +48,7 @@ class Experience extends Component {
                         <div className="timeline__circle">
                         </div>
                         <div className="timeline__content">
-                            <h2 className="mainTitle mainTitle--experience">PET</h2>
+                            <h2 className="mainTitle mainTitle--company">PET</h2>
                             <div className=" timeline__content__info">
                                 <span className="timeline__content__info__title">
                                     Scholarship Student
