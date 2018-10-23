@@ -65,7 +65,7 @@ class Experience extends Component {
                         <div className="timeline__circle">
                         </div>
                         <div className="timeline__content">
-                            <h2 className="mainTitle mainTitle--experience">LTIA</h2>
+                            <h2 className="mainTitle mainTitle--company">LTIA</h2>
                             <div className=" timeline__content__info">
                                 <div className="timeline__content__info__title">
                                     Game Developer & Project Manager

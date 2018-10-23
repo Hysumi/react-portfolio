@@ -27,13 +27,13 @@ footer {
     margin: 0 .5em;
     padding: 1px;
 
-    @include transition(all 0.5s ease);
+    @include transition(all 0.2s ease);
 
     &--git{
         fill: $gitColor;
         background: white;
     }
-    &--git:hover {
+    &--git:active:hover {
         fill: white;
         background: $gitColor;
         border-radius: 50%;
@@ -42,9 +42,26 @@ footer {
         fill: $linkedinColor;
         background: white;
     }
-    &--linkedin:hover{
+    &--linkedin:active:hover{
         fill: white;
         background: $linkedinColor;
         border-radius: 10%;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .footer__icon {
+        @include transition(all 0.5s ease);
+        &--git:hover {
+            fill: white;
+            background: $gitColor;
+            border-radius: 50%;
+        }
+        &--linkedin:hover{
+            fill: white;
+            background: $linkedinColor;
+            border-radius: 10%;
+        }
     }
 }
