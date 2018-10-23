@@ -7,6 +7,7 @@ import "../../assets/bundles/homePage/homePage.min.css";
 // components
 import Skills from "../../components/skillsComponent/skills";
 import Experience from "../../components/experienceComponent/experience";
+import Footer from "../../components/footerComponent/footer";
 
 class HomePage extends Component {
 
@@ -21,6 +22,7 @@ class HomePage extends Component {
                         <Experience/>
                     </Element>
                 </div>
+                <Footer/>
             </div>
         );
     }

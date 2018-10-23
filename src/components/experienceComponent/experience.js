@@ -51,13 +51,13 @@ class Experience extends Component {
                             <h2 className="mainTitle mainTitle--experience">PET</h2>
                             <div className=" timeline__content__info">
                                 <span className="timeline__content__info__title">
-                                    Bolsista
+                                    Scholarship Student
                                 </span>
                                 <span className="timeline__content__info__date">
                                     April 2014 - May 2017
                                 </span>
                             </div>
-                            <p>O PET (Programa de Educação Tutorial) é um programa extracurricular da UNESP que desenvolve atividades acadêmicas visando expandir o conhecimento universitário para diversas áreas não apresentadas dentro do conteúdo curricular da universidade.</p>
+                            <p>The PET (Tutorial Education Program) is a program extracurricular from UNESP (São Paulo State University) created to develop academic activities looking for expand the university grade knowledge to another areas whom isn't showed at normal curricular classes.</p>
                         </div>
                     </div>
 
@@ -74,7 +74,7 @@ class Experience extends Component {
                                     September 2012 - June 2017
                                 </span>
                             </div>
-                            <p>O LTIA (Laboratório de Tecnologia da Informação Aplicada) é um laboratório pertencente a UNESP cujo o intuito é estudar tecnologias novas e emergentes no mercado, desenvolvendo e aplicando-as.</p>
+                            <p>The LTIA (Applied Information Technology Laboratory) is a lab from UNESP (São Paulo State University) created to study new and forthcoming technologies, developing and applying it.</p>
                             <ul className="content__skills">
                                 <li>Scrum</li>
                                 <li>Unity</li>
