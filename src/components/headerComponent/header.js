@@ -139,7 +139,15 @@ class Header extends Component {
                                     Experience
                             </Link>
                         </div>
-                        <div className="navBar__item">Projects</div>
+                        <div className="navBar__item">
+                            <Link className="navBar__link"
+                                to="projects"
+                                smooth={true}
+                                duration={800}
+                                offset={0}>
+                                    Projects
+                            </Link>
+                        </div>
                         <div className="navBar__item" onClick={this.scrollToBottom}>
                             Contact
                         </div>

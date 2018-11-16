@@ -13,13 +13,37 @@ class Experience extends Component {
                         <div className="timeline__circle">
                         </div>
                         <div className="timeline__content">
+                            <h2 className="mainTitle mainTitle--company">Guni</h2>
+                            <div className=" timeline__content__info">
+                                <div className="timeline__content__info__title">
+                                    Full Stack Developer
+                                </div>
+                                <span className="timeline__content__info__date">
+                                    November 2018 - Present
+                                </span>
+                            </div>
+                            <p>Rede social universitária que disponibiliza informações da faculdade e agenda completa dos eventos universitários</p>
+                            <ul className="content__skills">
+                                <li>Scrum</li>
+                                <li>Angular</li>
+                                <li>Ionic 3</li>
+                                <li>Firebase</li>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="timeline__block">
+                        <div className="timeline__circle">
+                        </div>
+                        <div className="timeline__content">
                             <h2 className="mainTitle mainTitle--company">Linx</h2>
                             <div className=" timeline__content__info">
                                 <span className="timeline__content__info__title">
                                     Full Stack Developer
                                 </span>
                                 <span className="timeline__content__info__date">
-                                    July 2017 - Present
+                                    July 2017 - October 2018
                                 </span>
                             </div>
                             <p>Management software company for the big retail sector serving the most diverse segments of this market.</p>
@@ -85,6 +109,7 @@ class Experience extends Component {
                             </ul>
                         </div>
                     </div>
+
                     <div className="timeline__block">
                         <div className="timeline__circle">
                         </div>

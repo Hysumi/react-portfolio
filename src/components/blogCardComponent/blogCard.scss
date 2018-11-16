@@ -1,0 +1,66 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:400,300,700|Pacifico|Julius+Sans+One";
+@import '../../library/config/config.scss';
+
+.blogCardContainer {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 1em auto;
+    box-shadow: 0 3px 7px 2px rgba(#000, .1);
+    background-color: $lighter;
+    border-radius: 3px;
+    overflow: hidden;
+    z-index: 0;
+    &:hover {
+        .imageCard {
+            @include transition(all 0.3s ease);
+            transform: scale(1.3) rotate(3deg);
+        }
+    }
+}
+
+
+.imageContainer{
+    height: 150px;
+    width: 100%;
+    position: relative;
+}
+
+.imageCard {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    max-width: 400px;
+}
+
+.blogDescription {
+    padding: 1em;
+    background-color: $lighter;
+    position: relative;
+    z-index: 1;
+    h1 {
+        font-size: 2em;
+        margin-bottom: 0;
+    }
+    .secTitle {
+        position: relative;
+        margin: 0.5em 0;
+        color: $mainColor;
+
+        &::after {
+            background: $mainDarkerAlpha;
+            position: absolute;
+            content: '';
+            height: 3px;
+            bottom: -7px;
+            left: 0;
+            width: 10%;
+        }
+    }
+    p {
+        margin-bottom: 0px;
+    }
+}

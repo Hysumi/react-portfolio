@@ -7,6 +7,7 @@ import "../../assets/bundles/homePage/homePage.min.css";
 // components
 import Skills from "../../components/skillsComponent/skills";
 import Experience from "../../components/experienceComponent/experience";
+import Projects from "../../components/projectsComponent/projects";
 import Footer from "../../components/footerComponent/footer";
 
 class HomePage extends Component {
@@ -20,6 +21,9 @@ class HomePage extends Component {
                     </Element>
                     <Element className="element element--reverseColor" name="experience">
                         <Experience/>
+                    </Element>
+                    <Element className="element" name="projects">
+                        <Projects/>
                     </Element>
                 </div>
                 <Footer/>
