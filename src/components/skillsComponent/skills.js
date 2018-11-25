@@ -39,8 +39,8 @@ class Skills extends Component {
         return (
             <div className="elementContainer elementContainer--skills">
                 <h1 className="mainTitle mainTitle--skills">Skills</h1>
-                <p className="description">In this section you can see what technologies i know and what is my mastery level with each one.
-                    To measure my mastery, I created a metric to define my skill levels.</p>
+                <p className="description">In this section you can see which technologies i know and my skill level in each one.
+                I measured my level based on the metric below.</p>
                 <div className="metrics__container">
                     <input type="checkbox" className="showMetrics__state" id="showMetrics" />
                     <div className="showMetrics__wrap">

@@ -22,7 +22,7 @@ class Experience extends Component {
                                     November 2018 - Present
                                 </span>
                             </div>
-                            <p>Rede social universitária que disponibiliza informações da faculdade e agenda completa dos eventos universitários</p>
+                            <p>University social network that offers intelligence and a complete agenda of university events.</p>
                             <ul className="content__skills">
                                 <li>Scrum</li>
                                 <li>Angular</li>
@@ -46,7 +46,7 @@ class Experience extends Component {
                                     July 2017 - October 2018
                                 </span>
                             </div>
-                            <p>Management software company for the big retail sector serving the most diverse segments of this market.</p>
+                            <p>Linx is a software management company that provides services to a diverse set of customers from retail sector.</p>
                             <ul className="content__skills">
                                 <li>HTML5</li>
                                 <li>CSS3</li>
@@ -64,7 +64,7 @@ class Experience extends Component {
                         <div className="timeline__circle">
                         </div>
                         <div className="timeline__content">
-                            <span className="mainTitle mainTitle--company">End of academic experience.</span>
+                            <span className="mainTitle mainTitle--company">Graduation - Bachelor in Computer Science.</span>
                         </div>
                     </div>
 
@@ -81,7 +81,8 @@ class Experience extends Component {
                                     April 2014 - May 2017
                                 </span>
                             </div>
-                            <p>The PET (Tutorial Education Program) is a program extracurricular from UNESP (São Paulo State University) created to develop academic activities looking for expand the university grade knowledge to another areas whom isn't showed at normal curricular classes.</p>
+                            <p>PET (Tutorial Education Program) is an extracurricular program from UNESP (São Paulo State University) created to develop academic activities.
+                            The main goal of the program is to expand knowledge from the University to another fields that are not part of the classes.</p>
                         </div>
                     </div>
 
@@ -98,7 +99,7 @@ class Experience extends Component {
                                     September 2012 - June 2017
                                 </span>
                             </div>
-                            <p>The LTIA (Applied Information Technology Laboratory) is a lab from UNESP (São Paulo State University) created to study new and forthcoming technologies, developing and applying it.</p>
+                            <p>The LTIA (Applied Information Technology Laboratory) is a lab at UNESP (São Paulo State University) for students to learn new forthcoming technologies through projects with external institutions and companies. The main goal is that students learn and apply new technologies while developing a real project.</p>
                             <ul className="content__skills">
                                 <li>Scrum</li>
                                 <li>Unity</li>
