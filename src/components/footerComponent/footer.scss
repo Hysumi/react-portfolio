@@ -12,9 +12,16 @@ footer {
     margin: 0;
     display: inline-flex;
     text-align: center;
+    margin-bottom: 0px !important;
 }
 
 .footer__iconContainer {
     display: inline-flex;
     @include TranslateY(10px);
+}
+
+@media (min-width: 769px) {
+    footer {
+        padding-bottom: 0px;
+    }
 }

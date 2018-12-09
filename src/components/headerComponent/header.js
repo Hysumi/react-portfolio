@@ -4,6 +4,10 @@ import { Link, animateScroll as scroll } from "react-scroll";
 // includes
 import "../../assets/bundles/headerComponent/header.min.css";
 
+//data
+
+import { USAHeaderText, BrHeaderText } from "../../mocks/languageText/header-text";
+
 const delta = 5;
 const navbarHeight = 70;
 
@@ -115,43 +119,91 @@ class Header extends Component {
      * End Show/Hide on Scroll Methods
      */
 
+    renderBrHeader = () => {
+        return (
+            <div className="navBar__container">
+                <div className="navBar__item" onClick={this.scrollToTop}>
+                    {BrHeaderText.aboutMe}
+                </div>
+                <div className="navBar__item" onClick={this.navClicked}>
+                    <Link className="navBar__link"
+                        to="skills"
+                        smooth={true}
+                        duration={800}
+                        offset={0}>
+                        {BrHeaderText.skills}
+                    </Link>
+                </div>
+                <div className="navBar__item">
+                    <Link className="navBar__link"
+                        to="experience"
+                        smooth={true}
+                        duration={800}
+                        offset={0}>
+                        {BrHeaderText.experience}
+                    </Link>
+                </div>
+                <div className="navBar__item">
+                    <Link className="navBar__link"
+                        to="projects"
+                        smooth={true}
+                        duration={800}
+                        offset={0}>
+                        {BrHeaderText.projects}
+                    </Link>
+                </div>
+                <div className="navBar__item" onClick={this.scrollToBottom}>
+                    {BrHeaderText.contact}
+                </div>
+            </div>
+        );
+    }
+
+    renderUsaHeader = () => {
+        return (
+            <div className="navBar__container">
+                <div className="navBar__item" onClick={this.scrollToTop}>
+                    {USAHeaderText.aboutMe}
+                </div>
+                <div className="navBar__item" onClick={this.navClicked}>
+                    <Link className="navBar__link"
+                        to="skills"
+                        smooth={true}
+                        duration={800}
+                        offset={0}>
+                        {USAHeaderText.skills}
+                    </Link>
+                </div>
+                <div className="navBar__item">
+                    <Link className="navBar__link"
+                        to="experience"
+                        smooth={true}
+                        duration={800}
+                        offset={0}>
+                        {USAHeaderText.experience}
+                    </Link>
+                </div>
+                <div className="navBar__item">
+                    <Link className="navBar__link"
+                        to="projects"
+                        smooth={true}
+                        duration={800}
+                        offset={0}>
+                        {USAHeaderText.projects}
+                    </Link>
+                </div>
+                <div className="navBar__item" onClick={this.scrollToBottom}>
+                    {USAHeaderText.contact}
+                </div>
+            </div>
+        );
+    }
+
     render () {
         return (
             <header className={this.state.navClass}>
                 <div className="navBar">
-                    <div className="navBar__container">
-                        <div className="navBar__item" onClick={this.scrollToTop}>About me</div>
-                        <div className="navBar__item" onClick={this.navClicked}>
-                            <Link className="navBar__link"
-                                to="skills"
-                                smooth={true}
-                                duration={800}
-                                offset={0}>
-                                    Skills
-                            </Link>
-                        </div>
-                        <div className="navBar__item">
-                            <Link className="navBar__link"
-                                to="experience"
-                                smooth={true}
-                                duration={800}
-                                offset={0}>
-                                    Experience
-                            </Link>
-                        </div>
-                        <div className="navBar__item">
-                            <Link className="navBar__link"
-                                to="projects"
-                                smooth={true}
-                                duration={800}
-                                offset={0}>
-                                    Projects
-                            </Link>
-                        </div>
-                        <div className="navBar__item" onClick={this.scrollToBottom}>
-                            Contact
-                        </div>
-                    </div>
+                    { this.props.lang === "br" ? this.renderBrHeader() : this.renderUsaHeader() }
                 </div>
             </header>
         );

@@ -4,13 +4,13 @@
     color: white;
     float: right;
     font-size: .75em;
+    cursor: pointer;
 }
 
 .languageIcon {
     height: 40px;
     margin: .3em;
 }
-
 
 @media (min-width: 769px) {
     .languageContainer {
