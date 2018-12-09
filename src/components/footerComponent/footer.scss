@@ -1,8 +1,5 @@
 @import '../../library/config/config.scss';
 
-$gitColor: #181717;
-$linkedinColor: #0077B5;
-
 footer {
     text-align: center;
     box-shadow: 0 3px 10px rgba(0,0,0,.5);
@@ -20,49 +17,4 @@ footer {
 .footer__iconContainer {
     display: inline-flex;
     @include TranslateY(10px);
-}
-
-.footer__icon {
-    width: 35px;
-    height: 35px;
-    margin: 0 0 0 .5em;
-    padding: 1px;
-    cursor: pointer;
-    @include transition(all 0.2s ease);
-
-    &--git{
-        fill: $gitColor;
-        background: white;
-    }
-    &--git:active:hover {
-        fill: white;
-        background: $gitColor;
-        border-radius: 50%;
-    }
-    &--linkedin {
-        fill: $linkedinColor;
-        background: white;
-    }
-    &--linkedin:active:hover{
-        fill: white;
-        background: $linkedinColor;
-        border-radius: 10%;
-    }
-}
-
-
-@media (min-width: 769px) {
-    .footer__icon {
-        @include transition(all 0.5s ease);
-        &--git:hover {
-            fill: white;
-            background: $gitColor;
-            border-radius: 50%;
-        }
-        &--linkedin:hover{
-            fill: white;
-            background: $linkedinColor;
-            border-radius: 10%;
-        }
-    }
 }

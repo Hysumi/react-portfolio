@@ -29,7 +29,7 @@ class BlogCard extends Component {
                     <h1 className="mainTitle">{this.props.project.title}</h1>
                     <div className="blogSubContainer">
                         <h5 className="secTitle">See more at:</h5>
-                        <svg className="footer__icon footer__icon--git"
+                        <svg className="linkIcon linkIcon--git"
                             role="img"
                             viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg"

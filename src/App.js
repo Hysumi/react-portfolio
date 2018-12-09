@@ -8,6 +8,11 @@ import {
 import Header from "./components/headerComponent/header";
 import Homepage from "./containers/homePage/homePage";
 
+// imports
+import "./assets/bundles/config/config.min.css";
+import "./assets/bundles/containers/containers.min.css";
+import "./assets/bundles/icons/icons.min.css";
+
 class App extends Component {
     render () {
         return (
