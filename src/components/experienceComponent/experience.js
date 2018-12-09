@@ -22,7 +22,7 @@ class Experience extends Component {
                                     November 2018 - Present
                                 </span>
                             </div>
-                            <p>University social network that offers intelligence and a complete agenda of university events.</p>
+                            <p>College social network that offers intelligence and a complete agenda of university events.</p>
                             <ul className="content__skills">
                                 <li>Scrum</li>
                                 <li>Angular</li>

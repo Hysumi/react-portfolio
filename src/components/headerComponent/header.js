@@ -120,7 +120,7 @@ class Header extends Component {
             <header className={this.state.navClass}>
                 <div className="navBar">
                     <div className="navBar__container">
-                        <div className="navBar__item" onClick={this.scrollToTop}>Home</div>
+                        <div className="navBar__item" onClick={this.scrollToTop}>About me</div>
                         <div className="navBar__item" onClick={this.navClicked}>
                             <Link className="navBar__link"
                                 to="skills"

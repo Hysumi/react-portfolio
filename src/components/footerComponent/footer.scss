@@ -27,7 +27,7 @@ footer {
     height: 35px;
     margin: 0 0 0 .5em;
     padding: 1px;
-
+    cursor: pointer;
     @include transition(all 0.2s ease);
 
     &--git{
