@@ -4,9 +4,6 @@ import { Link, animateScroll as scroll } from "react-scroll";
 // includes
 import "../../assets/bundles/headerComponent/header.min.css";
 
-// data
-import { USAHeaderText, BrHeaderText } from "../../mocks/languageText/header-text";
-
 const delta = 5;
 const navbarHeight = 70;
 
@@ -122,7 +119,7 @@ class Header extends Component {
         return (
             <div className="navBar__container">
                 <div className="navBar__item" onClick={this.scrollToTop}>
-                    {BrHeaderText.aboutMe}
+                    Sobre
                 </div>
                 <div className="navBar__item" onClick={this.navClicked}>
                     <Link className="navBar__link"
@@ -130,7 +127,7 @@ class Header extends Component {
                         smooth={true}
                         duration={800}
                         offset={0}>
-                        {BrHeaderText.skills}
+                        Habilidades
                     </Link>
                 </div>
                 <div className="navBar__item">
@@ -139,7 +136,7 @@ class Header extends Component {
                         smooth={true}
                         duration={800}
                         offset={0}>
-                        {BrHeaderText.experience}
+                        Experiência
                     </Link>
                 </div>
                 <div className="navBar__item">
@@ -148,11 +145,11 @@ class Header extends Component {
                         smooth={true}
                         duration={800}
                         offset={0}>
-                        {BrHeaderText.projects}
+                        Projetos
                     </Link>
                 </div>
                 <div className="navBar__item" onClick={this.scrollToBottom}>
-                    {BrHeaderText.contact}
+                    Contato
                 </div>
             </div>
         );
@@ -162,7 +159,7 @@ class Header extends Component {
         return (
             <div className="navBar__container">
                 <div className="navBar__item" onClick={this.scrollToTop}>
-                    {USAHeaderText.aboutMe}
+                    About Me
                 </div>
                 <div className="navBar__item" onClick={this.navClicked}>
                     <Link className="navBar__link"
@@ -170,7 +167,7 @@ class Header extends Component {
                         smooth={true}
                         duration={800}
                         offset={0}>
-                        {USAHeaderText.skills}
+                        Skills
                     </Link>
                 </div>
                 <div className="navBar__item">
@@ -179,7 +176,7 @@ class Header extends Component {
                         smooth={true}
                         duration={800}
                         offset={0}>
-                        {USAHeaderText.experience}
+                        Experience
                     </Link>
                 </div>
                 <div className="navBar__item">
@@ -188,11 +185,11 @@ class Header extends Component {
                         smooth={true}
                         duration={800}
                         offset={0}>
-                        {USAHeaderText.projects}
+                        Projects
                     </Link>
                 </div>
                 <div className="navBar__item" onClick={this.scrollToBottom}>
-                    {USAHeaderText.contact}
+                    Contact
                 </div>
             </div>
         );

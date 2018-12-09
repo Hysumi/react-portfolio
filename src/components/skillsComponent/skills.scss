@@ -65,7 +65,7 @@
     @include transition(all 0.2s ease);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 767px) {
     .showMetrics__state:checked ~ .showMetrics__trigger:hover,
     .showMetrics__state ~ .showMetrics__trigger:hover {
         background: $mainColor;

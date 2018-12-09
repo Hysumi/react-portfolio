@@ -33,7 +33,7 @@ class ProgressBar extends Component {
         });
         return (
             <div className="progressBarMain">
-                <h1>Technologies</h1>
+                <h1>{ this.props.lang === "br" ? "Tecnologias" : "Technologies" } </h1>
                 <div className="progressBarContainer">
                     {Icons.map((icon, i) =>
                         <div key={i} className="skillLevel__container">
@@ -43,7 +43,7 @@ class ProgressBar extends Component {
                                     {icon.path.map((d, j) =>
                                         <path key={j} d={d}/>)}
                                 </svg>
-                                <span className="skillLevel__title">{icon.name} - Lv: {icon.level}</span>
+                                <span className="skillLevel__title">{icon.name} - { this.props.lang === "br" ? "Nv:" : "Lv:" }  {icon.level}</span>
                             </div>
                             <div className="skillLevel__progressBar">
                                 {skillRows[i].map((row, k) => (this.renderSkillLevel(row, k)))}

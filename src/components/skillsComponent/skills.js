@@ -8,9 +8,6 @@ import "../../assets/bundles/skillsComponent/skills.min.css";
 import ProgressBar from "../progressBarComponent/progressBar";
 import Metric from "../metricComponent/metric";
 
-// data
-import { USASkillsText, BrSkillsText } from "../../mocks/languageText/skills-text";
-
 class Skills extends Component {
     constructor (props) {
         super(props);
@@ -38,37 +35,73 @@ class Skills extends Component {
         });
     }
 
-    render () {
+    renderBrSkills = () => {
         return (
-            <div className="elementContainer elementContainer--skills">
+            <div>
                 <h1 className="mainTitle mainTitle--skills">
-                    {
-                        this.props.lang === "br" ? BrSkillsText.title : USASkillsText.title
-                    }
+                    Habilidades
                 </h1>
                 <p className="description">
-                    {
-                        this.props.lang === "br" ? BrSkillsText.description : USASkillsText.description
-                    }
+                    Nesta sessão você poderá ver quais tecnologias eu conheço e meu nível de habilidade com cada uma. Medi o meu nível baseado na métrica abaixo.
                 </p>
                 <div className="metrics__container">
                     <input type="checkbox" className="showMetrics__state" id="showMetrics" />
                     <div className="showMetrics__wrap">
                         <div className="showMetrics__target">
                             <Element name="metric">
-                                <Metric/>
+                                <Metric lang={ this.props.lang }/>
                             </Element>
                         </div>
                     </div>
                     <label
-                        seemetric={ this.props.lang === "br" ? BrSkillsText.seeMetric : USASkillsText.seeMetric }
-                        hidemetric={ this.props.lang === "br" ? BrSkillsText.hideMetric : USASkillsText.hideMetric }
+                        seemetric="Clique aqui para ver a métrica!"
+                        hidemetric="Ocultar a métrica."
                         htmlFor="showMetrics"
                         className="showMetrics__trigger"
-                        onClick={this.scrollToTop}>
+                        onClick={ this.scrollToTop }>
                     </label>
                 </div>
-                <ProgressBar/>
+                <ProgressBar lang={ this.props.lang }/>
+            </div>
+
+        );
+    }
+
+    renderUsaSkills = () => {
+        return (
+            <div>
+                <h1 className="mainTitle mainTitle--skills">
+                    Skills
+                </h1>
+                <p className="description">
+                    In this section you can see which technologies i know and my skill level in each one. I measured my level based on the metric below.                </p>
+                <div className="metrics__container">
+                    <input type="checkbox" className="showMetrics__state" id="showMetrics" />
+                    <div className="showMetrics__wrap">
+                        <div className="showMetrics__target">
+                            <Element name="metric">
+                                <Metric lang={ this.props.lang }/>
+                            </Element>
+                        </div>
+                    </div>
+                    <label
+                        seemetric="Click here to see the metric!"
+                        hidemetric="Hide the metric."
+                        htmlFor="showMetrics"
+                        className="showMetrics__trigger"
+                        onClick={ this.scrollToTop }>
+                    </label>
+                </div>
+                <ProgressBar lang={ this.props.lang }/>
+            </div>
+
+        );
+    }
+
+    render () {
+        return (
+            <div className="elementContainer elementContainer--skills">
+                { this.props.lang === "br" ? this.renderBrSkills() : this.renderUsaSkills() }
             </div>
         );
     }
