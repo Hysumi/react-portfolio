@@ -1,5 +1,4 @@
 export const USAHeaderText = {
-    lang: "usa",
     aboutMe: "About Me",
     skills: "Skills",
     experience: "Experience",
@@ -8,7 +7,6 @@ export const USAHeaderText = {
 }
 
 export const BrHeaderText = {
-    title: "brasil",
     aboutMe: "Sobre",
     skills: "Habilidades",
     experience: "Experiência",

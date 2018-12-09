@@ -8,6 +8,9 @@ import "../../assets/bundles/skillsComponent/skills.min.css";
 import ProgressBar from "../progressBarComponent/progressBar";
 import Metric from "../metricComponent/metric";
 
+// data
+import { USASkillsText, BrSkillsText } from "../../mocks/languageText/skills-text";
+
 class Skills extends Component {
     constructor (props) {
         super(props);
@@ -38,9 +41,16 @@ class Skills extends Component {
     render () {
         return (
             <div className="elementContainer elementContainer--skills">
-                <h1 className="mainTitle mainTitle--skills">Skills</h1>
-                <p className="description">In this section you can see which technologies i know and my skill level in each one.
-                I measured my level based on the metric below.</p>
+                <h1 className="mainTitle mainTitle--skills">
+                    {
+                        this.props.lang === "br" ? BrSkillsText.title : USASkillsText.title
+                    }
+                </h1>
+                <p className="description">
+                    {
+                        this.props.lang === "br" ? BrSkillsText.description : USASkillsText.description
+                    }
+                </p>
                 <div className="metrics__container">
                     <input type="checkbox" className="showMetrics__state" id="showMetrics" />
                     <div className="showMetrics__wrap">
@@ -50,7 +60,12 @@ class Skills extends Component {
                             </Element>
                         </div>
                     </div>
-                    <label htmlFor="showMetrics" className="showMetrics__trigger" onClick={this.scrollToTop}>
+                    <label
+                        seemetric={ this.props.lang === "br" ? BrSkillsText.seeMetric : USASkillsText.seeMetric }
+                        hidemetric={ this.props.lang === "br" ? BrSkillsText.hideMetric : USASkillsText.hideMetric }
+                        htmlFor="showMetrics"
+                        className="showMetrics__trigger"
+                        onClick={this.scrollToTop}>
                     </label>
                 </div>
                 <ProgressBar/>

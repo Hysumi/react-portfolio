@@ -22,28 +22,29 @@
 
 .showMetrics__target {
     display: none;
-    transition: .25s ease;
+    @include transition(all 0.5s ease);
 }
-  
+
 .showMetrics__state:checked ~ .showMetrics__wrap .showMetrics__target {
     display: inline-block;
     font-size: inherit;
 }
- 
+
 .showMetrics__trigger {
     cursor: pointer;
     padding: .5em;
     margin-bottom: 1rem;
+    @include transition(all 0.5s ease);
 }
 
 .showMetrics__state ~ .showMetrics__trigger::before {
-    content: 'Click here to see the metric!';
+    content: attr(seemetric);
     font-size: 1rem;
     text-decoration: underline;
 }
-  
+
 .showMetrics__state:checked ~ .showMetrics__trigger::before {
-    content: 'Hide the metric.';
+    content: attr(hidemetric);
     font-size: 1rem;
 }
 

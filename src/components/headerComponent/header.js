@@ -4,8 +4,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 // includes
 import "../../assets/bundles/headerComponent/header.min.css";
 
-//data
-
+// data
 import { USAHeaderText, BrHeaderText } from "../../mocks/languageText/header-text";
 
 const delta = 5;

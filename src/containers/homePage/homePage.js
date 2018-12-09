@@ -17,7 +17,7 @@ class HomePage extends Component {
             <div className="mainContainer">
                 <div className="contentContainer">
                     <Element className="element" name="skills">
-                        <Skills/>
+                        <Skills lang={this.props.lang}/>
                     </Element>
                     <Element className="element element--reverseColor" name="experience">
                         <Experience/>

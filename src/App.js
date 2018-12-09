@@ -37,7 +37,7 @@ class App extends Component {
                 <div className="App">
                     <Header lang={this.state.lang} />
                     <Language setLang={this.setLanguage}/>
-                    <Route exact path="/react-portfolio" component={Homepage} />
+                    <Route exact path="/react-portfolio" render={(props) => <Homepage {...props} lang={this.state.lang} />} />
                 </div>
             </Router>
         );
