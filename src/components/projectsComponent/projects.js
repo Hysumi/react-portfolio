@@ -13,11 +13,12 @@ class Projects extends Component {
     render () {
         return (
             <div className="elementContainer">
-                <h1 className="mainTitle">Personal Projects</h1>
-                <p className="description">In this section you can see some of my personal projects.</p>
+                <h1 className="mainTitle">
+                    { this.props.lang === "br" ? "Projetos Pessoais" : "Personal Projects" }
+                </h1>
                 <div className="cardsContainer">
                     {ProjectsData.map((proj, i) =>
-                        <BlogCard key={i} project={proj}/>)}
+                        <BlogCard lang={this.props.lang} key={i} project={proj}/>)}
                 </div>
             </div>
         );

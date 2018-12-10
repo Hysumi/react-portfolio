@@ -4,7 +4,8 @@ export const ProjectsData = [
         coverImage: "",
         gitLink: "https://github.com/Hysumi/react-portfolio",
         publishedLink: "https://hysumi.github.io/react-portfolio/",
-        description: "My personal web portfolio.",
+        usaDescription: "My personal web portfolio.",
+        brDescription: "Meu portfólio pessoal online.",
         technologies: ["HTML5", "CSS3", "SASS", "React", "Javascript", "Gulp"]
     },
     {
@@ -12,7 +13,8 @@ export const ProjectsData = [
         coverImage: "",
         gitLink: "",
         publishedLink: "",
-        description: "",
+        usaDescription: "",
+        brDescription: "",
         technologies: ["Unity", "C#"]
     }
 ];

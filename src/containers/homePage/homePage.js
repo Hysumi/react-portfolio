@@ -20,10 +20,10 @@ class HomePage extends Component {
                         <Skills lang={this.props.lang}/>
                     </Element>
                     <Element className="element element--reverseColor" name="experience">
-                        <Experience/>
+                        <Experience lang={this.props.lang}/>
                     </Element>
                     <Element className="element" name="projects">
-                        <Projects/>
+                        <Projects lang={this.props.lang}/>
                     </Element>
                 </div>
                 <Footer/>

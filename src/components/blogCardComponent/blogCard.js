@@ -8,10 +8,11 @@ class BlogCard extends Component {
     renderPublishedLink () {
         if (this.props.project.publishedLink !== "") {
             return (
-                <span className="blogWebsiteButton">or go to
+                <span className="blogWebsiteButton">
+                    { this.props.lang === "br" ? "ou visite a" : "or go to" }
                     <span className="blogWebsiteButton blogWebsiteButton__link"
                         onClick={ () => window.open( `${ this.props.project.publishedLink }`, "_blank")}>
-                        website
+                        { this.props.lang === "br" ? "página" : "website" }
                     </span>
                     .
                 </span>
@@ -28,7 +29,9 @@ class BlogCard extends Component {
                 <div className="blogDescription">
                     <h1 className="mainTitle">{this.props.project.title}</h1>
                     <div className="blogSubContainer">
-                        <h5 className="secTitle">See more at:</h5>
+                        <h5 className="secTitle">
+                            { this.props.lang === "br" ? "Veja mais:" : "See more at:" }
+                        </h5>
                         <svg className="linkIcon linkIcon--git"
                             role="img"
                             viewBox="0 0 24 24"
@@ -39,7 +42,9 @@ class BlogCard extends Component {
 
                         { this.renderPublishedLink() }
                     </div>
-                    <p> {this.props.project.description} </p>
+                    <p>
+                        { this.props.lang === "br" ? this.props.project.brDescription : this.props.project.usaDescription }
+                    </p>
                     <ul className="blogTechnologies">
                         {this.props.project.technologies.map((tech, i) =>
                             <li key={i} >{tech}</li>)}

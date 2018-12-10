@@ -19,9 +19,3 @@ footer {
     display: inline-flex;
     @include TranslateY(10px);
 }
-
-@media (min-width: 769px) {
-    footer {
-        padding-bottom: 0px;
-    }
-}
