@@ -15,9 +15,23 @@ class Projects extends Component {
         this.state = {
             heightClass: "elementContainer"
         };
+        this.updateDimensions = this.updateDimensions.bind(this);
     }
 
     componentDidMount () {
+        this.checkViewHeight();
+        window.addEventListener("resize", this.updateDimensions);
+    }
+
+    componentWillUnmount () {
+        window.removeEventListener("resize", this.updateDimensions);
+    }
+
+    updateDimensions () {
+        this.checkViewHeight();
+    }
+
+    checkViewHeight () {
         if (this.projectContainer.clientHeight < window.innerHeight) {
             this.setState({
                 heightClass: "elementContainer elementContainer--projects"

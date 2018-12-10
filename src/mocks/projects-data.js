@@ -11,10 +11,10 @@ export const ProjectsData = [
     {
         title: "Buckat",
         coverImage: "",
-        gitLink: "",
+        gitLink: "https://github.com/Hysumi/Buckat-Project",
         publishedLink: "",
-        usaDescription: "",
-        brDescription: "",
+        usaDescription: "A single player shooter game which you throw buckets into cats to explode then! [?]",
+        brDescription: "Um jogo single player de tiro onde você atira baldes em gatos e eles explodem! [?]",
         technologies: ["Unity", "C#"]
     }
 ];

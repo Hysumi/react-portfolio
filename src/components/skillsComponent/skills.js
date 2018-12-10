@@ -17,10 +17,24 @@ class Skills extends Component {
             heightClass: "elementContainer"
         };
 
+        this.updateDimensions = this.updateDimensions.bind(this);
         this.scrollToTop = this.scrollToTop.bind(this);
     }
 
     componentDidMount () {
+        this.checkViewHeight();
+        window.addEventListener("resize", this.updateDimensions);
+    }
+
+    componentWillUnmount () {
+        window.removeEventListener("resize", this.updateDimensions);
+    }
+
+    updateDimensions () {
+        this.checkViewHeight();
+    }
+
+    checkViewHeight () {
         if (this.skillsContainer.clientHeight < window.innerHeight) {
             this.setState({
                 heightClass: "elementContainer elementContainer--skills"
