@@ -13,16 +13,36 @@ class Skills extends Component {
         super(props);
 
         this.state = {
-            isMetricScrollHide: true
+            isMetricScrollHide: true,
+            heightClass: "elementContainer"
         };
 
         this.scrollToTop = this.scrollToTop.bind(this);
+    }
+
+    componentDidMount () {
+        if (this.skillsContainer.clientHeight < window.innerHeight) {
+            this.setState({
+                heightClass: "elementContainer elementContainer--skills"
+            });
+        } else {
+            this.setState({
+                heightClass: "elementContainer"
+            });
+        }
     }
 
     scrollToTop () {
         var offsetScroll = 0;
         if (!this.state.isMetricScrollHide) {
             offsetScroll = -218;
+            this.setState({
+                heightClass: "elementContainer elementContainer--skills"
+            });
+        } else {
+            this.setState({
+                heightClass: "elementContainer"
+            });
         }
         scroller.scrollTo("metric", {
             smooth:true,
@@ -100,7 +120,8 @@ class Skills extends Component {
 
     render () {
         return (
-            <div className="elementContainer elementContainer--skills">
+            <div className={ this.state.heightClass }
+                ref={ (skillsContainer) => this.skillsContainer = skillsContainer}>
                 { this.props.lang === "br" ? this.renderBrSkills() : this.renderUsaSkills() }
             </div>
         );

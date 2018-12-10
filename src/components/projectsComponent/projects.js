@@ -10,9 +10,29 @@ import BlogCard from "../blogCardComponent/blogCard";
 import ProjectsData from "../../mocks/projects-data";
 
 class Projects extends Component {
+    constructor (props) {
+        super(props);
+        this.state = {
+            heightClass: "elementContainer"
+        };
+    }
+
+    componentDidMount () {
+        if (this.projectContainer.clientHeight < window.innerHeight) {
+            this.setState({
+                heightClass: "elementContainer elementContainer--projects"
+            });
+        } else {
+            this.setState({
+                heightClass: "elementContainer"
+            });
+        }
+    }
+
     render () {
         return (
-            <div className="elementContainer">
+            <div className={ this.state.heightClass }
+                ref={ (projectContainer) => this.projectContainer = projectContainer}>
                 <h1 className="mainTitle">
                     { this.props.lang === "br" ? "Projetos Pessoais" : "Personal Projects" }
                 </h1>
