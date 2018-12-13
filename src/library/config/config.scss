@@ -94,6 +94,9 @@ h1 {
     letter-spacing: 1px;
 }
 
+p {
+    font-family: 'Abel', sans-serif;
+}
 article {
     background-color: $light;
     margin: 1em;
@@ -103,9 +106,11 @@ article {
 
 .mainTitle {
     margin-bottom: 20px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 .description {
     text-align: center;
     padding: 0 1em;
+    font-family: 'Abel', sans-serif;
 }

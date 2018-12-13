@@ -21,7 +21,7 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
     max-width: 750px;
     background: $lighter;
     box-sizing: border-box;
-    box-shadow: 0 3px 10px rgba(0,0,0,.5);    
+    box-shadow: 0 3px 10px rgba(0,0,0,.5);
     padding: 1em;
     margin: 1em;
 }
@@ -63,6 +63,7 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
 .skillLevel__title {
     color: $mainColor;
     font-weight: bold;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 .progressBarContainer {
@@ -95,7 +96,7 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
     &--advanced {
         background: $advanced;
     }
-    
+
 }
 
 @media (min-width: 769px) {

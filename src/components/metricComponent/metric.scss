@@ -9,6 +9,7 @@
     position: relative;
     margin: 1em 0;
     color: $mainColor;
+    font-family: 'Barlow', sans-serif;
     &::after {
         position: absolute;
         content: '';

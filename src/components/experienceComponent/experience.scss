@@ -2,7 +2,7 @@
 
 .elementContainer--experience {
     padding: 50px 0;
-    font-family: "Roboto";
+    font-family: 'Abel', sans-serif;
     background-color: $mainColor;
 }
 
@@ -31,8 +31,8 @@
     display: table;
     clear: both;
 }
-  
-  
+
+
 .timeline__container {
     position: relative;
     padding: 2em 0;
@@ -49,7 +49,7 @@
     width: 4px;
     background: $mainColor;
 }
-  
+
 @media only screen and (min-width: 1170px) {
     .timeline__container {
       margin-top: 3em;
@@ -60,7 +60,7 @@
       margin-left: -2px;
     }
 }
-  
+
 .timeline__block {
     position: relative;
     margin: 2em 0;
@@ -112,7 +112,7 @@
         @include TranslateZ(0);
     }
 }
-  
+
 .timeline__content {
     position: relative;
     margin-left: 60px;
@@ -126,10 +126,10 @@
         color: $lighter;
         font-size: 12px;
         box-shadow:  inset 0 2px 0 rgba(0, 0, 0, 0.08);
-        border-radius: 2px;    
+        border-radius: 2px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        &__title, &__date {  
+        &__title, &__date {
             display: inline-block;
             margin: 0 .5em;
         }
@@ -159,7 +159,7 @@
         margin: 1em 0;
     }
 }
-  
+
 .timeline__content::before {
     content: '';
     position: absolute;
@@ -170,7 +170,7 @@
     border: 10px solid transparent;
     border-right: 10px solid $mainColor;
 }
-  
+
 @media only screen and (min-width: 768px) {
     .timeline__content h2 {
       font-size: 1.25rem;
@@ -194,7 +194,7 @@
       border-color: transparent;
       border-left-color: $mainColor;
     }
-   
+
     .timeline__block:nth-child(even) .timeline__content {
       float: right;
     }
