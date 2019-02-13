@@ -19,6 +19,7 @@
 .element {
     background-color: $light;
     margin: 0px;
+    min-height: 100vh;
     &--reverseColor {
         background-color: $mainColor;
     }
