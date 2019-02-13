@@ -5,7 +5,6 @@ import "../../assets/bundles/languageComponent/language.min.css";
 
 class Language extends Component {
 
-
     render () {
         return (
             <div className="languageContainer">

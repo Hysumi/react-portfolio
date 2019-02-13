@@ -1,25 +1,52 @@
 @import '../../library/config/config.scss';
 
-.mainContainer {
-   background-image: url(../../images/anarchy.jpg);
-   height: 100vh;
-   background-position: center center;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-size: cover;
-   background-color: #464646;
-   padding-right: 0px;
-   padding-left: 0px;
-}
-
-.contentContainer {
-   padding-top: 100vh;
-}
-
 .element {
     background-color: $light;
     margin: 0px;
     &--reverseColor {
         background-color: $mainColor;
     }
+}
+
+.slide {
+    position: relative;
+    padding: 25vh 10%;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    transform-style: inherit;
+}
+
+.slide:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.slide, .slide:before {
+    background: 50% 50% / cover;
+}
+
+.about {
+    text-align: center;
+    font-size: 175%;
+    color: #fff;
+    text-shadow: 0 2px 2px #000;
+}
+
+.parallax-title {
+    background-image: url(../../images/democracy.jpg);
+    z-index:-1;
+}
+
+.parallax-title h1 {
+   transform: translateZ(.25px) scale(.75);
+   transform-origin: 50% 100%;
+}
+
+.parallax-content:before {
+   // transform: translateZ(-1px) scale(2);
 }
