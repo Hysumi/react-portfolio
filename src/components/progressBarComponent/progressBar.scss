@@ -86,7 +86,7 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
     border-radius: 50px;
     display: inline-block;
     margin: 0 .165em;
-    @include TranslateY(-.35em);
+    @include TranslateY(-.4em);
     &--basic {
         background: $basic;
     }

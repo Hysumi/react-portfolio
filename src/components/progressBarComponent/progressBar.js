@@ -33,7 +33,7 @@ class ProgressBar extends Component {
         });
         return (
             <div className="progressBarMain">
-                <h1>{ this.props.lang === "br" ? "Tecnologias" : "Technologies" } </h1>
+                <h1 className="mainTitle">{ this.props.lang === "br" ? "Tecnologias" : "Technologies" } </h1>
                 <div className="progressBarContainer">
                     {Icons.map((icon, i) =>
                         <div key={i} className="skillLevel__container">

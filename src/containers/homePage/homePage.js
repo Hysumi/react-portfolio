@@ -26,7 +26,7 @@ class HomePage extends Component {
                         <Projects lang={this.props.lang}/>
                     </Element>
                 </div>
-                <Footer/>
+                <Footer lang={this.props.lang}/>
             </div>
         );
     }

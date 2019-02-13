@@ -56,8 +56,10 @@ class Experience extends Component {
                                 <li>HTML5</li>
                                 <li>CSS3</li>
                                 <li>JavaScript</li>
+                                <li>AngularJs</li>
                                 <li>Git</li>
                                 <li>C# (.NET)</li>
+                                <li>REST</li>
                                 <li>Ionic 1</li>
                                 <li>SQL Server</li>
                                 <li>Scrum</li>

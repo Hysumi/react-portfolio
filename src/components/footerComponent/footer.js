@@ -8,7 +8,9 @@ class Footer extends Component {
     render () {
         return (
             <footer>
-                <h1 className="mainTitle mainTitle--footer">Contact me and see more at:</h1>
+                <h1 className="mainTitle mainTitle--footer">
+                    { this.props.lang === "br" ? "Entre em contato e veja mais em:" : "Contact me and see more at:" }
+                </h1>
                 <div className="footer__iconContainer">
                     <svg className="linkIcon linkIcon--linkedin"
                         role="img"
