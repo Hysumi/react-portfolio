@@ -1,0 +1,21 @@
+@import '../../library/config/config.scss';
+
+.about-container {
+    min-height: 100vh;
+    padding-top: 70px;
+    background-image: url(http://ppcdn.500px.org/75319705/1991f76c0c6a91ae1d23eb94ac5c7a9f7e79c480/2048.jpg) ;
+			background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+}
+
+
+.imageTeste {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}

@@ -159,7 +159,13 @@ class Header extends Component {
         return (
             <div className="navBar__container">
                 <div className="navBar__item" onClick={this.scrollToTop}>
-                    About Me
+                    <Link className="navBar__link"
+                        to="skills"
+                        smooth={true}
+                        duration={800}
+                        offset={0}>
+                        About Me
+                    </Link>
                 </div>
                 <div className="navBar__item" onClick={this.navClicked}>
                     <Link className="navBar__link"
