@@ -40,8 +40,10 @@ class ProgressBar extends Component {
                             <div className="skillLevel__titleContainer">
                                 <svg className={icon.classIcon} role="img" viewBox={icon.viewBox} xmlns="http://www.w3.org/2000/svg">
                                     <circle cx={icon.circle.cx} cy={icon.circle.cy} r={icon.circle.r}/>
-                                    {icon.path.map((d, j) =>
-                                        <path key={j} d={d}/>)}
+                                    {icon.path.map((path, j) =>
+                                        <path key={j} d={path.d} fill={path.fill} />)}
+                                    {icon.polygon.map((polygon, k) =>
+                                        <polygon key={k} points={polygon.points} fill={polygon.fill} />)}
                                 </svg>
                                 <span className="skillLevel__title">{icon.name} - { this.props.lang === "br" ? "Nv:" : "Lv:" }  {icon.level}</span>
                             </div>

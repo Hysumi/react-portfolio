@@ -26,14 +26,6 @@ class Experience extends Component {
                             </div>
                             <p> { this.props.lang === "br" ? "Rede social universitária que oferece inteligência e uma agenda completa dos eventos universitários." :
                                 "College social network that offers intelligence and a complete agenda of university events." }</p>
-                            <ul className="content__skills">
-                                <li>Scrum</li>
-                                <li>Angular</li>
-                                <li>Ionic 3</li>
-                                <li>Firebase</li>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                            </ul>
                         </div>
                     </div>
                     <div className="timeline__block">
@@ -52,18 +44,6 @@ class Experience extends Component {
                             <p>
                                 { this.props.lang === "br" ? "Linx é uma empresa de software que provê serviços para o setor de varejo." :
                                     "Linx is a software management company that provides services to a diverse set of customers from retail sector." }</p>
-                            <ul className="content__skills">
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>JavaScript</li>
-                                <li>AngularJs</li>
-                                <li>Git</li>
-                                <li>C# (.NET)</li>
-                                <li>REST</li>
-                                <li>Ionic 1</li>
-                                <li>SQL Server</li>
-                                <li>Scrum</li>
-                            </ul>
                         </div>
                     </div>
 
@@ -109,14 +89,6 @@ class Experience extends Component {
                             </div>
                             <p> { this.props.lang === "br" ? "O LTIA (Laboratório de Tecnologia da Informação Aplicada) é um laboratório da UNESP (Universidade do Estado de São Paulo) para estudantes aprenderem sobre tecnologias emergientes a partir de projetos com instituções e companhias. O objetivo principal é fazer os estudantes aprenderem e aplicarem as novas tecnologias enquanto desenvolvem um projeto real." :
                                 "The LTIA (Applied Information Technology Laboratory) is a lab at UNESP (São Paulo State University) for students to learn new forthcoming technologies through projects with external institutions and companies. The main goal is that students learn and apply new technologies while developing a real project." }</p>
-                            <ul className="content__skills">
-                                <li>Scrum</li>
-                                <li>Unity</li>
-                                <li>Git</li>
-                                <li>C#</li>
-                                <li>Kinect</li>
-                                <li>Oculus Rift</li>
-                            </ul>
                         </div>
                     </div>
 
