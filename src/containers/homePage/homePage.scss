@@ -1,18 +1,5 @@
 @import '../../library/config/config.scss';
 
-.mainContainer {
-   background-image: url(../../images/anarchy.jpg);
-   height: 100vh;
-   background-position: center center;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-size: cover;
-   background-color: #464646;
-   padding-right: 0px;
-   padding-left: 0px;
-}
-
-
 .element {
     background-color: $light;
     margin: 0px;

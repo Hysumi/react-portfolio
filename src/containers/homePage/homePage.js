@@ -15,7 +15,7 @@ class HomePage extends Component {
 
     render () {
         return (
-            <div className="mainContainer">
+            <div>
                 <Element className="element element--reverseColor" name="about">
                     <About lang={ this.props.lang }/>
                 </Element>
