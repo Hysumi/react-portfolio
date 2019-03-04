@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 // imports
 import "../../assets/bundles/aboutComponent/about.min.css";
@@ -7,14 +8,40 @@ class About extends Component {
     render () {
         return (
             <div className="about-container">
-                <div class="content">
-                    <div class="profile-image"></div>
-                    <div class="info">
+                <div className="content">
+                    <div className="profile-image"></div>
+                    <h4 className="name-title">Henrique de Souza</h4>
+                    <div className="info">
                         <p>
-                            web designer and developer, student of the gtu. I Love designs and I'm going to change the world.
+                            {
+                                this.props.lang === "br"
+                                    ? "desenvolvedor full stack"
+                                    : "full stack developer"
+                            }
+                        </p>
+                        <p>&</p>
+                        <p>
+                            {
+                                this.props.lang === "br"
+                                    ? "desenvolvedor de jogos nos tempos vagos."
+                                    : "game developer in free time."
+                            }
                         </p>
                     </div>
                 </div>
+
+                <Link className="see-more"
+                    to="skills"
+                    smooth={true}
+                    duration={800}
+                    offset={0}>
+                    {
+                        this.props.lang === "br"
+                            ? "Veja mais abaixo!"
+                            : "See more below!"
+                    }
+                </Link>
+
             </div>
         );
     }

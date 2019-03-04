@@ -2,11 +2,42 @@
 
 .about-container {
     content: "";
-    display: table;
+    display: block;
     clear: both;
     width: calc(60% + 60px);
-    margin: 0 auto 30px;
-    padding-top: 70px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.name-title {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: $lighter;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.see-more {
+    text-align: center;
+    color: $lighter !important;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    margin-bottom: 2em;
+    font-family: 'Abel', sans-serif;
+}
+
+.see-more::after {
+    content: ' \25BE';
+    font-size: 1.25rem;
+}
+
+.see-more:hover {
+    cursor: pointer;
 }
 
 .content {
@@ -31,15 +62,18 @@
 .info {
     font-family: 'Abel', sans-serif;
     text-transform: uppercase;
-    font-weight: 600;
-    margin: 35px auto;
+    text-align: center;
+    margin: 0px auto 15px;
     width: 90%;
     position: relative;
-    padding: 18px 0;
+    padding: 20px;
     font-size: 1em;
     border-top: solid 2px ;
     border-bottom: solid 2px ;
-    color: white;
+    color: $lighter;
+    p {
+        margin-bottom: 0;
+    }
 }
 
 .profile-image {
@@ -150,4 +184,10 @@
     to   {  width: 180px;
             height: 180px;
             left: -12px; top: -12px; }
+}
+
+@media (min-width: 769px) {
+    .about-container {
+        padding-bottom: 70px 0;
+    }
 }
