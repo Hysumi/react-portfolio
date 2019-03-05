@@ -12,6 +12,10 @@
 .language-icon {
     height: 40px;
     margin: .3em;
+    @include transition(transform 0.2s ease);
+    &:active:hover {
+        transform: scale(1.3);
+    }
 }
 
 @media (min-width: 769px) {
