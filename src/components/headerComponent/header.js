@@ -117,12 +117,12 @@ class Header extends Component {
 
     renderBrHeader = () => {
         return (
-            <div className="navBar__container">
-                <div className="navBar__item" onClick={this.scrollToTop}>
+            <div className="nav-bar__container">
+                <div className="nav-bar__item" onClick={this.scrollToTop}>
                     Sobre
                 </div>
-                <div className="navBar__item" onClick={this.navClicked}>
-                    <Link className="navBar__link"
+                <div className="nav-bar__item" onClick={this.navClicked}>
+                    <Link className="nav-bar__link"
                         to="skills"
                         smooth={true}
                         duration={800}
@@ -130,8 +130,8 @@ class Header extends Component {
                         Habilidades
                     </Link>
                 </div>
-                <div className="navBar__item">
-                    <Link className="navBar__link"
+                <div className="nav-bar__item">
+                    <Link className="nav-bar__link"
                         to="experience"
                         smooth={true}
                         duration={800}
@@ -139,8 +139,8 @@ class Header extends Component {
                         Experiência
                     </Link>
                 </div>
-                <div className="navBar__item">
-                    <Link className="navBar__link"
+                <div className="nav-bar__item">
+                    <Link className="nav-bar__link"
                         to="projects"
                         smooth={true}
                         duration={800}
@@ -148,7 +148,7 @@ class Header extends Component {
                         Projetos
                     </Link>
                 </div>
-                <div className="navBar__item" onClick={this.scrollToBottom}>
+                <div className="nav-bar__item" onClick={this.scrollToBottom}>
                     Contato
                 </div>
             </div>
@@ -157,9 +157,9 @@ class Header extends Component {
 
     renderUsaHeader = () => {
         return (
-            <div className="navBar__container">
-                <div className="navBar__item" onClick={this.scrollToTop}>
-                    <Link className="navBar__link"
+            <div className="nav-bar__container">
+                <div className="nav-bar__item" onClick={this.scrollToTop}>
+                    <Link className="nav-bar__link"
                         to="skills"
                         smooth={true}
                         duration={800}
@@ -167,8 +167,8 @@ class Header extends Component {
                         About Me
                     </Link>
                 </div>
-                <div className="navBar__item" onClick={this.navClicked}>
-                    <Link className="navBar__link"
+                <div className="nav-bar__item" onClick={this.navClicked}>
+                    <Link className="nav-bar__link"
                         to="skills"
                         smooth={true}
                         duration={800}
@@ -176,8 +176,8 @@ class Header extends Component {
                         Skills
                     </Link>
                 </div>
-                <div className="navBar__item">
-                    <Link className="navBar__link"
+                <div className="nav-bar__item">
+                    <Link className="nav-bar__link"
                         to="experience"
                         smooth={true}
                         duration={800}
@@ -185,8 +185,8 @@ class Header extends Component {
                         Experience
                     </Link>
                 </div>
-                <div className="navBar__item">
-                    <Link className="navBar__link"
+                <div className="nav-bar__item">
+                    <Link className="nav-bar__link"
                         to="projects"
                         smooth={true}
                         duration={800}
@@ -194,7 +194,7 @@ class Header extends Component {
                         Projects
                     </Link>
                 </div>
-                <div className="navBar__item" onClick={this.scrollToBottom}>
+                <div className="nav-bar__item" onClick={this.scrollToBottom}>
                     Contact
                 </div>
             </div>
@@ -204,7 +204,7 @@ class Header extends Component {
     render () {
         return (
             <header className={this.state.navClass}>
-                <div className="navBar">
+                <div className="nav-bar">
                     { this.props.lang === "br" ? this.renderBrHeader() : this.renderUsaHeader() }
                 </div>
             </header>

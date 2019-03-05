@@ -1,7 +1,7 @@
 export const ProjectsData = [
     {
         title: "React Portfolio",
-        coverImage: "",
+        coverImage: "images/portfolio.png",
         gitLink: "https://github.com/Hysumi/react-portfolio",
         publishedLink: "https://hysumi.github.io/react-portfolio/",
         usaDescription: "My personal web portfolio.",
@@ -10,7 +10,7 @@ export const ProjectsData = [
     },
     {
         title: "Buckat",
-        coverImage: "",
+        coverImage: "images/buckat.png",
         gitLink: "https://github.com/Hysumi/Buckat-Project",
         publishedLink: "",
         usaDescription: "A single player shooter game which you throw buckets into cats to explode then! [?]",

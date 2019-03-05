@@ -8,9 +8,9 @@ class BlogCard extends Component {
     renderPublishedLink () {
         if (this.props.project.publishedLink !== "") {
             return (
-                <span className="blogWebsiteButton">
+                <span className="blog-website-button">
                     { this.props.lang === "br" ? "ou visite a" : "or go to" }
-                    <span className="blogWebsiteButton blogWebsiteButton__link"
+                    <span className="blog-website-button blog-website-button__link"
                         onClick={ () => window.open( `${ this.props.project.publishedLink }`, "_blank")}>
                         { this.props.lang === "br" ? "página" : "website" }
                     </span>
@@ -22,17 +22,17 @@ class BlogCard extends Component {
 
     render () {
         return (
-            <div className="blogCardContainer">
-                <div className="imageContainer">
-                    <img className="imageCard" src={require("../../assets/images/democracy.jpg")} alt=""></img>
+            <div className="blog-card-container">
+                <div className="image-container">
+                    <img className="image-card" src={this.props.project.coverImage} alt=""></img>
                 </div>
-                <div className="blogDescription">
-                    <h1 className="mainTitle">{this.props.project.title}</h1>
-                    <div className="blogSubContainer">
-                        <h5 className="secTitle">
+                <div className="blog-description">
+                    <h1 className="main-title">{this.props.project.title}</h1>
+                    <div className="blog-sub-container">
+                        <h5 className="sec-title">
                             { this.props.lang === "br" ? "Veja mais:" : "See more at:" }
                         </h5>
-                        <svg className="linkIcon linkIcon--git"
+                        <svg className="link-icon link-icon--git"
                             role="img"
                             viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ class BlogCard extends Component {
                     <p>
                         { this.props.lang === "br" ? this.props.project.brDescription : this.props.project.usaDescription }
                     </p>
-                    <ul className="blogTechnologies">
+                    <ul className="blog-technologies">
                         {this.props.project.technologies.map((tech, i) =>
                             <li key={i} >{tech}</li>)}
                     </ul>

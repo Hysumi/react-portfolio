@@ -1,6 +1,6 @@
 @import '../../library/config/config.scss';
 
-.languageContainer {
+.language-container {
     padding-top: 4em;
     margin-right: 0.5em;
     color: white;
@@ -9,13 +9,13 @@
     cursor: pointer;
 }
 
-.languageIcon {
+.language-icon {
     height: 40px;
     margin: .3em;
 }
 
 @media (min-width: 769px) {
-    .languageContainer {
+    .language-container {
         padding-top: 6em;
         margin-right: 0.5em;
         color: white;
@@ -23,7 +23,7 @@
         font-size: .75em;
     }
 
-    .languageIcon {
+    .language-icon {
         margin: .5em;
         @include transition(transform 0.2s ease);
         &:hover {

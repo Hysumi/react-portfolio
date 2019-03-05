@@ -6,7 +6,7 @@ footer {
     padding-bottom: 15px;
 }
 
-.mainTitle--footer {
+.main-title--footer {
     color: $mainColor;
     font-size: 1em;
     margin: 0;
@@ -15,7 +15,7 @@ footer {
     margin-bottom: 0px !important;
 }
 
-.footer__iconContainer {
+.footer__icon-container {
     display: inline-flex;
     @include TranslateY(10px);
 }

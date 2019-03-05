@@ -17,7 +17,7 @@ $color-gulp:        #DA4648;
 $color-unity:       #000000;
 $color-unreal:      rgba(35, 35, 35, 0.7);
 
-.progressBarMain {
+.progress-bar-main {
     max-width: 750px;
     background: $lighter;
     box-sizing: border-box;
@@ -26,13 +26,13 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
     margin: 1em;
 }
 
-.skillLevel__container {
+.skill-level__container {
     box-sizing: border-box;
     margin: 0 auto;
     padding: .5em;
 }
 
-.skillLevel__titleContainer {
+.skill-level__title-container {
     margin-bottom: .5em;
 
     > .icon {
@@ -60,18 +60,18 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
     }
 }
 
-.skillLevel__title {
+.skill-level__title {
     color: $mainColor;
     font-weight: bold;
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
-.progressBarContainer {
+.progress-bar-container {
     display: flex;
     flex-wrap: wrap;
 }
 
-.skillLevel__progressBar {
+.skill-level__progress-bar {
     box-sizing: border-box;
     border-radius: 2px;
     border: 1px solid $mainColor;
@@ -80,7 +80,7 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
     padding-left: .2em;
 }
 
-.skillLevel__level {
+.skill-level__level {
     width: .65em;
     height: .65em;
     border-radius: 50px;
@@ -100,7 +100,7 @@ $color-unreal:      rgba(35, 35, 35, 0.7);
 }
 
 @media (min-width: 769px) {
-    .progressBarMain {
+    .progress-bar-main {
         margin: 0 auto;
     }
 }

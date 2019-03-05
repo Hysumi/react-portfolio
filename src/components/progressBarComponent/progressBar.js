@@ -9,7 +9,7 @@ import Icons from "../../mocks/skill-icons-data";
 class ProgressBar extends Component {
 
     renderSkillLevel (lv, key) {
-        let skillClass = "skillLevel__level skillLevel__level--";
+        let skillClass = "skill-level__level skill-level__level--";
         if (lv <= 4) {
             skillClass += "basic";
         } else if (lv > 4 && lv < 7) {
@@ -32,12 +32,12 @@ class ProgressBar extends Component {
             skillRows.push(skillRow);
         });
         return (
-            <div className="progressBarMain">
-                <h1 className="mainTitle">{ this.props.lang === "br" ? "Tecnologias" : "Technologies" } </h1>
-                <div className="progressBarContainer">
+            <div className="progress-bar-main">
+                <h1 className="main-title">{ this.props.lang === "br" ? "Tecnologias" : "Technologies" } </h1>
+                <div className="progress-bar-container">
                     {Icons.map((icon, i) =>
-                        <div key={i} className="skillLevel__container">
-                            <div className="skillLevel__titleContainer">
+                        <div key={i} className="skill-level__container">
+                            <div className="skill-level__title-container">
                                 <svg className={icon.classIcon} role="img" viewBox={icon.viewBox} xmlns="http://www.w3.org/2000/svg">
                                     <circle cx={icon.circle.cx} cy={icon.circle.cy} r={icon.circle.r}/>
                                     {icon.path.map((path, j) =>
@@ -45,9 +45,9 @@ class ProgressBar extends Component {
                                     {icon.polygon.map((polygon, k) =>
                                         <polygon key={k} points={polygon.points} fill={polygon.fill} />)}
                                 </svg>
-                                <span className="skillLevel__title">{icon.name} - { this.props.lang === "br" ? "Nv:" : "Lv:" }  {icon.level}</span>
+                                <span className="skill-level__title">{icon.name} - { this.props.lang === "br" ? "Nv:" : "Lv:" }  {icon.level}</span>
                             </div>
-                            <div className="skillLevel__progressBar">
+                            <div className="skill-level__progress-bar">
                                 {skillRows[i].map((row, k) => (this.renderSkillLevel(row, k)))}
                             </div>
                         </div>)}

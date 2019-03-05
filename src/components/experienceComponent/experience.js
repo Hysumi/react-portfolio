@@ -6,8 +6,8 @@ import "../../assets/bundles/experienceComponent/experience.min.css";
 class Experience extends Component {
     render () {
         return (
-            <div className="elementContainer elementContainer--experience">
-                <h1 className="mainTitle mainTitle--experience">
+            <div className="element-container element-container--experience">
+                <h1 className="main-title main-title--experience">
                     { this.props.lang === "br" ? "Experiência" : "Experience" }
                 </h1>
                 <section className="timeline__container">
@@ -15,7 +15,7 @@ class Experience extends Component {
                         <div className="timeline__circle">
                         </div>
                         <div className="timeline__content">
-                            <h2 className="mainTitle mainTitle--company">Guni</h2>
+                            <h2 className="main-title main-title--company">Guni</h2>
                             <div className=" timeline__content__info">
                                 <div className="timeline__content__info__title">
                                     { this.props.lang === "br" ? "Desenvolvedor Full Stack" : "Full Stack Developer" }
@@ -32,7 +32,7 @@ class Experience extends Component {
                         <div className="timeline__circle">
                         </div>
                         <div className="timeline__content">
-                            <h2 className="mainTitle mainTitle--company">Linx</h2>
+                            <h2 className="main-title main-title--company">Linx</h2>
                             <div className=" timeline__content__info">
                                 <span className="timeline__content__info__title">
                                     { this.props.lang === "br" ? "Desenvolvedor Full Stack" : "Full Stack Developer" }
@@ -51,7 +51,7 @@ class Experience extends Component {
                         <div className="timeline__circle">
                         </div>
                         <div className="timeline__content">
-                            <span className="mainTitle mainTitle--company">
+                            <span className="main-title main-title--company">
                                 { this.props.lang === "br" ? "Graduação - Bacharelado em Ciência da Computação" : "Graduation - Bachelor in Computer Science." }</span>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ class Experience extends Component {
                         <div className="timeline__circle">
                         </div>
                         <div className="timeline__content">
-                            <h2 className="mainTitle mainTitle--company">PET</h2>
+                            <h2 className="main-title main-title--company">PET</h2>
                             <div className=" timeline__content__info">
                                 <span className="timeline__content__info__title">
                                     { this.props.lang === "br" ? "Bolsista" : "Scholarship Student" }
@@ -78,7 +78,7 @@ class Experience extends Component {
                         <div className="timeline__circle">
                         </div>
                         <div className="timeline__content">
-                            <h2 className="mainTitle mainTitle--company">LTIA</h2>
+                            <h2 className="main-title main-title--company">LTIA</h2>
                             <div className=" timeline__content__info">
                                 <div className="timeline__content__info__title">
                                     { this.props.lang === "br" ? "Desenvolvedor de jogos & Gerente de Projetos" : "Game Developer & Project Manager" }
@@ -96,7 +96,7 @@ class Experience extends Component {
                         <div className="timeline__circle">
                         </div>
                         <div className="timeline__content">
-                            <span className="mainTitle mainTitle--experience">
+                            <span className="main-title main-title--experience">
                                 { this.props.lang === "br" ? "Início da experiência acadêmica." : "Start of academic experience." }
                             </span>
                         </div>

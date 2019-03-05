@@ -15,7 +15,7 @@ header {
     font-family: 'Abel', sans-serif;
 }
 
-.navBar{
+.nav-bar{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,7 +70,7 @@ header {
     header {
         height: $height;
     }
-    .navBar{
+    .nav-bar{
         &__container {
             height: $height;
         }

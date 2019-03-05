@@ -13,7 +13,7 @@ class Projects extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            heightClass: "elementContainer"
+            heightClass: "element-container"
         };
         this.updateDimensions = this.updateDimensions.bind(this);
     }
@@ -34,11 +34,11 @@ class Projects extends Component {
     checkViewHeight () {
         if (this.projectContainer.clientHeight < window.innerHeight) {
             this.setState({
-                heightClass: "elementContainer elementContainer--projects"
+                heightClass: "element-container element-container--projects"
             });
         } else {
             this.setState({
-                heightClass: "elementContainer"
+                heightClass: "element-container"
             });
         }
     }
@@ -47,10 +47,10 @@ class Projects extends Component {
         return (
             <div className={ this.state.heightClass }
                 ref={ (projectContainer) => this.projectContainer = projectContainer}>
-                <h1 className="mainTitle">
+                <h1 className="main-title">
                     { this.props.lang === "br" ? "Projetos Pessoais" : "Personal Projects" }
                 </h1>
-                <div className="cardsContainer">
+                <div className="cards-container">
                     {ProjectsData.map((proj, i) =>
                         <BlogCard lang={this.props.lang} key={i} project={proj}/>)}
                 </div>

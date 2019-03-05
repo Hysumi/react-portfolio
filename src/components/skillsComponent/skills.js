@@ -14,7 +14,7 @@ class Skills extends Component {
 
         this.state = {
             isMetricScrollHide: true,
-            heightClass: "elementContainer"
+            heightClass: "element-container"
         };
 
         this.updateDimensions = this.updateDimensions.bind(this);
@@ -37,11 +37,11 @@ class Skills extends Component {
     checkViewHeight () {
         if (this.skillsContainer.clientHeight < window.innerHeight) {
             this.setState({
-                heightClass: "elementContainer elementContainer--skills"
+                heightClass: "element-container element-container--skills"
             });
         } else {
             this.setState({
-                heightClass: "elementContainer"
+                heightClass: "element-container"
             });
         }
     }
@@ -51,11 +51,11 @@ class Skills extends Component {
         if (!this.state.isMetricScrollHide) {
             offsetScroll = -218;
             this.setState({
-                heightClass: "elementContainer elementContainer--skills"
+                heightClass: "element-container element-container--skills"
             });
         } else {
             this.setState({
-                heightClass: "elementContainer"
+                heightClass: "element-container"
             });
         }
         scroller.scrollTo("metric", {
@@ -72,16 +72,16 @@ class Skills extends Component {
     renderBrSkills = () => {
         return (
             <div>
-                <h1 className="mainTitle mainTitle--skills">
+                <h1 className="main-title main-title--skills">
                     Habilidades
                 </h1>
                 <p className="description">
                     Nesta sessão você poderá ver quais tecnologias eu conheço e meu nível de habilidade com cada uma. Medi o meu nível baseado na métrica abaixo.
                 </p>
                 <div className="metrics__container">
-                    <input type="checkbox" className="showMetrics__state" id="showMetrics" />
-                    <div className="showMetrics__wrap">
-                        <div className="showMetrics__target">
+                    <input type="checkbox" className="show-metrics__state" id="show-metrics" />
+                    <div className="show-metrics__wrap">
+                        <div className="show-metrics__target">
                             <Element name="metric">
                                 <Metric lang={ this.props.lang }/>
                             </Element>
@@ -90,8 +90,8 @@ class Skills extends Component {
                     <label
                         seemetric="Clique aqui para ver a métrica!"
                         hidemetric="Ocultar a métrica."
-                        htmlFor="showMetrics"
-                        className="showMetrics__trigger"
+                        htmlFor="show-metrics"
+                        className="show-metrics__trigger"
                         onClick={ this.scrollToTop }>
                     </label>
                 </div>
@@ -104,15 +104,15 @@ class Skills extends Component {
     renderUsaSkills = () => {
         return (
             <div>
-                <h1 className="mainTitle mainTitle--skills">
+                <h1 className="main-title main-title--skills">
                     Skills
                 </h1>
                 <p className="description">
                     In this section you can see which technologies i know and my skill level in each one. I measured my level based on the metric below.                </p>
                 <div className="metrics__container">
-                    <input type="checkbox" className="showMetrics__state" id="showMetrics" />
-                    <div className="showMetrics__wrap">
-                        <div className="showMetrics__target">
+                    <input type="checkbox" className="show-metrics__state" id="show-metrics" />
+                    <div className="show-metrics__wrap">
+                        <div className="show-metrics__target">
                             <Element name="metric">
                                 <Metric lang={ this.props.lang }/>
                             </Element>
@@ -121,8 +121,8 @@ class Skills extends Component {
                     <label
                         seemetric="Click here to see the metric!"
                         hidemetric="Hide the metric."
-                        htmlFor="showMetrics"
-                        className="showMetrics__trigger"
+                        htmlFor="show-metrics"
+                        className="show-metrics__trigger"
                         onClick={ this.scrollToTop }>
                     </label>
                 </div>

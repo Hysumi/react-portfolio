@@ -8,9 +8,9 @@ class Language extends Component {
 
     render () {
         return (
-            <div className="languageContainer">
-                <img onClick={() => this.props.setLang("br")} className="languageIcon" src={require("../../assets/icons/brasil.png")} alt=""></img>
-                <img onClick={() => this.props.setLang("usa")} className="languageIcon" src={require("../../assets/icons/usa.png")} alt=""></img>
+            <div className="language-container">
+                <img onClick={() => this.props.setLang("br")} className="language-icon" src={require("../../assets/icons/brasil.png")} alt=""></img>
+                <img onClick={() => this.props.setLang("usa")} className="language-icon" src={require("../../assets/icons/usa.png")} alt=""></img>
             </div>
         );
     }

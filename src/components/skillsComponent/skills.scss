@@ -1,11 +1,11 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:400,300,700|Pacifico|Julius+Sans+One";
 @import '../../library/config/config.scss';
 
-.elementContainer--skills {
+.element-container--skills {
     height: 100vh !important;
 }
 
-.mainTitle--skills {
+.main-title--skills {
     color: $mainColor;
     text-align: center;
 }
@@ -14,21 +14,21 @@
     text-align: center;
 }
 
-.showMetrics__state {
+.show-metrics__state {
     display: none;
 }
 
-.showMetrics__target {
+.show-metrics__target {
     display: none;
     @include transition(all 0.5s ease);
 }
 
-.showMetrics__state:checked ~ .showMetrics__wrap .showMetrics__target {
+.show-metrics__state:checked ~ .show-metrics__wrap .show-metrics__target {
     display: inline-block;
     font-size: inherit;
 }
 
-.showMetrics__trigger {
+.show-metrics__trigger {
     cursor: pointer;
     padding: .5em;
     margin-bottom: 1rem;
@@ -36,37 +36,37 @@
     @include transition(all 0.5s ease);
 }
 
-.showMetrics__state ~ .showMetrics__trigger::before {
+.show-metrics__state ~ .show-metrics__trigger::before {
     content: attr(seemetric);
     font-size: 1rem;
     text-decoration: underline;
 }
 
-.showMetrics__state:checked ~ .showMetrics__trigger::before {
+.show-metrics__state:checked ~ .show-metrics__trigger::before {
     content: attr(hidemetric);
     font-size: 1rem;
 }
 
-.showMetrics__state ~ .showMetrics__trigger::after {
+.show-metrics__state ~ .show-metrics__trigger::after {
     content: ' \25BE';
     font-size: 1.25rem;
 }
 
-.showMetrics__state:checked ~ .showMetrics__trigger::after {
+.show-metrics__state:checked ~ .show-metrics__trigger::after {
     content: ' \25B4';
     font-size: 1.25rem;
 }
 
-.showMetrics__state:checked ~ .showMetrics__trigger:active:hover,
-.showMetrics__state ~ .showMetrics__trigger:active:hover {
+.show-metrics__state:checked ~ .show-metrics__trigger:active:hover,
+.show-metrics__state ~ .show-metrics__trigger:active:hover {
     background: $mainColor;
     color: $navItemBackgroundColor;
     @include transition(all 0.2s ease);
 }
 
 @media (min-width: 767px) {
-    .showMetrics__state:checked ~ .showMetrics__trigger:hover,
-    .showMetrics__state ~ .showMetrics__trigger:hover {
+    .show-metrics__state:checked ~ .show-metrics__trigger:hover,
+    .show-metrics__state ~ .show-metrics__trigger:hover {
         background: $mainColor;
         color: $navItemBackgroundColor;
         @include transition(all 0.5s ease);
