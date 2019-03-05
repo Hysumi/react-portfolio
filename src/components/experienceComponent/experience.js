@@ -87,7 +87,7 @@ class Experience extends Component {
                                     { this.props.lang === "br" ? "Setembro 2012 - Junho 2017" : "September 2012 - June 2017" }
                                 </span>
                             </div>
-                            <p> { this.props.lang === "br" ? "O LTIA (Laboratório de Tecnologia da Informação Aplicada) é um laboratório da UNESP (Universidade do Estado de São Paulo) para estudantes aprenderem sobre tecnologias emergientes a partir de projetos com instituções e companhias. O objetivo principal é fazer os estudantes aprenderem e aplicarem as novas tecnologias enquanto desenvolvem um projeto real." :
+                            <p> { this.props.lang === "br" ? "O LTIA (Laboratório de Tecnologia da Informação Aplicada) é um laboratório da UNESP (Universidade do Estado de São Paulo) para estudantes aprenderem sobre tecnologias emergentes a partir de projetos com instituições e companhias. O objetivo principal é fazer os estudantes aprenderem e aplicarem as novas tecnologias enquanto desenvolvem um projeto real." :
                                 "The LTIA (Applied Information Technology Laboratory) is a lab at UNESP (São Paulo State University) for students to learn new forthcoming technologies through projects with external institutions and companies. The main goal is that students learn and apply new technologies while developing a real project." }</p>
                         </div>
                     </div>
