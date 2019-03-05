@@ -19,7 +19,7 @@ class Metric extends Component {
                     <h6 className="sec-title sec-title__level">Nível 3:</h6>
                     <p>Implementei o básico para saber como usar a tecnologia</p>
                     <h6 className="sec-title sec-title__level">Nível 4:</h6>
-                    <p>Usei a tecnologia em um projeto, mas o projeto ainda não foi concluido.</p>
+                    <p>Usei a tecnologia em um projeto, mas o projeto ainda não foi concluído.</p>
                     <h6 className="sec-title sec-title__level">Nível 5:</h6>
                     <p>Usei a tecnologia em um projeto e o concluí.</p>
                 </section>
@@ -33,7 +33,7 @@ class Metric extends Component {
                 <section className="metric-content">
                     <h5 className="sec-title sec-title--advanced">Avançado - Proficiente em boas práticas</h5>
                     <h6 className="sec-title sec-title__level">Nível 8:</h6>
-                    <p>Usei boas práticas em um projeto, mas o projeto ainda não foi concluido</p>
+                    <p>Usei boas práticas em um projeto, mas o projeto ainda não foi concluído</p>
                     <h6 className="sec-title sec-title__level">Nível 9:</h6>
                     <p>Usei as boas práticas em um projeto e o concluí.</p>
                 </section>

@@ -2,7 +2,7 @@
 @import '../../library/config/config.scss';
 
 .element-container--skills {
-    height: 100vh !important;
+    min-height: 100vh;
 }
 
 .main-title--skills {
@@ -82,6 +82,6 @@
 
 @media (min-height: 850px) and (min-width: 769px) {
     .skills__container {
-        height: 100vh;
+        min-height: 100vh;
     }
 }
