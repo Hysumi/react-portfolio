@@ -10,7 +10,7 @@ class About extends Component {
             <div className="about-container">
                 <div className="content">
                     <div className="profile-image"></div>
-                    <h4 className="name-title">Henrique de Souza</h4>
+                    <h4 className="name-title">Henrique Sumitomo</h4>
                     <div className="info">
                         <p>
                             {
@@ -23,8 +23,8 @@ class About extends Component {
                         <p>
                             {
                                 this.props.lang === "br"
-                                    ? "desenvolvedor de jogos nos tempos vagos."
-                                    : "game developer in free time."
+                                    ? "desenvolvedor de jogos nas horas vagas."
+                                    : "game developer during free time."
                             }
                         </p>
                     </div>
@@ -35,11 +35,13 @@ class About extends Component {
                         smooth={true}
                         duration={800}
                         offset={0}>
-                        {
-                            this.props.lang === "br"
-                                ? "Veja mais abaixo!"
-                                : "See more below!"
-                        }
+                        <span className="see-more-text">
+                            {
+                                this.props.lang === "br"
+                                    ? "Veja mais abaixo!"
+                                    : "See more below!"
+                            }
+                        </span>
                     </Link>
                 </div>
 

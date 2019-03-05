@@ -76,7 +76,7 @@ class Skills extends Component {
                     Habilidades
                 </h1>
                 <p className="description">
-                    Nesta sessão você poderá ver quais tecnologias eu conheço e meu nível de habilidade com cada uma. Medi o meu nível baseado na métrica abaixo.
+                    Nesta seção você poderá ver quais tecnologias eu conheço e meu nível de habilidade com cada uma. Medi o meu nível baseado na métrica abaixo.
                 </p>
                 <div className="metrics__container">
                     <input type="checkbox" className="show-metrics__state" id="show-metrics" />

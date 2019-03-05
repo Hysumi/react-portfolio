@@ -97,7 +97,7 @@ class Experience extends Component {
                         </div>
                         <div className="timeline__content">
                             <span className="main-title main-title--experience">
-                                { this.props.lang === "br" ? "Início da experiência acadêmica." : "Start of academic experience." }
+                                { this.props.lang === "br" ? "Início da experiência profissional." : "Start of work experience." }
                             </span>
                         </div>
                     </div>

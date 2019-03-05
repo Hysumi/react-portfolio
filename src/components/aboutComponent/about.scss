@@ -97,6 +97,7 @@
     letter-spacing: 1px;
     margin-top: 15px;
     font-family: 'Barlow', sans-serif;
+    font-size: 1em;
 }
 
 .link-container {
@@ -108,13 +109,15 @@
     position: absolute;
     margin-bottom: 2em;
 }
-
 .see-more {
-    font-family: 'Abel', sans-serif;
     cursor: pointer;
     padding: .5em;
     @include transition(all 0.2s ease);
-    @include transition(all 0.2s ease);
+}
+
+.see-more-text {
+    font-family: 'Abel', sans-serif;
+    text-decoration: underline;
 }
 
 .see-more::after {
@@ -158,6 +161,7 @@
     border-top: solid 2px ;
     border-bottom: solid 2px ;
     color: $lighter;
+    font-size: 0.75em;
     p {
         margin-bottom: 0;
     }
@@ -195,6 +199,14 @@
 }
 
 @media (min-width: 769px) {
+    .name-title {
+        font-size: 1.5em;
+    }
+
+    .info {
+        font-size: 1em;
+    }
+
     .about-container {
         padding-bottom: 70px 0;
     }

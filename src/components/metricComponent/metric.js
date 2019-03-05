@@ -11,7 +11,7 @@ class Metric extends Component {
                     <h1 className="main-title main-title--skills">Métrica</h1>
                 </section>
                 <section className="metric-content">
-                    <h5 className="sec-title sec-title--basic">Basico - Conhecendo a tecnologia</h5>
+                    <h5 className="sec-title sec-title--basic">Básico - Conhecendo a tecnologia</h5>
                     <h6 className="sec-title sec-title__level">Nível 1:</h6>
                     <p>Li sobre o conteúdo.</p>
                     <h6 className="sec-title sec-title__level">Nível 2:</h6>
