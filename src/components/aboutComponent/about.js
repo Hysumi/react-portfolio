@@ -29,18 +29,19 @@ class About extends Component {
                         </p>
                     </div>
                 </div>
-
-                <Link className="see-more"
-                    to="skills"
-                    smooth={true}
-                    duration={800}
-                    offset={0}>
-                    {
-                        this.props.lang === "br"
-                            ? "Veja mais abaixo!"
-                            : "See more below!"
-                    }
-                </Link>
+                <div className="link-container">
+                    <Link className="see-more"
+                        to="skills"
+                        smooth={true}
+                        duration={800}
+                        offset={0}>
+                        {
+                            this.props.lang === "br"
+                                ? "Veja mais abaixo!"
+                                : "See more below!"
+                        }
+                    </Link>
+                </div>
 
             </div>
         );
